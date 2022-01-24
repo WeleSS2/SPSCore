@@ -1,0 +1,5 @@
+on_game_start = {
+	events = {
+		id = sps_smgg.2
+	}
+}
