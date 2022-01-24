@@ -1,0 +1,151 @@
+namespace = sps_smgg
+
+# 1 - Zmiana wielkości planety
+# 2 - Zmiana klasy planety
+
+event = {
+	id = sps_smgg.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { 
+				is_country_type = default
+			}
+			switch = {
+				trigger = has_origin
+				origin_life_seeded = {
+					prev = {
+						
+					}
+				}
+				origin_machine = {
+					capital_scope = {
+						set_planet_size = 25
+					}
+				}
+				origin_post_apocalyptic = {
+					capital_scope = {
+						set_planet_size = 22
+					}
+				}
+				origin_ocean_paradise = {
+					capital_scope = {
+						set_planet_size = 30
+					}
+				}
+				origin_remnants = {
+					capital_scope = {
+						set_planet_size = 22
+					}
+				}
+			}
+			if = {
+				limit = {
+					not = {
+						or = {
+							has_origin = origin_life_seeded
+							has_origin = origin_machine
+							has_origin = origin_post_apocalyptic
+							has_origin = origin_ocean_paradise
+							has_origin = origin_remnants
+						}
+					}
+				}
+				capital_scope = {
+					set_planet_size = 20
+				}
+			}
+		}
+	}
+}
+
+event = {
+    id = sps_smgg.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { is_country_type = default }
+			if = {
+				limit = { capital_scope = { is_ideal_planet_class = { who = PREV status = no } } }
+				switch = {
+					trigger = ideal_planet_class
+					pc_continental = { capital_scope = { change_pc = pc_continental } }
+					pc_ocean = { capital_scope = { change_pc = pc_ocean } }
+					pc_tropical = { capital_scope = { change_pc = pc_tropical } }
+					pc_desert = { capital_scope = { change_pc = pc_desert } }
+					pc_arid = { capital_scope = { change_pc = pc_arid } }
+					pc_savannah = { capital_scope = { change_pc = pc_savannah } }
+					pc_arctic = { capital_scope = { change_pc = pc_arctic } }
+					pc_alpine = { capital_scope = { change_pc = pc_alpine } }
+					pc_tundra = { capital_scope = { change_pc = pc_tundra } }
+					pc_hive = { capital_scope = { change_pc = pc_hive } }
+					pc_machine = { capital_scope = { change_pc = pc_machine } }
+				}
+			}
+			if = {
+				limit = { is_machine_empire = yes }
+				capital_scope = {
+					change_pc = rl_habitable_normal
+				}
+			}
+			if = {
+				limit = { has_origin = origin_remnants }
+				capital_scope = {
+					change_pc = pc_relic
+				}
+				if = {
+					limit = { NOT = { ideal_planet_class = pc_relic } }
+					modify_species = {
+						species = this
+						ideal_planet_class = pc_relic
+					}
+				}
+			}
+			switch = {
+				trigger = has_origin
+				origin_life_seeded = {
+					capital_scope = {
+						change_pc = pc_gaia
+					}
+					modify_species = {
+						species = owner_main_species
+						ideal_planet_class = pc_gaia
+					}
+				}
+				origin_machine = {
+					capital_scope = {
+						change_pc = pc_machine
+						modify_species = {
+							species = this
+							ideal_planet_class = pc_machine
+						}
+					}
+				}
+				origin_post_apocalyptic = {
+					capital_scope = {
+						change_pc = pc_nuked
+						modify_species = {
+							species = this
+							ideal_planet_class = pc_nuked
+						}
+					}
+				}
+				origin_tree_of_life = {
+					capital_scope = {
+						remove_modifier = no_lifetree
+					}
+				}
+				origin_origin_ocean_paradise = {
+					capital_scope = {
+						change_pc = pc_ocean
+					}
+				}
+
+			}
+		}
+	}
+}
