@@ -1,59 +1,9 @@
 namespace = sps_smgg
 
-# 1 - Zmiana wielkości planety / Wyłączone
+# 1 - 
 # 2 - Zmiana klasy planety
-
-event = {
-	id = sps_smgg.1
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		every_country = {
-			limit = { 
-				is_country_type = default
-			}
-			switch = {
-				trigger = has_origin
-				origin_life_seeded = {
-					capital_scope = {
-						set_planet_size = 30
-					}
-				}
-				origin_machine = {
-					capital_scope = {
-						set_planet_size = 25
-					}
-				}
-				origin_post_apocalyptic = {
-					capital_scope = {
-						set_planet_size = 22
-					}
-				}
-				origin_ocean_paradise = {
-					capital_scope = {
-						set_planet_size = 30
-					}
-				}
-			}
-			if = {
-				limit = {
-					not = {
-						or = {
-							has_origin = origin_life_seeded
-							has_origin = origin_machine
-							has_origin = origin_post_apocalyptic
-							has_origin = origin_ocean_paradise
-						}
-					}
-				}
-				capital_scope = {
-					set_planet_size = 20
-				}
-			}
-		}
-	}
-}
+# 10 - Event zbiorczy wywołyjący vanillowe eventy dla stolicy (Depozyty, Budynki, Blockery, Popy)
+# 20 + Fallen Empire fixes
 
 event = {
     id = sps_smgg.2
@@ -63,14 +13,6 @@ event = {
 	immediate = {
 		every_country = {
 			limit = { is_country_type = default }
-			country_event = {
-				id = game_start.33
-			}
-			capital_scope = {
-				planet_event = {
-					id = game_start.23
-				}
-			}
 			if = {
 				limit = { capital_scope = { is_ideal_planet_class = { who = PREV status = no } } }
 				switch = {
@@ -167,4 +109,27 @@ event = {
 	}
 }
 
-WOOO PUDEL
+# Empire default fix
+event = {
+	id = sps_smgg.10
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		every_country = {
+			limit = { is_country_type = default }
+			# Add origin hyperlanes and stations in capital system
+			country_event = {
+				id = game_start.33
+			}
+			# Add pop on capital
+			capital_scope = {
+				planet_event = {
+					id = game_start.23
+				}
+			}
+		}
+	}
+}
+
