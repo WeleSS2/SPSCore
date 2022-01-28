@@ -146,7 +146,22 @@ event = {
 						change_pc = pc_ocean
 					}
 				}
+			}
+		}
+	}
+}
+event = {
 
+
+	id = sps_smgg.3 
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		
+		every_country = {
+			limit = { is_country_type = fallen_empire }
+			country_event = {
+				id = game_start.10
 			}
 		}
 	}
