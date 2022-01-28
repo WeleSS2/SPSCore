@@ -1,6 +1,6 @@
 namespace = sps_smgg
 
-# 1 - Zmiana wielkości planety
+# 1 - Zmiana wielkości planety / Wyłączone
 # 2 - Zmiana klasy planety
 
 event = {
@@ -63,6 +63,14 @@ event = {
 	immediate = {
 		every_country = {
 			limit = { is_country_type = default }
+			country_event = {
+				id = game_start.33
+			}
+			capital_scope = {
+				planet_event = {
+					id = game_start.23
+				}
+			}
 			if = {
 				limit = { capital_scope = { is_ideal_planet_class = { who = PREV status = no } } }
 				switch = {

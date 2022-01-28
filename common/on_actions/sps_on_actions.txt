@@ -1,5 +1,7 @@
+
+# Triggers when the game starts
 on_game_start = {
 	events = {
-		id = sps_smgg.2
+		sps_smgg.2
 	}
 }
