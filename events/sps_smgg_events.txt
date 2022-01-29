@@ -92,23 +92,6 @@ event = {
 		}
 	}
 }
-event = {
-
-
-	id = sps_smgg.3 
-	is_triggered_only = yes
-	hide_window = yes
-	immediate = {
-		
-		every_country = {
-			limit = { is_country_type = fallen_empire }
-			country_event = {
-				id = game_start.10
-			}
-		}
-	}
-}
-
 # Empire default fix
 event = {
 	id = sps_smgg.10
@@ -130,6 +113,18 @@ event = {
 				}
 			}
 		}
+		every_country = {
+			country_event = {
+				id = game_start.8
+			}
+		}
+		every_country = {
+	      capital_scope = {
+			 planet_event = {
+				id = game_start.12
+				
+			 }
+		  }
+		}	
 	}
 }
-
