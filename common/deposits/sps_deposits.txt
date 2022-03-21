@@ -1,0 +1,12 @@
+sps_amenities_20 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+	potential = { always = no }
+	
+	planet_modifier = {
+		planet_amenities_add = 20
+	}
+}

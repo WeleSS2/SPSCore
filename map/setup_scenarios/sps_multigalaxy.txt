@@ -2,871 +2,1313 @@ static_galaxy_scenario = {
 name = "MultiGalaxy" 
 priority = 10 
 radius = 500 
-num_empires = { min = 0 max = 80 } 
-num_empire_default = 20 
-fallen_empire_default = 3 
-fallen_empire_max = 10 
-marauder_empire_default = 2 
-marauder_empire_max = 6 
+num_empires = { min = 12 max = 25 } 
+num_empire_default = 25 
+fallen_empire_default = 1 
+fallen_empire_max = 1 
+marauder_empire_default = 1 
+marauder_empire_max = 1 
 advanced_empire_default = 1 
 colonizable_planet_odds = 1.0 
 primitive_odds = 1.0 
 crisis_strength = 0.75 
-extra_crisis_strength = { 10 25 50} 
+extra_crisis_strength = { 5.5 6 6.5 7 7.5 8 8.5 9 9.5 10 11 12 13 14 15 17.5 20 22.5 25 30 35 40 45 50} 
 num_wormhole_pairs = { min = 0 max = 10 } 
 num_wormhole_pairs_default = 1 
 num_gateways = { min = 0 max = 10 } 
 num_gateways_default = 1 
-random_hyperlanes = yes 
+random_hyperlanes = no 
 core_radius = 0 
-system = { id = "0" name = "" position = { x = 431 y = 224 }  }
-system = { id = "1" name = "" position = { x = 217 y = 341 }  }
-system = { id = "2" name = "" position = { x = 360 y = 384 }  }
-system = { id = "3" name = "" position = { x = 468 y = 409 }  }
-system = { id = "4" name = "" position = { x = 308 y = 351 }  }
-system = { id = "5" name = "" position = { x = 479 y = 300 }  }
-system = { id = "6" name = "" position = { x = 298 y = 373 }  }
-system = { id = "7" name = "" position = { x = 270 y = 427 }  }
-system = { id = "8" name = "" position = { x = 441 y = 418 }  }
-system = { id = "9" name = "" position = { x = 304 y = 344 }  }
-system = { id = "10" name = "" position = { x = 306 y = 226 }  }
-system = { id = "11" name = "" position = { x = 424 y = 316 }  }
-system = { id = "12" name = "" position = { x = 258 y = 442 }  }
-system = { id = "13" name = "" position = { x = 401 y = 399 }  }
-system = { id = "14" name = "" position = { x = 444 y = 336 }  }
-system = { id = "15" name = "" position = { x = 375 y = 472 }  }
-system = { id = "16" name = "" position = { x = 363 y = 396 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "17" name = "" position = { x = 271 y = 421 }  }
-system = { id = "18" name = "" position = { x = 457 y = 339 }  }
-system = { id = "19" name = "" position = { x = 353 y = 482 }  }
-system = { id = "20" name = "" position = { x = 330 y = 264 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "21" name = "" position = { x = 245 y = 342 }  }
-system = { id = "22" name = "" position = { x = 407 y = 270 }  }
-system = { id = "23" name = "" position = { x = 444 y = 313 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "24" name = "" position = { x = 285 y = 373 }  }
-system = { id = "25" name = "" position = { x = 384 y = 424 }  }
-system = { id = "26" name = "" position = { x = 334 y = 385 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "27" name = "" position = { x = 461 y = 413 }  }
-system = { id = "28" name = "" position = { x = 212 y = 373 }  }
-system = { id = "29" name = "" position = { x = 269 y = 372 }  }
-system = { id = "30" name = "" position = { x = 479 y = 338 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "31" name = "" position = { x = 284 y = 321 }  }
-system = { id = "32" name = "" position = { x = 475 y = 310 }  }
-system = { id = "33" name = "" position = { x = 253 y = 247 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "34" name = "" position = { x = 371 y = 420 }  }
-system = { id = "35" name = "" position = { x = 274 y = 283 }  }
-system = { id = "36" name = "" position = { x = 412 y = 239 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "37" name = "" position = { x = 326 y = 451 }  }
-system = { id = "38" name = "" position = { x = 485 y = 411 }  }
-system = { id = "39" name = "" position = { x = 386 y = 494 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "40" name = "" position = { x = 465 y = 418 }  }
-system = { id = "41" name = "" position = { x = 313 y = 396 }  }
-system = { id = "42" name = "" position = { x = 444 y = 377 }  }
-system = { id = "43" name = "" position = { x = 406 y = 481 }  }
-system = { id = "44" name = "" position = { x = 267 y = 253 }  }
-system = { id = "45" name = "" position = { x = 293 y = 369 }  }
-system = { id = "46" name = "" position = { x = 438 y = 457 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "47" name = "" position = { x = 426 y = 279 }  }
-system = { id = "48" name = "" position = { x = 249 y = 242 }  }
-system = { id = "49" name = "" position = { x = 469 y = 323 }  }
-system = { id = "50" name = "" position = { x = 433 y = 380 }  }
-system = { id = "51" name = "" position = { x = 399 y = 280 }  }
-system = { id = "52" name = "" position = { x = 306 y = 218 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "53" name = "" position = { x = 451 y = 291 }  }
-system = { id = "54" name = "" position = { x = 343 y = 410 }  }
-system = { id = "55" name = "" position = { x = 230 y = 287 }  }
-system = { id = "56" name = "" position = { x = 428 y = 455 }  }
-system = { id = "57" name = "" position = { x = 383 y = 366 }  }
-system = { id = "58" name = "" position = { x = 328 y = 456 }  }
-system = { id = "59" name = "" position = { x = 233 y = 440 }  }
-system = { id = "60" name = "" position = { x = 324 y = 468 }  }
-system = { id = "61" name = "" position = { x = 386 y = 401 }  }
-system = { id = "62" name = "" position = { x = 208 y = 329 }  }
-system = { id = "63" name = "" position = { x = 331 y = 314 }  }
-system = { id = "64" name = "" position = { x = 412 y = 312 }  }
-system = { id = "65" name = "" position = { x = 271 y = 340 }  }
-system = { id = "66" name = "" position = { x = 345 y = 265 }  }
-system = { id = "67" name = "" position = { x = 228 y = 390 }  }
-system = { id = "68" name = "" position = { x = 313 y = 412 }  }
-system = { id = "69" name = "" position = { x = 381 y = 464 }  }
-system = { id = "70" name = "" position = { x = 312 y = 320 }  }
-system = { id = "71" name = "" position = { x = 365 y = 419 }  }
-system = { id = "72" name = "" position = { x = 278 y = 371 }  }
-system = { id = "73" name = "" position = { x = 262 y = 464 }  }
-system = { id = "74" name = "" position = { x = 384 y = 269 }  }
-system = { id = "75" name = "" position = { x = 297 y = 307 }  }
-system = { id = "76" name = "" position = { x = 363 y = 355 }  }
-system = { id = "77" name = "" position = { x = 298 y = 450 }  }
-system = { id = "78" name = "" position = { x = 381 y = 245 }  }
-system = { id = "79" name = "" position = { x = 493 y = 309 }  }
-system = { id = "80" name = "" position = { x = 267 y = 298 }  }
-system = { id = "81" name = "" position = { x = 220 y = 384 }  }
-system = { id = "82" name = "" position = { x = 224 y = 302 }  }
-system = { id = "83" name = "" position = { x = 305 y = 358 }  }
-system = { id = "84" name = "" position = { x = 374 y = 220 }  }
-system = { id = "85" name = "" position = { x = 420 y = 401 }  }
-system = { id = "86" name = "" position = { x = 322 y = 249 }  }
-system = { id = "87" name = "" position = { x = 481 y = 320 }  }
-system = { id = "88" name = "" position = { x = 355 y = 208 }  }
-system = { id = "89" name = "" position = { x = 294 y = 430 }  }
-system = { id = "90" name = "" position = { x = 369 y = 265 }  }
-system = { id = "91" name = "" position = { x = 424 y = 298 }  }
-system = { id = "92" name = "" position = { x = 284 y = 240 }  }
-system = { id = "93" name = "" position = { x = 325 y = 289 }  }
-system = { id = "94" name = "" position = { x = 453 y = 306 }  }
-system = { id = "95" name = "" position = { x = 301 y = 378 }  }
-system = { id = "96" name = "" position = { x = 382 y = 287 }  }
-system = { id = "97" name = "" position = { x = 313 y = 220 }  }
-system = { id = "98" name = "" position = { x = 379 y = 459 }  }
-system = { id = "99" name = "" position = { x = 319 y = 449 }  }
-system = { id = "100" name = "" position = { x = 429 y = 472 }  }
-system = { id = "101" name = "" position = { x = 405 y = 393 }  }
-system = { id = "102" name = "" position = { x = 358 y = 359 }  }
-system = { id = "103" name = "" position = { x = 474 y = 287 }  }
-system = { id = "104" name = "" position = { x = 295 y = 264 }  }
-system = { id = "105" name = "" position = { x = 444 y = 284 }  }
-system = { id = "106" name = "" position = { x = 324 y = 266 }  }
-system = { id = "107" name = "" position = { x = 310 y = 382 }  }
-system = { id = "108" name = "" position = { x = 318 y = 368 }  }
-system = { id = "109" name = "" position = { x = 234 y = 346 }  }
-system = { id = "110" name = "" position = { x = 237 y = 301 }  }
-system = { id = "111" name = "" position = { x = 251 y = 456 }  }
-system = { id = "112" name = "" position = { x = 432 y = 277 }  }
-system = { id = "113" name = "" position = { x = 263 y = 397 }  }
-system = { id = "114" name = "" position = { x = 379 y = 405 }  }
-system = { id = "115" name = "" position = { x = 248 y = 362 }  }
-system = { id = "116" name = "" position = { x = 422 y = 470 }  }
-system = { id = "117" name = "" position = { x = 382 y = 418 }  }
-system = { id = "118" name = "" position = { x = 450 y = 283 }  }
-system = { id = "119" name = "" position = { x = 419 y = 477 }  }
-system = { id = "120" name = "" position = { x = 379 y = 209 }  }
-system = { id = "121" name = "" position = { x = 414 y = 327 }  }
-system = { id = "122" name = "" position = { x = 393 y = 341 }  }
-system = { id = "123" name = "" position = { x = 471 y = 335 }  }
-system = { id = "124" name = "" position = { x = 378 y = 382 }  }
-system = { id = "125" name = "" position = { x = 272 y = 448 }  }
-system = { id = "126" name = "" position = { x = 386 y = 231 }  }
-system = { id = "127" name = "" position = { x = 239 y = 320 }  }
-system = { id = "128" name = "" position = { x = 310 y = 465 }  }
-system = { id = "129" name = "" position = { x = 263 y = 423 }  }
-system = { id = "130" name = "" position = { x = 361 y = 377 }  }
-system = { id = "131" name = "" position = { x = 271 y = 387 }  }
-system = { id = "132" name = "" position = { x = 357 y = 494 }  }
-system = { id = "133" name = "" position = { x = 359 y = 214 }  }
-system = { id = "134" name = "" position = { x = 455 y = 423 }  }
-system = { id = "135" name = "" position = { x = 383 y = 302 }  }
-system = { id = "136" name = "" position = { x = 425 y = 285 }  }
-system = { id = "137" name = "" position = { x = 456 y = 361 }  }
-system = { id = "138" name = "" position = { x = 355 y = 474 }  }
-system = { id = "139" name = "" position = { x = 240 y = 373 }  }
-system = { id = "140" name = "" position = { x = 366 y = 472 }  }
-system = { id = "141" name = "" position = { x = 286 y = 287 }  }
-system = { id = "142" name = "" position = { x = 295 y = 278 }  }
-system = { id = "143" name = "" position = { x = 268 y = 414 }  }
-system = { id = "144" name = "" position = { x = 226 y = 319 }  }
-system = { id = "145" name = "" position = { x = 420 y = 437 }  }
-system = { id = "146" name = "" position = { x = 473 y = 359 }  }
-system = { id = "147" name = "" position = { x = 235 y = 293 }  }
-system = { id = "148" name = "" position = { x = 443 y = 393 }  }
-system = { id = "149" name = "" position = { x = 420 y = 411 }  }
-system = { id = "150" name = "" position = { x = 304 y = 440 }  }
-system = { id = "151" name = "" position = { x = 321 y = 387 }  }
-system = { id = "152" name = "" position = { x = 454 y = 347 }  }
-system = { id = "153" name = "" position = { x = 316 y = 479 }  }
-system = { id = "154" name = "" position = { x = 455 y = 318 }  }
-system = { id = "155" name = "" position = { x = 295 y = 466 }  }
-system = { id = "156" name = "" position = { x = 365 y = 478 }  }
-system = { id = "157" name = "" position = { x = 250 y = 292 }  }
-system = { id = "158" name = "" position = { x = 312 y = 356 }  }
-system = { id = "159" name = "" position = { x = 259 y = 320 }  }
-system = { id = "160" name = "" position = { x = 221 y = 368 }  }
-system = { id = "161" name = "" position = { x = 455 y = 385 }  }
-system = { id = "162" name = "" position = { x = 393 y = 384 }  }
-system = { id = "163" name = "" position = { x = 361 y = 483 }  }
-system = { id = "164" name = "" position = { x = 482 y = 383 }  }
-system = { id = "165" name = "" position = { x = 384 y = 261 }  }
-system = { id = "166" name = "" position = { x = 217 y = 293 }  }
-system = { id = "167" name = "" position = { x = 455 y = 456 }  }
-system = { id = "168" name = "" position = { x = 366 y = 220 }  }
-system = { id = "169" name = "" position = { x = 223 y = 417 }  }
-system = { id = "170" name = "" position = { x = 307 y = 210 }  }
-system = { id = "171" name = "" position = { x = 360 y = 348 }  }
-system = { id = "172" name = "" position = { x = 288 y = 414 }  }
-system = { id = "173" name = "" position = { x = 310 y = 308 }  }
-system = { id = "174" name = "" position = { x = 349 y = 202 }  }
-system = { id = "175" name = "" position = { x = 239 y = 353 }  }
-system = { id = "176" name = "" position = { x = 406 y = 242 }  }
-system = { id = "177" name = "" position = { x = 410 y = 285 }  }
-system = { id = "178" name = "" position = { x = 322 y = 429 }  }
-system = { id = "179" name = "" position = { x = 270 y = 237 }  }
-system = { id = "180" name = "" position = { x = 337 y = 207 }  }
-system = { id = "181" name = "" position = { x = 409 y = 262 }  }
-system = { id = "182" name = "" position = { x = 301 y = 458 }  }
-system = { id = "183" name = "" position = { x = 462 y = 274 }  }
-system = { id = "184" name = "" position = { x = 371 y = 242 }  }
-system = { id = "185" name = "" position = { x = 317 y = 495 }  }
-system = { id = "186" name = "" position = { x = 429 y = 259 }  }
-system = { id = "187" name = "" position = { x = 396 y = 251 }  }
-system = { id = "188" name = "" position = { x = 431 y = 355 }  }
-system = { id = "189" name = "" position = { x = 305 y = 434 }  }
-system = { id = "190" name = "" position = { x = 270 y = 245 }  }
-system = { id = "191" name = "" position = { x = 439 y = 271 }  }
-system = { id = "192" name = "" position = { x = 403 y = 214 }  }
-system = { id = "193" name = "" position = { x = 275 y = 347 }  }
-system = { id = "194" name = "" position = { x = 448 y = 436 }  }
-system = { id = "195" name = "" position = { x = 289 y = 481 }  }
-system = { id = "196" name = "" position = { x = 288 y = 343 }  }
-system = { id = "197" name = "" position = { x = 380 y = 435 }  }
-system = { id = "198" name = "" position = { x = 374 y = 309 }  }
-system = { id = "199" name = "" position = { x = 430 y = 444 }  }
-system = { id = "200" name = "" position = { x = 308 y = 232 }  }
-system = { id = "201" name = "" position = { x = 415 y = 318 }  }
-system = { id = "202" name = "" position = { x = 232 y = 415 }  }
-system = { id = "203" name = "" position = { x = 443 y = 300 }  }
-system = { id = "204" name = "" position = { x = 341 y = 494 }  }
-system = { id = "205" name = "" position = { x = 382 y = 275 }  }
-system = { id = "206" name = "" position = { x = 363 y = 255 }  }
-system = { id = "207" name = "" position = { x = 309 y = 314 }  }
-system = { id = "208" name = "" position = { x = 411 y = 479 }  }
-system = { id = "209" name = "" position = { x = 274 y = 265 }  }
-system = { id = "210" name = "" position = { x = 388 y = 341 }  }
-system = { id = "211" name = "" position = { x = 460 y = 373 }  }
-system = { id = "212" name = "" position = { x = 431 y = 411 }  }
-system = { id = "213" name = "" position = { x = 253 y = 300 }  }
-system = { id = "214" name = "" position = { x = 381 y = 308 }  }
-system = { id = "215" name = "" position = { x = 422 y = 333 }  }
-system = { id = "216" name = "" position = { x = 337 y = 337 }  }
-system = { id = "217" name = "" position = { x = 248 y = 411 }  }
-system = { id = "218" name = "" position = { x = 239 y = 337 }  }
-system = { id = "219" name = "" position = { x = 462 y = 334 }  }
-system = { id = "220" name = "" position = { x = 397 y = 392 }  }
-system = { id = "221" name = "" position = { x = 240 y = 427 }  }
-system = { id = "222" name = "" position = { x = 338 y = 241 }  }
-system = { id = "223" name = "" position = { x = 237 y = 262 }  }
-system = { id = "224" name = "" position = { x = 435 y = 424 }  }
-system = { id = "225" name = "" position = { x = 273 y = 468 }  }
-system = { id = "226" name = "" position = { x = 425 y = 384 }  }
-system = { id = "227" name = "" position = { x = 444 y = 244 }  }
-system = { id = "228" name = "" position = { x = 496 y = 358 }  }
-system = { id = "229" name = "" position = { x = 264 y = 364 }  }
-system = { id = "230" name = "" position = { x = 408 y = 329 }  }
-system = { id = "231" name = "" position = { x = 222 y = 345 }  }
-system = { id = "232" name = "" position = { x = 325 y = 369 }  }
-system = { id = "233" name = "" position = { x = 442 y = 399 }  }
-system = { id = "234" name = "" position = { x = 352 y = 312 }  }
-system = { id = "235" name = "" position = { x = 278 y = 450 }  }
-system = { id = "236" name = "" position = { x = 408 y = 386 }  }
-system = { id = "237" name = "" position = { x = 372 y = 456 }  }
-system = { id = "238" name = "" position = { x = 332 y = 480 }  }
-system = { id = "239" name = "" position = { x = 295 y = 471 }  }
-system = { id = "240" name = "" position = { x = 407 y = 279 }  }
-system = { id = "241" name = "" position = { x = 304 y = 478 }  }
-system = { id = "242" name = "" position = { x = 453 y = 371 }  }
-system = { id = "243" name = "" position = { x = 349 y = 345 }  }
-system = { id = "244" name = "" position = { x = 398 y = 474 }  }
-system = { id = "245" name = "" position = { x = 421 y = 273 }  }
-system = { id = "246" name = "" position = { x = 466 y = 383 }  }
-system = { id = "247" name = "" position = { x = 485 y = 369 }  }
-system = { id = "248" name = "" position = { x = 300 y = 236 }  }
-system = { id = "249" name = "" position = { x = 226 y = 385 }  }
-system = { id = "250" name = "" position = { x = 76 y = -447 }  }
-system = { id = "251" name = "" position = { x = -79 y = -484 }  }
-system = { id = "252" name = "" position = { x = -86 y = -462 }  }
-system = { id = "253" name = "" position = { x = -188 y = -399 }  }
-system = { id = "254" name = "" position = { x = -225 y = -344 }  }
-system = { id = "255" name = "" position = { x = 139 y = -44 }  }
-system = { id = "256" name = "" position = { x = 44 y = -468 }  }
-system = { id = "257" name = "" position = { x = -108 y = -373 }  }
-system = { id = "258" name = "" position = { x = 181 y = -244 }  }
-system = { id = "259" name = "" position = { x = -189 y = -106 }  }
-system = { id = "260" name = "" position = { x = -62 y = -112 }  }
-system = { id = "261" name = "" position = { x = 18 y = -341 }  }
-system = { id = "262" name = "" position = { x = 174 y = -219 }  }
-system = { id = "263" name = "" position = { x = 191 y = -184 }  }
-system = { id = "264" name = "" position = { x = -181 y = -190 }  }
-system = { id = "265" name = "" position = { x = -81 y = -435 }  }
-system = { id = "266" name = "" position = { x = 89 y = -358 }  }
-system = { id = "267" name = "" position = { x = 111 y = -162 }  }
-system = { id = "268" name = "" position = { x = -34 y = -176 }  }
-system = { id = "269" name = "" position = { x = 177 y = -256 }  }
-system = { id = "270" name = "" position = { x = 174 y = -185 }  }
-system = { id = "271" name = "" position = { x = 101 y = -59 }  }
-system = { id = "272" name = "" position = { x = -118 y = -166 }  }
-system = { id = "273" name = "" position = { x = -110 y = -83 }  }
-system = { id = "274" name = "" position = { x = 10 y = -340 }  }
-system = { id = "275" name = "" position = { x = 117 y = -141 }  }
-system = { id = "276" name = "" position = { x = 211 y = -238 }  }
-system = { id = "277" name = "" position = { x = 34 y = -235 }  }
-system = { id = "278" name = "" position = { x = 140 y = -230 }  }
-system = { id = "279" name = "" position = { x = 133 y = -425 }  }
-system = { id = "280" name = "" position = { x = 202 y = -200 }  }
-system = { id = "281" name = "" position = { x = 90 y = -406 }  }
-system = { id = "282" name = "" position = { x = -161 y = -407 }  }
-system = { id = "283" name = "" position = { x = -2 y = -383 }  }
-system = { id = "284" name = "" position = { x = -33 y = -432 }  }
-system = { id = "285" name = "" position = { x = -233 y = -210 }  }
-system = { id = "286" name = "" position = { x = 146 y = -289 }  }
-system = { id = "287" name = "" position = { x = -100 y = -248 }  }
-system = { id = "288" name = "" position = { x = -49 y = -108 }  }
-system = { id = "289" name = "" position = { x = 120 y = -236 }  }
-system = { id = "290" name = "" position = { x = 176 y = -405 }  }
-system = { id = "291" name = "" position = { x = 191 y = -398 }  }
-system = { id = "292" name = "" position = { x = 194 y = -205 }  }
-system = { id = "293" name = "" position = { x = 160 y = -119 }  }
-system = { id = "294" name = "" position = { x = -85 y = -29 }  }
-system = { id = "295" name = "" position = { x = -104 y = -299 }  }
-system = { id = "296" name = "" position = { x = 58 y = -373 }  }
-system = { id = "297" name = "" position = { x = 10 y = -71 }  }
-system = { id = "298" name = "" position = { x = -104 y = -355 }  }
-system = { id = "299" name = "" position = { x = 32 y = -177 }  }
-system = { id = "300" name = "" position = { x = -55 y = -388 }  }
-system = { id = "301" name = "" position = { x = -145 y = -198 }  }
-system = { id = "302" name = "" position = { x = -136 y = -216 }  }
-system = { id = "303" name = "" position = { x = 84 y = -261 }  }
-system = { id = "304" name = "" position = { x = 234 y = -242 }  }
-system = { id = "305" name = "" position = { x = -23 y = -417 }  }
-system = { id = "306" name = "" position = { x = -42 y = -277 }  }
-system = { id = "307" name = "" position = { x = -28 y = -107 }  }
-system = { id = "308" name = "" position = { x = 218 y = -169 }  }
-system = { id = "309" name = "" position = { x = -21 y = -122 }  }
-system = { id = "310" name = "" position = { x = -24 y = -148 }  }
-system = { id = "311" name = "" position = { x = -209 y = -301 }  }
-system = { id = "312" name = "" position = { x = -11 y = -339 }  }
-system = { id = "313" name = "" position = { x = -11 y = -450 }  }
-system = { id = "314" name = "" position = { x = 232 y = -291 }  }
-system = { id = "315" name = "" position = { x = 76 y = -41 }  }
-system = { id = "316" name = "" position = { x = 221 y = -305 }  }
-system = { id = "317" name = "" position = { x = -232 y = -240 }  }
-system = { id = "318" name = "" position = { x = -32 y = -454 }  }
-system = { id = "319" name = "" position = { x = -21 y = -434 }  }
-system = { id = "320" name = "" position = { x = 162 y = -280 }  }
-system = { id = "321" name = "" position = { x = 114 y = -400 }  }
-system = { id = "322" name = "" position = { x = 237 y = -289 }  }
-system = { id = "323" name = "" position = { x = -8 y = -398 }  }
-system = { id = "324" name = "" position = { x = 184 y = -209 }  }
-system = { id = "325" name = "" position = { x = 67 y = -328 }  }
-system = { id = "326" name = "" position = { x = 147 y = -433 }  }
-system = { id = "327" name = "" position = { x = 198 y = -385 }  }
-system = { id = "328" name = "" position = { x = -229 y = -254 }  }
-system = { id = "329" name = "" position = { x = -121 y = -316 }  }
-system = { id = "330" name = "" position = { x = 101 y = -324 }  }
-system = { id = "331" name = "" position = { x = 53 y = -391 }  }
-system = { id = "332" name = "" position = { x = 223 y = -152 }  }
-system = { id = "333" name = "" position = { x = -23 y = -395 }  }
-system = { id = "334" name = "" position = { x = -29 y = -244 }  }
-system = { id = "335" name = "" position = { x = -125 y = -299 }  }
-system = { id = "336" name = "" position = { x = 27 y = -162 }  }
-system = { id = "337" name = "" position = { x = -111 y = -193 }  }
-system = { id = "338" name = "" position = { x = 59 y = -136 }  }
-system = { id = "339" name = "" position = { x = -171 y = -159 }  }
-system = { id = "340" name = "" position = { x = -37 y = -70 }  }
-system = { id = "341" name = "" position = { x = 120 y = -132 }  }
-system = { id = "342" name = "" position = { x = -123 y = -89 }  }
-system = { id = "343" name = "" position = { x = 188 y = -123 }  }
-system = { id = "344" name = "" position = { x = 232 y = -201 }  }
-system = { id = "345" name = "" position = { x = -94 y = -470 }  }
-system = { id = "346" name = "" position = { x = -6 y = -262 }  }
-system = { id = "347" name = "" position = { x = 145 y = -383 }  }
-system = { id = "348" name = "" position = { x = 216 y = -328 }  }
-system = { id = "349" name = "" position = { x = 78 y = -52 }  }
-system = { id = "350" name = "" position = { x = -183 y = -304 }  }
-system = { id = "351" name = "" position = { x = 35 y = -192 }  }
-system = { id = "352" name = "" position = { x = -33 y = -385 }  }
-system = { id = "353" name = "" position = { x = -69 y = -283 }  }
-system = { id = "354" name = "" position = { x = -236 y = -300 }  }
-system = { id = "355" name = "" position = { x = 136 y = -219 }  }
-system = { id = "356" name = "" position = { x = -71 y = -355 }  }
-system = { id = "357" name = "" position = { x = -46 y = -242 }  }
-system = { id = "358" name = "" position = { x = 170 y = -193 }  }
-system = { id = "359" name = "" position = { x = 89 y = -227 }  }
-system = { id = "360" name = "" position = { x = -157 y = -188 }  }
-system = { id = "361" name = "" position = { x = -60 y = -268 }  }
-system = { id = "362" name = "" position = { x = 151 y = -135 }  }
-system = { id = "363" name = "" position = { x = 209 y = -265 }  }
-system = { id = "364" name = "" position = { x = 27 y = -43 }  }
-system = { id = "365" name = "" position = { x = -109 y = -74 }  }
-system = { id = "366" name = "" position = { x = -1 y = -55 }  }
-system = { id = "367" name = "" position = { x = -158 y = -209 }  }
-system = { id = "368" name = "" position = { x = -9 y = -33 }  }
-system = { id = "369" name = "" position = { x = 96 y = -115 }  }
-system = { id = "370" name = "" position = { x = 139 y = -84 }  }
-system = { id = "371" name = "" position = { x = 133 y = -42 }  }
-system = { id = "372" name = "" position = { x = 178 y = -101 }  }
-system = { id = "373" name = "" position = { x = -190 y = -168 }  }
-system = { id = "374" name = "" position = { x = -195 y = -199 }  }
-system = { id = "375" name = "" position = { x = -62 y = -257 }  }
-system = { id = "376" name = "" position = { x = 174 y = -108 }  }
-system = { id = "377" name = "" position = { x = 67 y = -50 }  }
-system = { id = "378" name = "" position = { x = -90 y = -168 }  }
-system = { id = "379" name = "" position = { x = -35 y = -241 }  }
-system = { id = "380" name = "" position = { x = 168 y = -143 }  }
-system = { id = "381" name = "" position = { x = -43 y = -351 }  }
-system = { id = "382" name = "" position = { x = 28 y = -95 }  }
-system = { id = "383" name = "" position = { x = 86 y = -75 }  }
-system = { id = "384" name = "" position = { x = -178 y = -261 }  }
-system = { id = "385" name = "" position = { x = -50 y = -305 }  }
-system = { id = "386" name = "" position = { x = -83 y = -116 }  }
-system = { id = "387" name = "" position = { x = -45 y = -175 }  }
-system = { id = "388" name = "" position = { x = 91 y = -198 }  }
-system = { id = "389" name = "" position = { x = -124 y = -346 }  }
-system = { id = "390" name = "" position = { x = 204 y = -264 }  }
-system = { id = "391" name = "" position = { x = -210 y = -318 }  }
-system = { id = "392" name = "" position = { x = -45 y = -267 }  }
-system = { id = "393" name = "" position = { x = -181 y = -222 }  }
-system = { id = "394" name = "" position = { x = 222 y = -253 }  }
-system = { id = "395" name = "" position = { x = -66 y = -326 }  }
-system = { id = "396" name = "" position = { x = -166 y = -136 }  }
-system = { id = "397" name = "" position = { x = -47 y = -322 }  }
-system = { id = "398" name = "" position = { x = 118 y = -166 }  }
-system = { id = "399" name = "" position = { x = -7 y = -292 }  }
-system = { id = "400" name = "" position = { x = 62 y = -163 }  }
-system = { id = "401" name = "" position = { x = -171 y = -117 }  }
-system = { id = "402" name = "" position = { x = -65 y = -251 }  }
-system = { id = "403" name = "" position = { x = 96 y = -414 }  }
-system = { id = "404" name = "" position = { x = -101 y = -120 }  }
-system = { id = "405" name = "" position = { x = -230 y = -248 }  }
-system = { id = "406" name = "" position = { x = -13 y = -108 }  }
-system = { id = "407" name = "" position = { x = 185 y = -310 }  }
-system = { id = "408" name = "" position = { x = 30 y = -471 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "409" name = "" position = { x = -229 y = -268 }  }
-system = { id = "410" name = "" position = { x = 70 y = -143 }  }
-system = { id = "411" name = "" position = { x = 106 y = -157 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "412" name = "" position = { x = 54 y = -191 }  }
-system = { id = "413" name = "" position = { x = -56 y = -320 }  }
-system = { id = "414" name = "" position = { x = -81 y = -440 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "415" name = "" position = { x = 240 y = -202 }  }
-system = { id = "416" name = "" position = { x = -152 y = -104 }  }
-system = { id = "417" name = "" position = { x = 63 y = -343 }  }
-system = { id = "418" name = "" position = { x = -122 y = -362 }  }
-system = { id = "419" name = "" position = { x = 133 y = -71 }  }
-system = { id = "420" name = "" position = { x = 232 y = -331 }  }
-system = { id = "421" name = "" position = { x = 59 y = -308 }  }
-system = { id = "422" name = "" position = { x = -88 y = -81 }  }
-system = { id = "423" name = "" position = { x = 19 y = -52 }  }
-system = { id = "424" name = "" position = { x = 41 y = -175 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "425" name = "" position = { x = 68 y = -68 }  }
-system = { id = "426" name = "" position = { x = -90 y = -32 }  }
-system = { id = "427" name = "" position = { x = -131 y = -62 }  }
-system = { id = "428" name = "" position = { x = -195 y = -252 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "429" name = "" position = { x = 165 y = -435 }  }
-system = { id = "430" name = "" position = { x = -111 y = -248 }  }
-system = { id = "431" name = "" position = { x = 61 y = -102 }  }
-system = { id = "432" name = "" position = { x = 19 y = -440 }  }
-system = { id = "433" name = "" position = { x = 185 y = -363 }  }
-system = { id = "434" name = "" position = { x = -148 y = -385 }  }
-system = { id = "435" name = "" position = { x = -178 y = -202 }  }
-system = { id = "436" name = "" position = { x = -212 y = -285 }  }
-system = { id = "437" name = "" position = { x = 133 y = -84 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "438" name = "" position = { x = -82 y = -124 }  }
-system = { id = "439" name = "" position = { x = -178 y = -171 }  }
-system = { id = "440" name = "" position = { x = -6 y = -3 }  }
-system = { id = "441" name = "" position = { x = 58 y = -20 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "442" name = "" position = { x = -75 y = -235 }  }
-system = { id = "443" name = "" position = { x = 69 y = -486 }  }
-system = { id = "444" name = "" position = { x = 24 y = -203 }  }
-system = { id = "445" name = "" position = { x = 52 y = -38 }  }
-system = { id = "446" name = "" position = { x = 190 y = -279 }  }
-system = { id = "447" name = "" position = { x = -13 y = -230 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "448" name = "" position = { x = -152 y = -259 }  }
-system = { id = "449" name = "" position = { x = -44 y = -135 }  }
-system = { id = "450" name = "" position = { x = 18 y = -33 }  }
-system = { id = "451" name = "" position = { x = -102 y = -165 }  }
-system = { id = "452" name = "" position = { x = -25 y = -367 }  }
-system = { id = "453" name = "" position = { x = -180 y = -279 }  }
-system = { id = "454" name = "" position = { x = -13 y = -310 }  }
-system = { id = "455" name = "" position = { x = 138 y = -153 }  }
-system = { id = "456" name = "" position = { x = -125 y = -427 }  }
-system = { id = "457" name = "" position = { x = 17 y = -347 }  }
-system = { id = "458" name = "" position = { x = 17 y = -21 }  }
-system = { id = "459" name = "" position = { x = 176 y = -124 }  }
-system = { id = "460" name = "" position = { x = -91 y = -252 }  }
-system = { id = "461" name = "" position = { x = -163 y = -69 }  }
-system = { id = "462" name = "" position = { x = -225 y = -331 }  }
-system = { id = "463" name = "" position = { x = -109 y = -64 }  }
-system = { id = "464" name = "" position = { x = 68 y = -249 }  }
-system = { id = "465" name = "" position = { x = 193 y = -349 }  }
-system = { id = "466" name = "" position = { x = -123 y = -391 }  }
-system = { id = "467" name = "" position = { x = 42 y = -394 }  }
-system = { id = "468" name = "" position = { x = -120 y = -150 }  }
-system = { id = "469" name = "" position = { x = 70 y = -375 }  }
-system = { id = "470" name = "" position = { x = -106 y = -132 }  }
-system = { id = "471" name = "" position = { x = -11 y = -236 }  }
-system = { id = "472" name = "" position = { x = 74 y = -136 }  }
-system = { id = "473" name = "" position = { x = 82 y = -115 }  }
-system = { id = "474" name = "" position = { x = 51 y = -227 }  }
-system = { id = "475" name = "" position = { x = 87 y = -423 }  }
-system = { id = "476" name = "" position = { x = 96 y = -381 }  }
-system = { id = "477" name = "" position = { x = -84 y = -161 }  }
-system = { id = "478" name = "" position = { x = 189 y = -271 }  }
-system = { id = "479" name = "" position = { x = -67 y = -49 }  }
-system = { id = "480" name = "" position = { x = 91 y = -93 }  }
-system = { id = "481" name = "" position = { x = -7 y = -129 }  }
-system = { id = "482" name = "" position = { x = -12 y = -412 }  }
-system = { id = "483" name = "" position = { x = -56 y = -28 }  }
-system = { id = "484" name = "" position = { x = -221 y = -229 }  }
-system = { id = "485" name = "" position = { x = -113 y = -465 }  }
-system = { id = "486" name = "" position = { x = 160 y = -275 }  }
-system = { id = "487" name = "" position = { x = -25 y = -493 }  }
-system = { id = "488" name = "" position = { x = 193 y = -141 }  }
-system = { id = "489" name = "" position = { x = 34 y = -136 }  }
-system = { id = "490" name = "" position = { x = 65 y = -286 }  }
-system = { id = "491" name = "" position = { x = 153 y = -395 }  }
-system = { id = "492" name = "" position = { x = 41 y = -118 }  }
-system = { id = "493" name = "" position = { x = 185 y = -285 }  }
-system = { id = "494" name = "" position = { x = 52 y = -248 }  }
-system = { id = "495" name = "" position = { x = 35 y = -404 }  }
-system = { id = "496" name = "" position = { x = 201 y = -207 }  }
-system = { id = "497" name = "" position = { x = 22 y = -85 }  }
-system = { id = "498" name = "" position = { x = -228 y = -187 }  }
-system = { id = "499" name = "" position = { x = -12 y = -352 }  }
-system = { id = "500" name = "" position = { x = 74 y = -344 }  }
-system = { id = "501" name = "" position = { x = 91 y = -21 }  }
-system = { id = "502" name = "" position = { x = -172 y = -133 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "503" name = "" position = { x = 146 y = -441 }  }
-system = { id = "504" name = "" position = { x = -181 y = -331 }  }
-system = { id = "505" name = "" position = { x = 161 y = -338 }  }
-system = { id = "506" name = "" position = { x = -88 y = -110 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "507" name = "" position = { x = 185 y = -107 }  }
-system = { id = "508" name = "" position = { x = 173 y = -170 }  }
-system = { id = "509" name = "" position = { x = 116 y = -39 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "510" name = "" position = { x = -108 y = -408 }  }
-system = { id = "511" name = "" position = { x = 142 y = -64 }  }
-system = { id = "512" name = "" position = { x = -91 y = -192 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "513" name = "" position = { x = -23 y = -462 }  }
-system = { id = "514" name = "" position = { x = -190 y = -145 }  }
-system = { id = "515" name = "" position = { x = 133 y = -432 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "516" name = "" position = { x = -63 y = -31 }  }
-system = { id = "517" name = "" position = { x = -153 y = -230 }  }
-system = { id = "518" name = "" position = { x = -83 y = -100 }  }
-system = { id = "519" name = "" position = { x = -105 y = -402 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "520" name = "" position = { x = 88 y = -44 }  }
-system = { id = "521" name = "" position = { x = -203 y = -106 }  }
-system = { id = "522" name = "" position = { x = 7 y = -324 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "523" name = "" position = { x = 37 y = -340 }  }
-system = { id = "524" name = "" position = { x = 205 y = -179 }  }
-system = { id = "525" name = "" position = { x = -155 y = -203 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "526" name = "" position = { x = -49 y = -165 }  }
-system = { id = "527" name = "" position = { x = -17 y = -63 }  }
-system = { id = "528" name = "" position = { x = -113 y = -343 }  }
-system = { id = "529" name = "" position = { x = -132 y = -381 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "530" name = "" position = { x = 152 y = -200 }  }
-system = { id = "531" name = "" position = { x = 24 y = -442 }  }
-system = { id = "532" name = "" position = { x = 98 y = -403 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "533" name = "" position = { x = -163 y = -274 }  }
-system = { id = "534" name = "" position = { x = 35 y = -117 }  }
-system = { id = "535" name = "" position = { x = 12 y = -8 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "536" name = "" position = { x = 43 y = -102 }  }
-system = { id = "537" name = "" position = { x = -184 y = -233 }  }
-system = { id = "538" name = "" position = { x = -150 y = -306 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "539" name = "" position = { x = 118 y = -213 }  }
-system = { id = "540" name = "" position = { x = 122 y = -156 }  }
-system = { id = "541" name = "" position = { x = 239 y = -217 }  }
-system = { id = "542" name = "" position = { x = -21 y = -454 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "543" name = "" position = { x = -216 y = -199 }  }
-system = { id = "544" name = "" position = { x = -87 y = -359 }  }
-system = { id = "545" name = "" position = { x = 64 y = -410 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "546" name = "" position = { x = -164 y = -209 }  }
-system = { id = "547" name = "" position = { x = 6 y = -346 }  }
-system = { id = "548" name = "" position = { x = -190 y = -197 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "549" name = "" position = { x = 224 y = -161 }  }
-system = { id = "550" name = "" position = { x = 140 y = -337 }  }
-system = { id = "551" name = "" position = { x = 50 y = -117 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "552" name = "" position = { x = -52 y = -459 }  }
-system = { id = "553" name = "" position = { x = -186 y = -267 }  }
-system = { id = "554" name = "" position = { x = -156 y = -417 }  }
-system = { id = "555" name = "" position = { x = -76 y = -121 }  }
-system = { id = "556" name = "" position = { x = -169 y = -362 }  }
-system = { id = "557" name = "" position = { x = 165 y = -252 }  }
-system = { id = "558" name = "" position = { x = 37 y = -306 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
-system = { id = "559" name = "" position = { x = 185 y = -305 }  }
-system = { id = "560" name = "" position = { x = -102 y = -146 }  }
-system = { id = "561" name = "" position = { x = -49 y = -90 }  }
-system = { id = "562" name = "" position = { x = -115 y = -128 }  }
-system = { id = "563" name = "" position = { x = 111 y = -326 }  }
-system = { id = "564" name = "" position = { x = 39 y = -229 }  }
-system = { id = "565" name = "" position = { x = -54 y = -444 }  }
-system = { id = "566" name = "" position = { x = -55 y = -405 }  }
-system = { id = "567" name = "" position = { x = 189 y = -239 }  }
-system = { id = "568" name = "" position = { x = -152 y = -77 }  }
-system = { id = "569" name = "" position = { x = -34 y = -189 }  }
-system = { id = "570" name = "" position = { x = 0 y = -482 }  }
-system = { id = "571" name = "" position = { x = 172 y = -161 }  }
-system = { id = "572" name = "" position = { x = -204 y = -374 }  }
-system = { id = "573" name = "" position = { x = -76 y = -396 }  }
-system = { id = "574" name = "" position = { x = 136 y = -78 }  }
-system = { id = "575" name = "" position = { x = -134 y = -325 }  }
-system = { id = "576" name = "" position = { x = -87 y = -147 }  }
-system = { id = "577" name = "" position = { x = 57 y = -265 }  }
-system = { id = "578" name = "" position = { x = -171 y = -298 }  }
-system = { id = "579" name = "" position = { x = -172 y = -244 }  }
-system = { id = "580" name = "" position = { x = 25 y = -76 }  }
-system = { id = "581" name = "" position = { x = 57 y = -467 }  }
-system = { id = "582" name = "" position = { x = 124 y = -311 }  }
-system = { id = "583" name = "" position = { x = 103 y = -402 }  }
-system = { id = "584" name = "" position = { x = 145 y = -122 }  }
-system = { id = "585" name = "" position = { x = 42 y = -211 }  }
-system = { id = "586" name = "" position = { x = -82 y = -64 }  }
-system = { id = "587" name = "" position = { x = 125 y = -151 }  }
-system = { id = "588" name = "" position = { x = 60 y = -480 }  }
-system = { id = "589" name = "" position = { x = -203 y = -230 }  }
-system = { id = "590" name = "" position = { x = -181 y = -366 }  }
-system = { id = "591" name = "" position = { x = 7 y = -115 }  }
-system = { id = "592" name = "" position = { x = 1 y = -460 }  }
-system = { id = "593" name = "" position = { x = 163 y = -139 }  }
-system = { id = "594" name = "" position = { x = 214 y = -162 }  }
-system = { id = "595" name = "" position = { x = 43 y = -159 }  }
-system = { id = "596" name = "" position = { x = 199 y = -241 }  }
-system = { id = "597" name = "" position = { x = 18 y = -486 }  }
-system = { id = "598" name = "" position = { x = 74 y = -414 }  }
-system = { id = "599" name = "" position = { x = 28 y = -397 }  }
-system = { id = "600" name = "" position = { x = 127 y = -263 }  }
-system = { id = "601" name = "" position = { x = 155 y = -94 }  }
-system = { id = "602" name = "" position = { x = 97 y = -100 }  }
-system = { id = "603" name = "" position = { x = 49 y = -404 }  }
-system = { id = "604" name = "" position = { x = -141 y = -101 }  }
-system = { id = "605" name = "" position = { x = 236 y = -283 }  }
-system = { id = "606" name = "" position = { x = -95 y = -95 }  }
-system = { id = "607" name = "" position = { x = 154 y = -440 }  }
-system = { id = "608" name = "" position = { x = 239 y = -277 }  }
-system = { id = "609" name = "" position = { x = 42 y = -82 }  }
-system = { id = "610" name = "" position = { x = 53 y = -278 }  }
-system = { id = "611" name = "" position = { x = 97 y = -172 }  }
-system = { id = "612" name = "" position = { x = 114 y = -111 }  }
-system = { id = "613" name = "" position = { x = 82 y = -218 }  }
-system = { id = "614" name = "" position = { x = 148 y = -401 }  }
-system = { id = "615" name = "" position = { x = 24 y = -254 }  }
-system = { id = "616" name = "" position = { x = 76 y = -80 }  }
-system = { id = "617" name = "" position = { x = -106 y = -100 }  }
-system = { id = "618" name = "" position = { x = 22 y = -19 }  }
-system = { id = "619" name = "" position = { x = -122 y = -338 }  }
-system = { id = "620" name = "" position = { x = -28 y = -195 }  }
-system = { id = "621" name = "" position = { x = 99 y = -423 }  }
-system = { id = "622" name = "" position = { x = -97 y = -420 }  }
-system = { id = "623" name = "" position = { x = 144 y = -214 }  }
-system = { id = "624" name = "" position = { x = -72 y = -438 }  }
-system = { id = "625" name = "" position = { x = -142 y = -52 }  }
-system = { id = "626" name = "" position = { x = 42 y = -408 }  }
-system = { id = "627" name = "" position = { x = 144 y = -239 }  }
-system = { id = "628" name = "" position = { x = -42 y = -329 }  }
-system = { id = "629" name = "" position = { x = -169 y = -214 }  }
-system = { id = "630" name = "" position = { x = 104 y = -66 }  }
-system = { id = "631" name = "" position = { x = -70 y = -140 }  }
-system = { id = "632" name = "" position = { x = -77 y = -191 }  }
-system = { id = "633" name = "" position = { x = 19 y = -389 }  }
-system = { id = "634" name = "" position = { x = -50 y = -230 }  }
-system = { id = "635" name = "" position = { x = -132 y = -175 }  }
-system = { id = "636" name = "" position = { x = 193 y = -134 }  }
-system = { id = "637" name = "" position = { x = 6 y = -194 }  }
-system = { id = "638" name = "" position = { x = 7 y = -452 }  }
-system = { id = "639" name = "" position = { x = -65 y = -307 }  }
-system = { id = "640" name = "" position = { x = 139 y = -211 }  }
-system = { id = "641" name = "" position = { x = 67 y = -391 }  }
-system = { id = "642" name = "" position = { x = 195 y = -170 }  }
-system = { id = "643" name = "" position = { x = -13 y = -280 }  }
-system = { id = "644" name = "" position = { x = 153 y = -262 }  }
-system = { id = "645" name = "" position = { x = 58 y = -445 }  }
-system = { id = "646" name = "" position = { x = 224 y = -316 }  }
-system = { id = "647" name = "" position = { x = 37 y = -69 }  }
-system = { id = "648" name = "" position = { x = -85 y = -168 }  }
-system = { id = "649" name = "" position = { x = -57 y = -137 }  }
-system = { id = "650" name = "" position = { x = -188 y = 352 }  }
-system = { id = "651" name = "" position = { x = -184 y = 329 }  }
-system = { id = "652" name = "" position = { x = -419 y = 361 }  }
-system = { id = "653" name = "" position = { x = -347 y = 171 }  }
-system = { id = "654" name = "" position = { x = -124 y = 272 }  }
-system = { id = "655" name = "" position = { x = -157 y = 172 }  }
-system = { id = "656" name = "" position = { x = -292 y = 219 }  }
-system = { id = "657" name = "" position = { x = -308 y = 165 }  }
-system = { id = "658" name = "" position = { x = -72 y = 307 }  }
-system = { id = "659" name = "" position = { x = -329 y = 280 }  }
-system = { id = "660" name = "" position = { x = -248 y = 437 }  }
-system = { id = "661" name = "" position = { x = -144 y = 424 }  }
-system = { id = "662" name = "" position = { x = -307 y = 364 }  }
-system = { id = "663" name = "" position = { x = -243 y = 272 }  }
-system = { id = "664" name = "" position = { x = -275 y = 398 }  }
-system = { id = "665" name = "" position = { x = -157 y = 340 }  }
-system = { id = "666" name = "" position = { x = -163 y = 314 }  }
-system = { id = "667" name = "" position = { x = -173 y = 330 }  }
-system = { id = "668" name = "" position = { x = -411 y = 225 }  }
-system = { id = "669" name = "" position = { x = -311 y = 387 }  }
-system = { id = "670" name = "" position = { x = -347 y = 302 }  }
-system = { id = "671" name = "" position = { x = -278 y = 187 }  }
-system = { id = "672" name = "" position = { x = -141 y = 193 }  }
-system = { id = "673" name = "" position = { x = -152 y = 383 }  }
-system = { id = "674" name = "" position = { x = -308 y = 409 }  }
-system = { id = "675" name = "" position = { x = -245 y = 248 }  }
-system = { id = "676" name = "" position = { x = -265 y = 382 }  }
-system = { id = "677" name = "" position = { x = -179 y = 351 }  }
-system = { id = "678" name = "" position = { x = -268 y = 218 }  }
-system = { id = "679" name = "" position = { x = -387 y = 228 }  }
-system = { id = "680" name = "" position = { x = -310 y = 460 }  }
-system = { id = "681" name = "" position = { x = -386 y = 373 }  }
-system = { id = "682" name = "" position = { x = -213 y = 125 }  }
-system = { id = "683" name = "" position = { x = -228 y = 456 }  }
-system = { id = "684" name = "" position = { x = -153 y = 390 }  }
-system = { id = "685" name = "" position = { x = -117 y = 227 }  }
-system = { id = "686" name = "" position = { x = -415 y = 342 }  }
-system = { id = "687" name = "" position = { x = -158 y = 232 }  }
-system = { id = "688" name = "" position = { x = -219 y = 452 }  }
-system = { id = "689" name = "" position = { x = -352 y = 269 }  }
-system = { id = "690" name = "" position = { x = -128 y = 395 }  }
-system = { id = "691" name = "" position = { x = -159 y = 191 }  }
-system = { id = "692" name = "" position = { x = -205 y = 422 }  }
-system = { id = "693" name = "" position = { x = -260 y = 273 }  }
-system = { id = "694" name = "" position = { x = -234 y = 136 }  }
-system = { id = "695" name = "" position = { x = -286 y = 315 }  }
-system = { id = "696" name = "" position = { x = -265 y = 195 }  }
-system = { id = "697" name = "" position = { x = -392 y = 410 }  }
-system = { id = "698" name = "" position = { x = -190 y = 192 }  }
-system = { id = "699" name = "" position = { x = -119 y = 241 }  }
-system = { id = "700" name = "" position = { x = -214 y = 219 }  }
-system = { id = "701" name = "" position = { x = -137 y = 187 }  }
-system = { id = "702" name = "" position = { x = -101 y = 265 }  }
-system = { id = "703" name = "" position = { x = -158 y = 426 }  }
-system = { id = "704" name = "" position = { x = -99 y = 319 }  }
-system = { id = "705" name = "" position = { x = -317 y = 451 }  }
-system = { id = "706" name = "" position = { x = -402 y = 370 }  }
-system = { id = "707" name = "" position = { x = -129 y = 386 }  }
-system = { id = "708" name = "" position = { x = -359 y = 320 }  }
-system = { id = "709" name = "" position = { x = -317 y = 266 }  }
-system = { id = "710" name = "" position = { x = -272 y = 286 }  }
-system = { id = "711" name = "" position = { x = -254 y = 338 }  }
-system = { id = "712" name = "" position = { x = -357 y = 211 }  }
-system = { id = "713" name = "" position = { x = -212 y = 464 }  }
-system = { id = "714" name = "" position = { x = -236 y = 188 }  }
-system = { id = "715" name = "" position = { x = -343 y = 164 }  }
-system = { id = "716" name = "" position = { x = -184 y = 215 }  }
-system = { id = "717" name = "" position = { x = -214 y = 211 }  }
-system = { id = "718" name = "" position = { x = -73 y = 291 }  }
-system = { id = "719" name = "" position = { x = -267 y = 254 }  }
-system = { id = "720" name = "" position = { x = -137 y = 207 }  }
-system = { id = "721" name = "" position = { x = -283 y = 187 }  }
-system = { id = "722" name = "" position = { x = -132 y = 236 }  }
-system = { id = "723" name = "" position = { x = -249 y = 234 }  }
-system = { id = "724" name = "" position = { x = -280 y = 199 }  }
-system = { id = "725" name = "" position = { x = -163 y = 236 }  }
-system = { id = "726" name = "" position = { x = -294 y = 250 }  }
-system = { id = "727" name = "" position = { x = -407 y = 350 }  }
-system = { id = "728" name = "" position = { x = -100 y = 307 }  }
-system = { id = "729" name = "" position = { x = -219 y = 293 }  }
-system = { id = "730" name = "" position = { x = -251 y = 393 }  }
-system = { id = "731" name = "" position = { x = -205 y = 141 }  }
-system = { id = "732" name = "" position = { x = -306 y = 278 }  }
-system = { id = "733" name = "" position = { x = -123 y = 335 }  }
-system = { id = "734" name = "" position = { x = -353 y = 285 }  }
-system = { id = "735" name = "" position = { x = -247 y = 220 }  }
-system = { id = "736" name = "" position = { x = -179 y = 260 }  }
-system = { id = "737" name = "" position = { x = -200 y = 263 }  }
-system = { id = "738" name = "" position = { x = -234 y = 289 }  }
-system = { id = "739" name = "" position = { x = -190 y = 375 }  }
-system = { id = "740" name = "" position = { x = -222 y = 260 }  }
-system = { id = "741" name = "" position = { x = -295 y = 426 }  }
-system = { id = "742" name = "" position = { x = -273 y = 123 }  }
-system = { id = "743" name = "" position = { x = -114 y = 192 }  }
-system = { id = "744" name = "" position = { x = -90 y = 330 }  }
-system = { id = "745" name = "" position = { x = -321 y = 367 }  }
-system = { id = "746" name = "" position = { x = -182 y = 303 }  }
-system = { id = "747" name = "" position = { x = -281 y = 284 }  }
-system = { id = "748" name = "" position = { x = -111 y = 245 }  }
-system = { id = "749" name = "" position = { x = -194 y = 367 }  }
-system = { id = "750" name = "" position = { x = -160 y = 363 }  }
-system = { id = "751" name = "" position = { x = -184 y = 254 }  }
-system = { id = "752" name = "" position = { x = -228 y = 282 }  }
-system = { id = "753" name = "" position = { x = -91 y = 257 }  }
-system = { id = "754" name = "" position = { x = -87 y = 362 }  }
-system = { id = "755" name = "" position = { x = -154 y = 200 }  }
-system = { id = "756" name = "" position = { x = -136 y = 304 }  }
-system = { id = "757" name = "" position = { x = -273 y = 292 }  }
-system = { id = "758" name = "" position = { x = -116 y = 283 }  }
-system = { id = "759" name = "" position = { x = -316 y = 364 }  }
-system = { id = "760" name = "" position = { x = -154 y = 263 }  }
-system = { id = "761" name = "" position = { x = -306 y = 386 }  }
-system = { id = "762" name = "" position = { x = -254 y = 387 }  }
-system = { id = "763" name = "" position = { x = -354 y = 363 }  }
-system = { id = "764" name = "" position = { x = -347 y = 348 }  }
-system = { id = "765" name = "" position = { x = -104 y = 226 }  }
-system = { id = "766" name = "" position = { x = -246 y = 372 }  }
-system = { id = "767" name = "" position = { x = -209 y = 472 }  }
-system = { id = "768" name = "" position = { x = -216 y = 203 }  }
-system = { id = "769" name = "" position = { x = -252 y = 123 }  }
-system = { id = "770" name = "" position = { x = -306 y = 211 }  }
-system = { id = "771" name = "" position = { x = -153 y = 249 }  }
-system = { id = "772" name = "" position = { x = -252 y = 313 }  }
-system = { id = "773" name = "" position = { x = -130 y = 309 }  }
-system = { id = "774" name = "" position = { x = -184 y = 287 }  }
-system = { id = "775" name = "" position = { x = -309 y = 291 }  }
-system = { id = "776" name = "" position = { x = -224 y = 200 }  }
-system = { id = "777" name = "" position = { x = -234 y = 196 }  }
-system = { id = "778" name = "" position = { x = -271 y = 445 }  }
-system = { id = "779" name = "" position = { x = -185 y = 229 }  }
-system = { id = "780" name = "" position = { x = -250 y = 145 }  }
-system = { id = "781" name = "" position = { x = -221 y = 272 }  }
-system = { id = "782" name = "" position = { x = -140 y = 237 }  }
-system = { id = "783" name = "" position = { x = -273 y = 455 }  }
-system = { id = "784" name = "" position = { x = -314 y = 162 }  }
-system = { id = "785" name = "" position = { x = -180 y = 444 }  }
-system = { id = "786" name = "" position = { x = -404 y = 262 }  }
-system = { id = "787" name = "" position = { x = -378 y = 283 }  }
-system = { id = "788" name = "" position = { x = -273 y = 203 }  }
-system = { id = "789" name = "" position = { x = -197 y = 323 }  }
-system = { id = "790" name = "" position = { x = -228 y = 337 }  }
-system = { id = "791" name = "" position = { x = -325 y = 137 }  }
-system = { id = "792" name = "" position = { x = -358 y = 442 }  }
-system = { id = "793" name = "" position = { x = -305 y = 430 }  }
-system = { id = "794" name = "" position = { x = -144 y = 374 }  }
-system = { id = "795" name = "" position = { x = -83 y = 314 }  }
-system = { id = "796" name = "" position = { x = -110 y = 312 }  }
-system = { id = "797" name = "" position = { x = -219 y = 464 }  }
-system = { id = "798" name = "" position = { x = -359 y = 416 }  }
-system = { id = "799" name = "" position = { x = -156 y = 324 }  }
-system = { id = "800" name = "" position = { x = -407 y = 242 }  }
-system = { id = "801" name = "" position = { x = -383 y = 272 }  }
-system = { id = "802" name = "" position = { x = -268 y = 413 }  }
-system = { id = "803" name = "" position = { x = -256 y = 307 }  }
-system = { id = "804" name = "" position = { x = -257 y = 469 }  }
-system = { id = "805" name = "" position = { x = -348 y = 189 }  }
-system = { id = "806" name = "" position = { x = -346 y = 445 }  }
-system = { id = "807" name = "" position = { x = -279 y = 379 }  }
-system = { id = "808" name = "" position = { x = -333 y = 195 }  }
-system = { id = "809" name = "" position = { x = -362 y = 261 }  }
-system = { id = "810" name = "" position = { x = -84 y = 320 }  }
-system = { id = "811" name = "" position = { x = -291 y = 156 }  }
-system = { id = "812" name = "" position = { x = -205 y = 211 }  }
-system = { id = "813" name = "" position = { x = -289 y = 431 }  }
-system = { id = "814" name = "" position = { x = -334 y = 381 }  }
-system = { id = "815" name = "" position = { x = -132 y = 362 }  }
-system = { id = "816" name = "" position = { x = -407 y = 257 }  }
-system = { id = "817" name = "" position = { x = -345 y = 280 }  }
-system = { id = "818" name = "" position = { x = -339 y = 178 }  }
-system = { id = "819" name = "" position = { x = -351 y = 259 }  }
-system = { id = "820" name = "" position = { x = -232 y = 236 }  }
-system = { id = "821" name = "" position = { x = -285 y = 245 }  }
-system = { id = "822" name = "" position = { x = -307 y = 320 }  }
-system = { id = "823" name = "" position = { x = -350 y = 378 }  }
-system = { id = "824" name = "" position = { x = -213 y = 437 }  }
-system = { id = "825" name = "" position = { x = -214 y = 348 }  }
-system = { id = "826" name = "" position = { x = -252 y = 241 }  }
-system = { id = "827" name = "" position = { x = -109 y = 294 }  }
-system = { id = "828" name = "" position = { x = -367 y = 290 }  }
-system = { id = "829" name = "" position = { x = -133 y = 267 }  }
-system = { id = "830" name = "" position = { x = -274 y = 363 }  }
-system = { id = "831" name = "" position = { x = -147 y = 355 }  }
-system = { id = "832" name = "" position = { x = -252 y = 130 }  }
-system = { id = "833" name = "" position = { x = -165 y = 273 }  }
-system = { id = "834" name = "" position = { x = -85 y = 348 }  }
-system = { id = "835" name = "" position = { x = -244 y = 450 }  }
-system = { id = "836" name = "" position = { x = -172 y = 173 }  }
-system = { id = "837" name = "" position = { x = -408 y = 338 }  }
-system = { id = "838" name = "" position = { x = -314 y = 397 }  }
-system = { id = "839" name = "" position = { x = -221 y = 442 }  }
-system = { id = "840" name = "" position = { x = -299 y = 294 }  }
-system = { id = "841" name = "" position = { x = -255 y = 359 }  }
-system = { id = "842" name = "" position = { x = -238 y = 335 }  }
-system = { id = "843" name = "" position = { x = -361 y = 228 }  }
-system = { id = "844" name = "" position = { x = -397 y = 324 }  }
-system = { id = "845" name = "" position = { x = -340 y = 312 }  }
-system = { id = "846" name = "" position = { x = -282 y = 470 }  }
-system = { id = "847" name = "" position = { x = -328 y = 168 }  }
-system = { id = "848" name = "" position = { x = -178 y = 413 }  }
-system = { id = "849" name = "" position = { x = -217 y = 135 }  }
+system = { id = "0" name = "" position = { x = -47 y = 177 }  }
+system = { id = "1" name = "" position = { x = 21 y = -74 }  }
+system = { id = "2" name = "" position = { x = -224 y = -108 }  }
+system = { id = "3" name = "" position = { x = 253 y = 253 }  }
+system = { id = "4" name = "" position = { x = 45 y = 320 }  }
+system = { id = "5" name = "" position = { x = -16 y = 141 }  }
+system = { id = "6" name = "" position = { x = -97 y = -122 }  }
+system = { id = "7" name = "" position = { x = -99 y = -74 }  }
+system = { id = "8" name = "" position = { x = -99 y = 86 }  }
+system = { id = "9" name = "" position = { x = -76 y = -125 }  }
+system = { id = "10" name = "" position = { x = -336 y = -59 }  }
+system = { id = "11" name = "" position = { x = -59 y = -27 }  }
+system = { id = "12" name = "" position = { x = -5 y = -52 }  }
+system = { id = "13" name = "" position = { x = 96 y = 358 }  }
+system = { id = "14" name = "" position = { x = -30 y = -103 } initializer = random_empire_init_04 spawn_weight = { base = 1 } }
+system = { id = "15" name = "" position = { x = 109 y = 309 }  }
+system = { id = "16" name = "" position = { x = -10 y = 83 }  }
+system = { id = "17" name = "" position = { x = 174 y = 310 }  }
+system = { id = "18" name = "" position = { x = -88 y = 109 }  }
+system = { id = "19" name = "" position = { x = -358 y = -10 } initializer = random_empire_init_01 spawn_weight = { base = 1 } }
+system = { id = "20" name = "" position = { x = 6 y = 83 }  }
+system = { id = "21" name = "" position = { x = -102 y = 299 }  }
+system = { id = "22" name = "" position = { x = -109 y = -130 }  }
+system = { id = "23" name = "" position = { x = 293 y = 234 }  }
+system = { id = "24" name = "" position = { x = -314 y = -48 }  }
+system = { id = "25" name = "" position = { x = 57 y = -29 }  }
+system = { id = "26" name = "" position = { x = 157 y = 345 }  }
+system = { id = "27" name = "" position = { x = -72 y = -148 }  }
+system = { id = "28" name = "" position = { x = -75 y = 204 }  }
+system = { id = "29" name = "" position = { x = -315 y = -72 }  }
+system = { id = "30" name = "" position = { x = 231 y = 297 }  }
+system = { id = "31" name = "" position = { x = 13 y = 80 }  }
+system = { id = "32" name = "" position = { x = -37 y = 334 }  }
+system = { id = "33" name = "" position = { x = -70 y = 288 }  }
+system = { id = "34" name = "" position = { x = 279 y = 236 }  }
+system = { id = "35" name = "" position = { x = -54 y = 55 }  }
+system = { id = "36" name = "" position = { x = -89 y = 224 }  }
+system = { id = "37" name = "" position = { x = -23 y = -101 }  }
+system = { id = "38" name = "" position = { x = 27 y = 47 }  }
+system = { id = "39" name = "" position = { x = -395 y = 39 }  }
+system = { id = "40" name = "" position = { x = -408 y = 57 }  }
+system = { id = "41" name = "" position = { x = -62 y = -110 }  }
+system = { id = "42" name = "" position = { x = 12 y = 210 }  }
+system = { id = "43" name = "" position = { x = 43 y = -61 }  }
+system = { id = "44" name = "" position = { x = -55 y = 278 }  }
+system = { id = "45" name = "" position = { x = -60 y = -86 }  }
+system = { id = "46" name = "" position = { x = -44 y = 147 }  }
+system = { id = "47" name = "" position = { x = 99 y = 343 }  }
+system = { id = "48" name = "" position = { x = -95 y = 75 }  }
+system = { id = "49" name = "" position = { x = 21 y = -64 }  }
+system = { id = "50" name = "" position = { x = 44 y = 141 }  }
+system = { id = "51" name = "" position = { x = -47 y = -104 }  }
+system = { id = "52" name = "" position = { x = -149 y = 207 }  }
+system = { id = "53" name = "" position = { x = 45 y = 336 }  }
+system = { id = "54" name = "" position = { x = -122 y = -125 }  }
+system = { id = "55" name = "" position = { x = -16 y = 62 }  }
+system = { id = "56" name = "" position = { x = 17 y = 73 }  }
+system = { id = "57" name = "" position = { x = -159 y = -118 }  }
+system = { id = "58" name = "" position = { x = -52 y = -76 }  }
+system = { id = "59" name = "" position = { x = 10 y = 327 }  }
+system = { id = "60" name = "" position = { x = -246 y = -103 }  }
+system = { id = "61" name = "" position = { x = -8 y = 112 }  }
+system = { id = "62" name = "" position = { x = 25 y = 267 }  }
+system = { id = "63" name = "" position = { x = 124 y = 335 }  }
+system = { id = "64" name = "" position = { x = -96 y = 209 }  }
+system = { id = "65" name = "" position = { x = 45 y = 12 }  }
+system = { id = "66" name = "" position = { x = -57 y = 86 }  }
+system = { id = "67" name = "" position = { x = -105 y = 156 }  }
+system = { id = "68" name = "" position = { x = 29 y = -32 }  }
+system = { id = "69" name = "" position = { x = -145 y = 193 }  }
+system = { id = "70" name = "" position = { x = -61 y = -135 }  }
+system = { id = "71" name = "" position = { x = 48 y = 310 }  }
+system = { id = "72" name = "" position = { x = -253 y = -105 }  }
+system = { id = "73" name = "" position = { x = -87 y = -106 }  }
+system = { id = "74" name = "" position = { x = 24 y = 103 }  }
+system = { id = "75" name = "" position = { x = 89 y = 331 }  }
+system = { id = "76" name = "" position = { x = -68 y = 73 } initializer = guardians_init_dreadnought }
+system = { id = "77" name = "" position = { x = 72 y = 90 }  }
+system = { id = "78" name = "" position = { x = -14 y = -129 }  }
+system = { id = "79" name = "" position = { x = -376 y = 6 }  }
+system = { id = "80" name = "" position = { x = -168 y = -134 }  }
+system = { id = "81" name = "" position = { x = -78 y = 258 } initializer = random_empire_init_02 spawn_weight = { base = 1 } }
+system = { id = "82" name = "" position = { x = -24 y = 224 }  }
+system = { id = "83" name = "" position = { x = -90 y = 190 }  }
+system = { id = "84" name = "" position = { x = -129 y = 136 }  }
+system = { id = "85" name = "" position = { x = -28 y = 91 }  }
+system = { id = "86" name = "" position = { x = 139 y = 287 }  }
+system = { id = "87" name = "" position = { x = 63 y = -33 }  }
+system = { id = "88" name = "" position = { x = 58 y = 323 }  }
+system = { id = "89" name = "" position = { x = 134 y = 342 }  }
+system = { id = "90" name = "" position = { x = -65 y = 279 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
+system = { id = "91" name = "" position = { x = -298 y = -57 }  }
+system = { id = "92" name = "" position = { x = -193 y = -121 }  }
+system = { id = "93" name = "" position = { x = 223 y = 306 } initializer = random_empire_init_05 spawn_weight = { base = 1 } }
+system = { id = "94" name = "" position = { x = -104 y = 22 }  }
+system = { id = "95" name = "" position = { x = -160 y = 229 }  }
+system = { id = "96" name = "" position = { x = 61 y = 50 }  }
+system = { id = "97" name = "" position = { x = -160 y = -146 }  }
+system = { id = "98" name = "" position = { x = -150 y = -125 }  }
+system = { id = "99" name = "" position = { x = -272 y = -117 }  }
+system = { id = "100" name = "" position = { x = 109 y = 332 }  }
+system = { id = "101" name = "" position = { x = 183 y = 283 }  }
+system = { id = "102" name = "" position = { x = -141 y = -102 }  }
+system = { id = "103" name = "" position = { x = -46 y = 98 }  }
+system = { id = "104" name = "" position = { x = 57 y = 81 }  }
+system = { id = "105" name = "" position = { x = -87 y = -131 }  }
+system = { id = "106" name = "" position = { x = -106 y = -91 }  }
+system = { id = "107" name = "" position = { x = -219 y = -133 }  }
+system = { id = "108" name = "" position = { x = 89 y = 112 }  }
+system = { id = "109" name = "" position = { x = -134 y = -120 } initializer = random_empire_init_03 spawn_weight = { base = 1 } }
+system = { id = "110" name = "" position = { x = -405 y = 32 }  }
+system = { id = "111" name = "" position = { x = -137 y = 100 }  }
+system = { id = "112" name = "" position = { x = 265 y = 254 }  }
+system = { id = "113" name = "" position = { x = 12 y = 9 }  }
+system = { id = "114" name = "" position = { x = -50 y = 89 }  }
+system = { id = "115" name = "" position = { x = 28 y = 31 }  }
+system = { id = "116" name = "" position = { x = 17 y = -127 }  }
+system = { id = "117" name = "" position = { x = -57 y = 72 }  }
+system = { id = "118" name = "" position = { x = -96 y = 155 }  }
+system = { id = "119" name = "" position = { x = -216 y = -79 }  }
+system = { id = "120" name = "" position = { x = -97 y = -95 }  }
+system = { id = "121" name = "" position = { x = -44 y = 303 }  }
+system = { id = "122" name = "" position = { x = -90 y = -22 }  }
+system = { id = "123" name = "" position = { x = -112 y = -73 }  }
+system = { id = "124" name = "" position = { x = 188 y = 315 }  }
+system = { id = "125" name = "" position = { x = 45 y = 303 }  }
+system = { id = "126" name = "" position = { x = -254 y = -99 }  }
+system = { id = "127" name = "" position = { x = -234 y = -114 }  }
+system = { id = "128" name = "" position = { x = 20 y = 316 }  }
+system = { id = "129" name = "" position = { x = 65 y = 278 }  }
+system = { id = "130" name = "" position = { x = -13 y = 296 }  }
+system = { id = "131" name = "" position = { x = 325 y = 199 } initializer = random_empire_init_01 spawn_weight = { base = 1 } }
+system = { id = "132" name = "" position = { x = 181 y = 330 } initializer = guardians_init_horror }
+system = { id = "133" name = "" position = { x = 241 y = 263 }  }
+system = { id = "134" name = "" position = { x = -12 y = 329 }  }
+system = { id = "135" name = "" position = { x = -100 y = 146 }  }
+system = { id = "136" name = "" position = { x = -46 y = 64 }  }
+system = { id = "137" name = "" position = { x = -50 y = 199 }  }
+system = { id = "138" name = "" position = { x = -204 y = -101 }  }
+system = { id = "139" name = "" position = { x = -46 y = -22 }  }
+system = { id = "140" name = "" position = { x = 2 y = 91 }  }
+system = { id = "141" name = "" position = { x = 30 y = -43 }  }
+system = { id = "142" name = "" position = { x = -352 y = -3 }  }
+system = { id = "143" name = "" position = { x = -338 y = -34 }  }
+system = { id = "144" name = "" position = { x = -342 y = -51 }  }
+system = { id = "145" name = "" position = { x = 46 y = 158 }  }
+system = { id = "146" name = "" position = { x = 60 y = 124 }  }
+system = { id = "147" name = "" position = { x = -21 y = 105 }  }
+system = { id = "148" name = "" position = { x = 27 y = 116 }  }
+system = { id = "149" name = "" position = { x = -302 y = -74 }  }
+system = { id = "150" name = "" position = { x = -108 y = 295 }  }
+system = { id = "151" name = "" position = { x = 61 y = 166 }  }
+system = { id = "152" name = "" position = { x = 314 y = 219 }  }
+system = { id = "153" name = "" position = { x = -18 y = -95 }  }
+system = { id = "154" name = "" position = { x = -82 y = 43 }  }
+system = { id = "155" name = "" position = { x = 27 y = -93 }  }
+system = { id = "156" name = "" position = { x = -71 y = 54 }  }
+system = { id = "157" name = "" position = { x = 215 y = 286 }  }
+system = { id = "158" name = "" position = { x = 312 y = 234 }  }
+system = { id = "159" name = "" position = { x = 136 y = 300 }  }
+system = { id = "160" name = "" position = { x = 51 y = 177 }  }
+system = { id = "161" name = "" position = { x = -172 y = 184 }  }
+system = { id = "162" name = "" position = { x = -183 y = -142 }  }
+system = { id = "163" name = "" position = { x = -83 y = 307 }  }
+system = { id = "164" name = "" position = { x = -294 y = -99 }  }
+system = { id = "165" name = "" position = { x = -120 y = -68 }  }
+system = { id = "166" name = "" position = { x = 35 y = -6 }  }
+system = { id = "167" name = "" position = { x = -10 y = 317 } initializer = marauder_1_1 }
+system = { id = "168" name = "" position = { x = 264 y = 243 }  }
+system = { id = "169" name = "" position = { x = -379 y = -6 }  }
+system = { id = "170" name = "" position = { x = -81 y = 24 }  }
+system = { id = "171" name = "" position = { x = -7 y = 156 }  }
+system = { id = "172" name = "" position = { x = -35 y = 218 } initializer = random_empire_init_05 spawn_weight = { base = 1 } }
+system = { id = "173" name = "" position = { x = -245 y = -124 }  }
+system = { id = "174" name = "" position = { x = -60 y = 252 }  }
+system = { id = "175" name = "" position = { x = 2 y = 319 }  }
+system = { id = "176" name = "" position = { x = -219 y = -99 }  }
+system = { id = "177" name = "" position = { x = 52 y = 196 }  }
+system = { id = "178" name = "" position = { x = 83 y = 349 }  }
+system = { id = "179" name = "" position = { x = -35 y = 323 }  }
+system = { id = "180" name = "" position = { x = -164 y = 147 }  }
+system = { id = "181" name = "" position = { x = 4 y = 286 }  }
+system = { id = "182" name = "" position = { x = -246 y = -94 }  }
+system = { id = "183" name = "" position = { x = -97 y = -86 }  }
+system = { id = "184" name = "" position = { x = -69 y = 234 }  }
+system = { id = "185" name = "" position = { x = -133 y = 221 } initializer = random_empire_init_05 spawn_weight = { base = 1 } }
+system = { id = "186" name = "" position = { x = -115 y = 94 }  }
+system = { id = "187" name = "" position = { x = -39 y = 291 }  }
+system = { id = "188" name = "" position = { x = -371 y = -1 } initializer = smgg_fallen_1 }
+system = { id = "189" name = "" position = { x = -118 y = 169 }  }
+system = { id = "190" name = "" position = { x = -174 y = -97 }  }
+system = { id = "191" name = "" position = { x = -77 y = -109 }  }
+system = { id = "192" name = "" position = { x = 5 y = -54 }  }
+system = { id = "193" name = "" position = { x = 22 y = 82 }  }
+system = { id = "194" name = "" position = { x = -108 y = 171 }  }
+system = { id = "195" name = "" position = { x = 41 y = 326 }  }
+system = { id = "196" name = "" position = { x = 209 y = 285 }  }
+system = { id = "197" name = "" position = { x = 27 y = 41 }  }
+system = { id = "198" name = "" position = { x = 51 y = 12 }  }
+system = { id = "199" name = "" position = { x = -16 y = 90 }  }
+system = { id = "200" name = "" position = { x = -90 y = -115 }  }
+system = { id = "201" name = "" position = { x = 217 y = 264 }  }
+system = { id = "202" name = "" position = { x = 168 y = 345 }  }
+system = { id = "203" name = "" position = { x = -260 y = -108 }  }
+system = { id = "204" name = "" position = { x = -56 y = 40 } initializer = random_empire_init_03 spawn_weight = { base = 1 } }
+system = { id = "205" name = "" position = { x = -47 y = -111 }  }
+system = { id = "206" name = "" position = { x = 37 y = -13 }  }
+system = { id = "207" name = "" position = { x = -325 y = -18 }  }
+system = { id = "208" name = "" position = { x = -92 y = 93 }  }
+system = { id = "209" name = "" position = { x = 54 y = 209 }  }
+system = { id = "210" name = "" position = { x = -112 y = -33 }  }
+system = { id = "211" name = "" position = { x = -381 y = 16 }  }
+system = { id = "212" name = "" position = { x = -111 y = 38 }  }
+system = { id = "213" name = "" position = { x = 71 y = 156 }  }
+system = { id = "214" name = "" position = { x = 149 y = 325 }  }
+system = { id = "215" name = "" position = { x = -128 y = -125 }  }
+system = { id = "216" name = "" position = { x = -82 y = 284 }  }
+system = { id = "217" name = "" position = { x = -78 y = 144 }  }
+system = { id = "218" name = "" position = { x = 86 y = 323 }  }
+system = { id = "219" name = "" position = { x = -150 y = 201 }  }
+system = { id = "220" name = "" position = { x = 57 y = 9 }  }
+system = { id = "221" name = "" position = { x = -36 y = 118 }  }
+system = { id = "222" name = "" position = { x = 39 y = 21 }  }
+system = { id = "223" name = "" position = { x = 68 y = 327 }  }
+system = { id = "224" name = "" position = { x = 147 y = 355 }  }
+system = { id = "225" name = "" position = { x = 33 y = 55 }  }
+system = { id = "226" name = "" position = { x = 288 y = 209 }  }
+system = { id = "227" name = "" position = { x = -98 y = 105 }  }
+system = { id = "228" name = "" position = { x = -41 y = 28 }  }
+system = { id = "229" name = "" position = { x = 109 y = 274 }  }
+system = { id = "230" name = "" position = { x = -239 y = -130 }  }
+system = { id = "231" name = "" position = { x = 211 y = 278 }  }
+system = { id = "232" name = "" position = { x = 58 y = 40 }  }
+system = { id = "233" name = "" position = { x = 249 y = 272 }  }
+system = { id = "234" name = "" position = { x = -59 y = -67 }  }
+system = { id = "235" name = "" position = { x = 88 y = 360 }  }
+system = { id = "236" name = "" position = { x = 16 y = -50 }  }
+system = { id = "237" name = "" position = { x = 85 y = 262 }  }
+system = { id = "238" name = "" position = { x = -53 y = 264 }  }
+system = { id = "239" name = "" position = { x = 262 y = 264 }  }
+system = { id = "240" name = "" position = { x = 24 y = 257 }  }
+system = { id = "241" name = "" position = { x = -83 y = 165 }  }
+system = { id = "242" name = "" position = { x = 65 y = 68 }  }
+system = { id = "243" name = "" position = { x = -115 y = -148 }  }
+system = { id = "244" name = "" position = { x = 333 y = 166 }  }
+system = { id = "245" name = "" position = { x = -27 y = 300 }  }
+system = { id = "246" name = "" position = { x = -42 y = -77 }  }
+system = { id = "247" name = "" position = { x = 333 y = 179 }  }
+system = { id = "248" name = "" position = { x = -49 y = -124 }  }
+system = { id = "249" name = "" position = { x = -118 y = -94 }  }
+system = { id = "250" name = "" position = { x = -95 y = 223 }  }
+system = { id = "251" name = "" position = { x = 45 y = 346 }  }
+system = { id = "252" name = "" position = { x = 49 y = 285 }  }
+system = { id = "253" name = "" position = { x = 17 y = 269 }  }
+system = { id = "254" name = "" position = { x = -313 y = -65 }  }
+system = { id = "255" name = "" position = { x = -114 y = 207 }  }
+system = { id = "256" name = "" position = { x = -93 y = 179 }  }
+system = { id = "257" name = "" position = { x = -8 y = -129 }  }
+system = { id = "258" name = "" position = { x = 26 y = 251 } initializer = random_empire_init_05 spawn_weight = { base = 1 } }
+system = { id = "259" name = "" position = { x = 345 y = 174 }  }
+system = { id = "260" name = "" position = { x = -264 y = -121 }  }
+system = { id = "261" name = "" position = { x = -14 y = 197 }  }
+system = { id = "262" name = "" position = { x = -117 y = -105 }  }
+system = { id = "263" name = "" position = { x = 83 y = 330 }  }
+system = { id = "264" name = "" position = { x = 83 y = -18 }  }
+system = { id = "265" name = "" position = { x = -392 y = 86 }  }
+system = { id = "266" name = "" position = { x = -129 y = 151 }  }
+system = { id = "267" name = "" position = { x = -345 y = -38 }  }
+system = { id = "268" name = "" position = { x = 9 y = 148 }  }
+system = { id = "269" name = "" position = { x = 347 y = 116 }  }
+system = { id = "270" name = "" position = { x = -13 y = 337 }  }
+system = { id = "271" name = "" position = { x = 78 y = 292 }  }
+system = { id = "272" name = "" position = { x = 335 y = 150 }  }
+system = { id = "273" name = "" position = { x = 125 y = 304 }  }
+system = { id = "274" name = "" position = { x = -397 y = 48 }  }
+system = { id = "275" name = "" position = { x = 299 y = 220 }  }
+system = { id = "276" name = "" position = { x = -18 y = -146 }  }
+system = { id = "277" name = "" position = { x = -82 y = -119 }  }
+system = { id = "278" name = "" position = { x = 293 y = 246 }  }
+system = { id = "279" name = "" position = { x = -38 y = 56 }  }
+system = { id = "280" name = "" position = { x = -136 y = 199 }  }
+system = { id = "281" name = "" position = { x = -326 y = -54 }  }
+system = { id = "282" name = "" position = { x = -131 y = -148 }  }
+system = { id = "283" name = "" position = { x = 32 y = 317 }  }
+system = { id = "284" name = "" position = { x = 46 y = -2 }  }
+system = { id = "285" name = "" position = { x = -38 y = 95 }  }
+system = { id = "286" name = "" position = { x = -37 y = -123 }  }
+system = { id = "287" name = "" position = { x = -21 y = 69 }  }
+system = { id = "288" name = "" position = { x = -143 y = 150 }  }
+system = { id = "289" name = "" position = { x = -14 y = 74 }  }
+system = { id = "290" name = "" position = { x = -324 y = -72 }  }
+system = { id = "291" name = "" position = { x = 89 y = 291 }  }
+system = { id = "292" name = "" position = { x = 13 y = 301 }  }
+system = { id = "293" name = "" position = { x = 202 y = 311 }  }
+system = { id = "294" name = "" position = { x = 21 y = 54 }  }
+system = { id = "295" name = "" position = { x = -42 y = 105 }  }
+system = { id = "296" name = "" position = { x = -98 y = 190 }  }
+system = { id = "297" name = "" position = { x = -7 y = 284 }  }
+system = { id = "298" name = "" position = { x = 114 y = 302 }  }
+system = { id = "299" name = "" position = { x = -36 y = -110 }  }
+system = { id = "300" name = "" position = { x = -11 y = -94 }  }
+system = { id = "301" name = "" position = { x = 255 y = 272 }  }
+system = { id = "302" name = "" position = { x = -73 y = 90 }  }
+system = { id = "303" name = "" position = { x = 73 y = 280 }  }
+system = { id = "304" name = "" position = { x = -30 y = -137 }  }
+system = { id = "305" name = "" position = { x = -322 y = -46 }  }
+system = { id = "306" name = "" position = { x = -243 y = -78 }  }
+system = { id = "307" name = "" position = { x = -296 y = -87 }  }
+system = { id = "308" name = "" position = { x = 279 y = 230 }  }
+system = { id = "309" name = "" position = { x = -27 y = 274 }  }
+system = { id = "310" name = "" position = { x = 10 y = 63 }  }
+system = { id = "311" name = "" position = { x = -64 y = 33 }  }
+system = { id = "312" name = "" position = { x = -32 y = 102 }  }
+system = { id = "313" name = "" position = { x = 97 y = 308 }  }
+system = { id = "314" name = "" position = { x = -115 y = -126 }  }
+system = { id = "315" name = "" position = { x = -72 y = 171 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
+system = { id = "316" name = "" position = { x = 94 y = 322 }  }
+system = { id = "317" name = "" position = { x = 75 y = 264 }  }
+system = { id = "318" name = "" position = { x = -99 y = 124 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
+system = { id = "319" name = "" position = { x = -69 y = 248 }  }
+system = { id = "320" name = "" position = { x = -101 y = -113 }  }
+system = { id = "321" name = "" position = { x = -155 y = 175 }  }
+system = { id = "322" name = "" position = { x = -11 y = -109 }  }
+system = { id = "323" name = "" position = { x = -17 y = -107 }  }
+system = { id = "324" name = "" position = { x = 35 y = 127 } initializer = random_empire_init_02 spawn_weight = { base = 1 } }
+system = { id = "325" name = "" position = { x = 86 y = 99 } initializer = random_empire_init_05 spawn_weight = { base = 1 } }
+system = { id = "326" name = "" position = { x = -137 y = 146 }  }
+system = { id = "327" name = "" position = { x = -161 y = -161 }  }
+system = { id = "328" name = "" position = { x = -282 y = -65 }  }
+system = { id = "329" name = "" position = { x = -222 y = -116 }  }
+system = { id = "330" name = "" position = { x = -113 y = -17 }  }
+system = { id = "331" name = "" position = { x = -128 y = 235 }  }
+system = { id = "332" name = "" position = { x = -36 y = 284 }  }
+system = { id = "333" name = "" position = { x = -96 y = -133 }  }
+system = { id = "334" name = "" position = { x = 43 y = 127 }  }
+system = { id = "335" name = "" position = { x = -63 y = 228 }  }
+system = { id = "336" name = "" position = { x = 17 y = -87 }  }
+system = { id = "337" name = "" position = { x = -108 y = 120 }  }
+system = { id = "338" name = "" position = { x = 99 y = 144 }  }
+system = { id = "339" name = "" position = { x = 243 y = 304 }  }
+system = { id = "340" name = "" position = { x = 14 y = 278 }  }
+system = { id = "341" name = "" position = { x = 91 y = 342 }  }
+system = { id = "342" name = "" position = { x = 296 y = 208 }  }
+system = { id = "343" name = "" position = { x = -67 y = 114 }  }
+system = { id = "344" name = "" position = { x = 100 y = 137 } initializer = random_empire_init_02 spawn_weight = { base = 1 } }
+system = { id = "345" name = "" position = { x = 100 y = 92 }  }
+system = { id = "346" name = "" position = { x = 18 y = 111 }  }
+system = { id = "347" name = "" position = { x = -122 y = 188 }  }
+system = { id = "348" name = "" position = { x = 327 y = 162 }  }
+system = { id = "349" name = "" position = { x = -187 y = -111 } initializer = dyson_sphere_init_01 }
+system = { id = "350" name = "" position = { x = 317 y = 204 }  }
+system = { id = "351" name = "" position = { x = -82 y = 2 }  }
+system = { id = "352" name = "" position = { x = -91 y = 127 }  }
+system = { id = "353" name = "" position = { x = 22 y = 90 }  }
+system = { id = "354" name = "" position = { x = 33 y = 146 }  }
+system = { id = "355" name = "" position = { x = 44 y = 67 }  }
+system = { id = "356" name = "" position = { x = -88 y = 26 }  }
+system = { id = "357" name = "" position = { x = -201 y = -124 }  }
+system = { id = "358" name = "" position = { x = 235 y = 245 }  }
+system = { id = "359" name = "" position = { x = -16 y = -22 }  }
+system = { id = "360" name = "" position = { x = -339 y = -274 }  }
+system = { id = "361" name = "" position = { x = -371 y = -363 }  }
+system = { id = "362" name = "" position = { x = -397 y = -409 }  }
+system = { id = "363" name = "" position = { x = -377 y = -372 }  }
+system = { id = "364" name = "" position = { x = -327 y = -282 }  }
+system = { id = "365" name = "" position = { x = -358 y = -423 }  }
+system = { id = "366" name = "" position = { x = -374 y = -320 }  }
+system = { id = "367" name = "" position = { x = -360 y = -347 }  }
+system = { id = "368" name = "" position = { x = -428 y = -334 }  }
+system = { id = "369" name = "" position = { x = -349 y = -346 }  }
+system = { id = "370" name = "" position = { x = -369 y = -340 }  }
+system = { id = "371" name = "" position = { x = -332 y = -322 }  }
+system = { id = "372" name = "" position = { x = -430 y = -265 }  }
+system = { id = "373" name = "" position = { x = -396 y = -365 }  }
+system = { id = "374" name = "" position = { x = -374 y = -346 }  }
+system = { id = "375" name = "" position = { x = -433 y = -308 }  }
+system = { id = "376" name = "" position = { x = -363 y = -405 }  }
+system = { id = "377" name = "" position = { x = -470 y = -382 }  }
+system = { id = "378" name = "" position = { x = -379 y = -461 }  }
+system = { id = "379" name = "" position = { x = -365 y = -302 }  }
+system = { id = "380" name = "" position = { x = -363 y = -435 }  }
+system = { id = "381" name = "" position = { x = -312 y = -337 }  }
+system = { id = "382" name = "" position = { x = -362 y = -429 }  }
+system = { id = "383" name = "" position = { x = -365 y = -324 }  }
+system = { id = "384" name = "" position = { x = -393 y = -292 }  }
+system = { id = "385" name = "" position = { x = -348 y = -269 }  }
+system = { id = "386" name = "" position = { x = -420 y = -326 } initializer = random_empire_init_05 spawn_weight = { base = 1 } }
+system = { id = "387" name = "" position = { x = -349 y = -369 }  }
+system = { id = "388" name = "" position = { x = -384 y = -357 }  }
+system = { id = "389" name = "" position = { x = -376 y = -333 }  }
+system = { id = "390" name = "" position = { x = -379 y = -366 }  }
+system = { id = "391" name = "" position = { x = -341 y = -348 }  }
+system = { id = "392" name = "" position = { x = -376 y = -311 }  }
+system = { id = "393" name = "" position = { x = -367 y = -375 }  }
+system = { id = "394" name = "" position = { x = -430 y = -271 }  }
+system = { id = "395" name = "" position = { x = -420 y = -350 }  }
+system = { id = "396" name = "" position = { x = -311 y = -270 }  }
+system = { id = "397" name = "" position = { x = -374 y = -326 }  }
+system = { id = "398" name = "" position = { x = -394 y = -353 }  }
+system = { id = "399" name = "" position = { x = -331 y = -344 }  }
+system = { id = "400" name = "" position = { x = -320 y = -352 }  }
+system = { id = "401" name = "" position = { x = -428 y = -368 }  }
+system = { id = "402" name = "" position = { x = -389 y = -379 }  }
+system = { id = "403" name = "" position = { x = -352 y = -434 }  }
+system = { id = "404" name = "" position = { x = -346 y = -319 }  }
+system = { id = "405" name = "" position = { x = -374 y = -294 } initializer = random_empire_init_02 spawn_weight = { base = 1 } }
+system = { id = "406" name = "" position = { x = -330 y = -395 }  }
+system = { id = "407" name = "" position = { x = -388 y = -334 }  }
+system = { id = "408" name = "" position = { x = -411 y = -359 }  }
+system = { id = "409" name = "" position = { x = -395 y = -392 }  }
+system = { id = "410" name = "" position = { x = -361 y = -354 }  }
+system = { id = "411" name = "" position = { x = -357 y = -415 }  }
+system = { id = "412" name = "" position = { x = -304 y = -353 }  }
+system = { id = "413" name = "" position = { x = -350 y = -356 }  }
+system = { id = "414" name = "" position = { x = -351 y = -388 }  }
+system = { id = "415" name = "" position = { x = -365 y = -455 }  }
+system = { id = "416" name = "" position = { x = -361 y = -398 }  }
+system = { id = "417" name = "" position = { x = -340 y = -264 }  }
+system = { id = "418" name = "" position = { x = -372 y = -420 }  }
+system = { id = "419" name = "" position = { x = -338 y = -360 }  }
+system = { id = "420" name = "" position = { x = -437 y = -285 }  }
+system = { id = "421" name = "" position = { x = -417 y = -394 }  }
+system = { id = "422" name = "" position = { x = -364 y = -360 }  }
+system = { id = "423" name = "" position = { x = -339 y = -341 }  }
+system = { id = "424" name = "" position = { x = -454 y = -390 }  }
+system = { id = "425" name = "" position = { x = -282 y = -363 }  }
+system = { id = "426" name = "" position = { x = -273 y = -392 } initializer = guardians_init_hive }
+system = { id = "427" name = "" position = { x = -351 y = -331 }  }
+system = { id = "428" name = "" position = { x = -359 y = -326 } initializer = random_empire_init_05 spawn_weight = { base = 1 } }
+system = { id = "429" name = "" position = { x = -404 y = -358 }  }
+system = { id = "430" name = "" position = { x = -412 y = -374 } initializer = random_empire_init_02 spawn_weight = { base = 1 } }
+system = { id = "431" name = "" position = { x = -460 y = -392 }  }
+system = { id = "432" name = "" position = { x = -383 y = -351 }  }
+system = { id = "433" name = "" position = { x = -314 y = -352 }  }
+system = { id = "434" name = "" position = { x = -363 y = -442 }  }
+system = { id = "435" name = "" position = { x = -432 y = -328 }  }
+system = { id = "436" name = "" position = { x = -430 y = -377 }  }
+system = { id = "437" name = "" position = { x = -388 y = -341 }  }
+system = { id = "438" name = "" position = { x = -375 y = -454 }  }
+system = { id = "439" name = "" position = { x = -339 y = -282 }  }
+system = { id = "440" name = "" position = { x = -442 y = -380 }  }
+system = { id = "441" name = "" position = { x = -361 y = -279 }  }
+system = { id = "442" name = "" position = { x = -337 y = -296 }  }
+system = { id = "443" name = "" position = { x = -361 y = -372 }  }
+system = { id = "444" name = "" position = { x = -375 y = -353 }  }
+system = { id = "445" name = "" position = { x = -342 y = -396 }  }
+system = { id = "446" name = "" position = { x = -435 y = -398 }  }
+system = { id = "447" name = "" position = { x = -378 y = -397 }  }
+system = { id = "448" name = "" position = { x = -332 y = -404 }  }
+system = { id = "449" name = "" position = { x = -412 y = -353 }  }
+system = { id = "450" name = "" position = { x = -409 y = -336 }  }
+system = { id = "451" name = "" position = { x = -277 y = -384 }  }
+system = { id = "452" name = "" position = { x = -371 y = -300 }  }
+system = { id = "453" name = "" position = { x = -336 y = -383 }  }
+system = { id = "454" name = "" position = { x = -411 y = -390 } initializer = random_empire_init_05 spawn_weight = { base = 1 } }
+system = { id = "455" name = "" position = { x = -332 y = -274 }  }
+system = { id = "456" name = "" position = { x = -377 y = -386 }  }
+system = { id = "457" name = "" position = { x = -354 y = -290 }  }
+system = { id = "458" name = "" position = { x = -320 y = -333 }  }
+system = { id = "459" name = "" position = { x = -358 y = -339 }  }
+system = { id = "460" name = "" position = { x = -429 y = -398 }  }
+system = { id = "461" name = "" position = { x = -364 y = -333 }  }
+system = { id = "462" name = "" position = { x = -329 y = -301 }  }
+system = { id = "463" name = "" position = { x = -362 y = -290 }  }
+system = { id = "464" name = "" position = { x = -285 y = -376 }  }
+system = { id = "465" name = "" position = { x = -473 y = -373 }  }
+system = { id = "466" name = "" position = { x = -379 y = -428 }  }
+system = { id = "467" name = "" position = { x = -327 y = -365 }  }
+system = { id = "468" name = "" position = { x = -344 y = -290 }  }
+system = { id = "469" name = "" position = { x = 262 y = -297 }  }
+system = { id = "470" name = "" position = { x = 427 y = -273 }  }
+system = { id = "471" name = "" position = { x = 461 y = -343 }  }
+system = { id = "472" name = "" position = { x = 258 y = -350 }  }
+system = { id = "473" name = "" position = { x = 290 y = -404 } initializer = random_empire_init_04 spawn_weight = { base = 1 } }
+system = { id = "474" name = "" position = { x = 253 y = -337 }  }
+system = { id = "475" name = "" position = { x = 428 y = -256 }  }
+system = { id = "476" name = "" position = { x = 329 y = -373 }  }
+system = { id = "477" name = "" position = { x = 433 y = -397 }  }
+system = { id = "478" name = "" position = { x = 343 y = -348 }  }
+system = { id = "479" name = "" position = { x = 442 y = -340 }  }
+system = { id = "480" name = "" position = { x = 331 y = -335 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
+system = { id = "481" name = "" position = { x = 340 y = -259 } initializer = guardians_init_technosphere }
+system = { id = "482" name = "" position = { x = 397 y = -353 }  }
+system = { id = "483" name = "" position = { x = 356 y = -316 }  }
+system = { id = "484" name = "" position = { x = 378 y = -303 }  }
+system = { id = "485" name = "" position = { x = 383 y = -351 }  }
+system = { id = "486" name = "" position = { x = 391 y = -307 }  }
+system = { id = "487" name = "" position = { x = 332 y = -320 }  }
+system = { id = "488" name = "" position = { x = 379 y = -272 }  }
+system = { id = "489" name = "" position = { x = 296 y = -362 }  }
+system = { id = "490" name = "" position = { x = 329 y = -343 }  }
+system = { id = "491" name = "" position = { x = 443 y = -346 }  }
+system = { id = "492" name = "" position = { x = 278 y = -372 }  }
+system = { id = "493" name = "" position = { x = 373 y = -427 }  }
+system = { id = "494" name = "" position = { x = 441 y = -409 } initializer = random_empire_init_01 spawn_weight = { base = 1 } }
+system = { id = "495" name = "" position = { x = 414 y = -395 }  }
+system = { id = "496" name = "" position = { x = 307 y = -286 }  }
+system = { id = "497" name = "" position = { x = 326 y = -397 }  }
+system = { id = "498" name = "" position = { x = 384 y = -402 }  }
+system = { id = "499" name = "" position = { x = 451 y = -279 }  }
+system = { id = "500" name = "" position = { x = 304 y = -264 }  }
+system = { id = "501" name = "" position = { x = 368 y = -404 }  }
+system = { id = "502" name = "" position = { x = 427 y = -385 }  }
+system = { id = "503" name = "" position = { x = 343 y = -300 }  }
+system = { id = "504" name = "" position = { x = 368 y = -310 }  }
+system = { id = "505" name = "" position = { x = 326 y = -323 }  }
+system = { id = "506" name = "" position = { x = 368 y = -272 }  }
+system = { id = "507" name = "" position = { x = 368 y = -337 }  }
+system = { id = "508" name = "" position = { x = 281 y = -346 }  }
+system = { id = "509" name = "" position = { x = 427 y = -329 }  }
+system = { id = "510" name = "" position = { x = 433 y = -414 }  }
+system = { id = "511" name = "" position = { x = 396 y = -332 }  }
+system = { id = "512" name = "" position = { x = 403 y = -402 }  }
+system = { id = "513" name = "" position = { x = 342 y = -408 }  }
+system = { id = "514" name = "" position = { x = 278 y = -303 }  }
+system = { id = "515" name = "" position = { x = 394 y = -378 }  }
+system = { id = "516" name = "" position = { x = 405 y = -275 }  }
+system = { id = "517" name = "" position = { x = 380 y = -392 }  }
+system = { id = "518" name = "" position = { x = 442 y = -319 }  }
+system = { id = "519" name = "" position = { x = 374 y = -370 }  }
+system = { id = "520" name = "" position = { x = 412 y = -415 }  }
+system = { id = "521" name = "" position = { x = 275 y = -282 }  }
+system = { id = "522" name = "" position = { x = 361 y = -360 }  }
+system = { id = "523" name = "" position = { x = 371 y = -352 }  }
+system = { id = "524" name = "" position = { x = 450 y = -377 }  }
+system = { id = "525" name = "" position = { x = 309 y = -330 }  }
+system = { id = "526" name = "" position = { x = 366 y = -300 }  }
+system = { id = "527" name = "" position = { x = 365 y = -446 }  }
+system = { id = "528" name = "" position = { x = 290 y = -410 } initializer = random_empire_init_06 spawn_weight = { base = 1 } }
+system = { id = "529" name = "" position = { x = 454 y = -310 }  }
+system = { id = "530" name = "" position = { x = 326 y = -354 }  }
+system = { id = "531" name = "" position = { x = 452 y = -369 }  }
+system = { id = "532" name = "" position = { x = 366 y = -416 }  }
+system = { id = "533" name = "" position = { x = 448 y = -315 }  }
+system = { id = "534" name = "" position = { x = 263 y = -363 }  }
+system = { id = "535" name = "" position = { x = 272 y = -317 }  }
+system = { id = "536" name = "" position = { x = 444 y = -395 }  }
+system = { id = "537" name = "" position = { x = 335 y = -309 }  }
+system = { id = "538" name = "" position = { x = 355 y = -396 }  }
+system = { id = "539" name = "" position = { x = 339 y = -392 }  }
+system = { id = "540" name = "" position = { x = 362 y = -333 }  }
+system = { id = "541" name = "" position = { x = 422 y = -352 }  }
+system = { id = "542" name = "" position = { x = 396 y = -424 }  }
+system = { id = "543" name = "" position = { x = 318 y = -383 }  }
+system = { id = "544" name = "" position = { x = 357 y = -351 }  }
+system = { id = "545" name = "" position = { x = 437 y = -310 }  }
+system = { id = "546" name = "" position = { x = 350 y = -436 }  }
+system = { id = "547" name = "" position = { x = 360 y = -326 }  }
+system = { id = "548" name = "" position = { x = 444 y = -385 } initializer = random_empire_init_04 spawn_weight = { base = 1 } }
+system = { id = "549" name = "" position = { x = 427 y = -344 }  }
+system = { id = "550" name = "" position = { x = 427 y = -305 }  }
+system = { id = "551" name = "" position = { x = 395 y = -301 }  }
+system = { id = "552" name = "" position = { x = 401 y = -393 }  }
+system = { id = "553" name = "" position = { x = 315 y = -324 }  }
+system = { id = "554" name = "" position = { x = 352 y = -331 }  }
+system = { id = "555" name = "" position = { x = 356 y = -245 }  }
+system = { id = "556" name = "" position = { x = 444 y = -370 }  }
+system = { id = "557" name = "" position = { x = 288 y = -391 }  }
+system = { id = "558" name = "" position = { x = 355 y = -308 }  }
+system = { id = "559" name = "" position = { x = 424 y = -399 }  }
+system = { id = "560" name = "" position = { x = 392 y = -261 }  }
+system = { id = "561" name = "" position = { x = 289 y = -385 }  }
+system = { id = "562" name = "" position = { x = 393 y = -244 }  }
+system = { id = "563" name = "" position = { x = 337 y = -432 }  }
+system = { id = "564" name = "" position = { x = 430 y = -264 }  }
+system = { id = "565" name = "" position = { x = 330 y = -406 }  }
+system = { id = "566" name = "" position = { x = 404 y = -415 }  }
+system = { id = "567" name = "" position = { x = 331 y = -291 }  }
+system = { id = "568" name = "" position = { x = 332 y = -278 }  }
+system = { id = "569" name = "" position = { x = 414 y = -428 }  }
+system = { id = "570" name = "" position = { x = 290 y = -326 }  }
+system = { id = "571" name = "" position = { x = 346 y = -369 }  }
+system = { id = "572" name = "" position = { x = 283 y = -336 }  }
+system = { id = "573" name = "" position = { x = 365 y = -238 }  }
+system = { id = "574" name = "" position = { x = 411 y = -389 }  }
+system = { id = "575" name = "" position = { x = 433 y = -357 }  }
+system = { id = "576" name = "" position = { x = 433 y = -319 }  }
+system = { id = "577" name = "" position = { x = 364 y = -257 }  }
+add_hyperlane = { from = "90" to = "33" }
+add_hyperlane = { from = "90" to = "44" }
+add_hyperlane = { from = "33" to = "216" }
+add_hyperlane = { from = "33" to = "163" }
+add_hyperlane = { from = "44" to = "238" }
+add_hyperlane = { from = "216" to = "163" }
+add_hyperlane = { from = "216" to = "21" }
+add_hyperlane = { from = "163" to = "21" }
+add_hyperlane = { from = "163" to = "150" }
+add_hyperlane = { from = "238" to = "174" }
+add_hyperlane = { from = "238" to = "319" }
+add_hyperlane = { from = "21" to = "81" }
+add_hyperlane = { from = "174" to = "184" }
+add_hyperlane = { from = "319" to = "335" }
+add_hyperlane = { from = "81" to = "36" }
+add_hyperlane = { from = "184" to = "250" }
+add_hyperlane = { from = "335" to = "28" }
+add_hyperlane = { from = "36" to = "64" }
+add_hyperlane = { from = "250" to = "64" }
+add_hyperlane = { from = "28" to = "83" }
+add_hyperlane = { from = "64" to = "255" }
+add_hyperlane = { from = "83" to = "256" }
+add_hyperlane = { from = "83" to = "241" }
+add_hyperlane = { from = "255" to = "347" }
+add_hyperlane = { from = "256" to = "296" }
+add_hyperlane = { from = "256" to = "194" }
+add_hyperlane = { from = "241" to = "315" }
+add_hyperlane = { from = "347" to = "280" }
+add_hyperlane = { from = "347" to = "189" }
+add_hyperlane = { from = "296" to = "189" }
+add_hyperlane = { from = "194" to = "67" }
+add_hyperlane = { from = "315" to = "0" }
+add_hyperlane = { from = "280" to = "69" }
+add_hyperlane = { from = "189" to = "266" }
+add_hyperlane = { from = "67" to = "118" }
+add_hyperlane = { from = "0" to = "137" }
+add_hyperlane = { from = "0" to = "137" }
+add_hyperlane = { from = "69" to = "219" }
+add_hyperlane = { from = "266" to = "326" }
+add_hyperlane = { from = "118" to = "135" }
+add_hyperlane = { from = "118" to = "217" }
+add_hyperlane = { from = "219" to = "52" }
+add_hyperlane = { from = "326" to = "288" }
+add_hyperlane = { from = "326" to = "84" }
+add_hyperlane = { from = "135" to = "352" }
+add_hyperlane = { from = "217" to = "352" }
+add_hyperlane = { from = "217" to = "318" }
+add_hyperlane = { from = "52" to = "185" }
+add_hyperlane = { from = "52" to = "95" }
+add_hyperlane = { from = "288" to = "84" }
+add_hyperlane = { from = "288" to = "180" }
+add_hyperlane = { from = "84" to = "337" }
+add_hyperlane = { from = "352" to = "318" }
+add_hyperlane = { from = "318" to = "337" }
+add_hyperlane = { from = "185" to = "331" }
+add_hyperlane = { from = "95" to = "331" }
+add_hyperlane = { from = "95" to = "161" }
+add_hyperlane = { from = "180" to = "321" }
+add_hyperlane = { from = "180" to = "321" }
+add_hyperlane = { from = "337" to = "227" }
+add_hyperlane = { from = "331" to = "161" }
+add_hyperlane = { from = "227" to = "18" }
+add_hyperlane = { from = "18" to = "208" }
+add_hyperlane = { from = "208" to = "8" }
+add_hyperlane = { from = "8" to = "48" }
+add_hyperlane = { from = "48" to = "302" }
+add_hyperlane = { from = "48" to = "76" }
+add_hyperlane = { from = "302" to = "66" }
+add_hyperlane = { from = "302" to = "114" }
+add_hyperlane = { from = "76" to = "117" }
+add_hyperlane = { from = "66" to = "114" }
+add_hyperlane = { from = "66" to = "103" }
+add_hyperlane = { from = "114" to = "103" }
+add_hyperlane = { from = "117" to = "136" }
+add_hyperlane = { from = "103" to = "285" }
+add_hyperlane = { from = "136" to = "279" }
+add_hyperlane = { from = "136" to = "35" }
+add_hyperlane = { from = "285" to = "312" }
+add_hyperlane = { from = "285" to = "85" }
+add_hyperlane = { from = "279" to = "35" }
+add_hyperlane = { from = "35" to = "204" }
+add_hyperlane = { from = "312" to = "295" }
+add_hyperlane = { from = "85" to = "199" }
+add_hyperlane = { from = "204" to = "311" }
+add_hyperlane = { from = "295" to = "221" }
+add_hyperlane = { from = "199" to = "16" }
+add_hyperlane = { from = "311" to = "170" }
+add_hyperlane = { from = "221" to = "147" }
+add_hyperlane = { from = "16" to = "289" }
+add_hyperlane = { from = "170" to = "356" }
+add_hyperlane = { from = "147" to = "61" }
+add_hyperlane = { from = "289" to = "287" }
+add_hyperlane = { from = "356" to = "94" }
+add_hyperlane = { from = "61" to = "140" }
+add_hyperlane = { from = "287" to = "55" }
+add_hyperlane = { from = "94" to = "212" }
+add_hyperlane = { from = "140" to = "20" }
+add_hyperlane = { from = "55" to = "310" }
+add_hyperlane = { from = "212" to = "154" }
+add_hyperlane = { from = "212" to = "156" }
+add_hyperlane = { from = "20" to = "31" }
+add_hyperlane = { from = "310" to = "56" }
+add_hyperlane = { from = "154" to = "156" }
+add_hyperlane = { from = "156" to = "228" }
+add_hyperlane = { from = "31" to = "56" }
+add_hyperlane = { from = "31" to = "193" }
+add_hyperlane = { from = "56" to = "193" }
+add_hyperlane = { from = "228" to = "351" }
+add_hyperlane = { from = "228" to = "139" }
+add_hyperlane = { from = "193" to = "74" }
+add_hyperlane = { from = "351" to = "122" }
+add_hyperlane = { from = "351" to = "122" }
+add_hyperlane = { from = "139" to = "11" }
+add_hyperlane = { from = "139" to = "11" }
+add_hyperlane = { from = "74" to = "346" }
+add_hyperlane = { from = "346" to = "148" }
+add_hyperlane = { from = "346" to = "353" }
+add_hyperlane = { from = "148" to = "324" }
+add_hyperlane = { from = "353" to = "355" }
+add_hyperlane = { from = "324" to = "50" }
+add_hyperlane = { from = "355" to = "225" }
+add_hyperlane = { from = "50" to = "354" }
+add_hyperlane = { from = "225" to = "38" }
+add_hyperlane = { from = "354" to = "145" }
+add_hyperlane = { from = "354" to = "334" }
+add_hyperlane = { from = "38" to = "294" }
+add_hyperlane = { from = "38" to = "115" }
+add_hyperlane = { from = "145" to = "151" }
+add_hyperlane = { from = "334" to = "146" }
+add_hyperlane = { from = "334" to = "146" }
+add_hyperlane = { from = "294" to = "197" }
+add_hyperlane = { from = "294" to = "197" }
+add_hyperlane = { from = "115" to = "222" }
+add_hyperlane = { from = "151" to = "160" }
+add_hyperlane = { from = "151" to = "213" }
+add_hyperlane = { from = "146" to = "108" }
+add_hyperlane = { from = "197" to = "222" }
+add_hyperlane = { from = "222" to = "65" }
+add_hyperlane = { from = "160" to = "177" }
+add_hyperlane = { from = "213" to = "338" }
+add_hyperlane = { from = "213" to = "338" }
+add_hyperlane = { from = "108" to = "325" }
+add_hyperlane = { from = "65" to = "220" }
+add_hyperlane = { from = "177" to = "209" }
+add_hyperlane = { from = "177" to = "209" }
+add_hyperlane = { from = "338" to = "344" }
+add_hyperlane = { from = "325" to = "345" }
+add_hyperlane = { from = "325" to = "77" }
+add_hyperlane = { from = "220" to = "198" }
+add_hyperlane = { from = "220" to = "284" }
+add_hyperlane = { from = "344" to = "77" }
+add_hyperlane = { from = "345" to = "242" }
+add_hyperlane = { from = "345" to = "104" }
+add_hyperlane = { from = "77" to = "242" }
+add_hyperlane = { from = "198" to = "284" }
+add_hyperlane = { from = "284" to = "166" }
+add_hyperlane = { from = "242" to = "96" }
+add_hyperlane = { from = "242" to = "232" }
+add_hyperlane = { from = "104" to = "96" }
+add_hyperlane = { from = "166" to = "206" }
+add_hyperlane = { from = "166" to = "68" }
+add_hyperlane = { from = "96" to = "113" }
+add_hyperlane = { from = "232" to = "113" }
+add_hyperlane = { from = "206" to = "68" }
+add_hyperlane = { from = "68" to = "141" }
+add_hyperlane = { from = "113" to = "359" }
+add_hyperlane = { from = "141" to = "236" }
+add_hyperlane = { from = "359" to = "12" }
+add_hyperlane = { from = "359" to = "192" }
+add_hyperlane = { from = "236" to = "49" }
+add_hyperlane = { from = "12" to = "49" }
+add_hyperlane = { from = "192" to = "1" }
+add_hyperlane = { from = "49" to = "43" }
+add_hyperlane = { from = "49" to = "336" }
+add_hyperlane = { from = "1" to = "155" }
+add_hyperlane = { from = "43" to = "87" }
+add_hyperlane = { from = "43" to = "25" }
+add_hyperlane = { from = "336" to = "300" }
+add_hyperlane = { from = "155" to = "116" }
+add_hyperlane = { from = "87" to = "25" }
+add_hyperlane = { from = "25" to = "264" }
+add_hyperlane = { from = "25" to = "264" }
+add_hyperlane = { from = "300" to = "153" }
+add_hyperlane = { from = "300" to = "37" }
+add_hyperlane = { from = "116" to = "257" }
+add_hyperlane = { from = "153" to = "37" }
+add_hyperlane = { from = "153" to = "323" }
+add_hyperlane = { from = "37" to = "14" }
+add_hyperlane = { from = "257" to = "276" }
+add_hyperlane = { from = "257" to = "322" }
+add_hyperlane = { from = "323" to = "299" }
+add_hyperlane = { from = "14" to = "299" }
+add_hyperlane = { from = "276" to = "304" }
+add_hyperlane = { from = "276" to = "78" }
+add_hyperlane = { from = "322" to = "286" }
+add_hyperlane = { from = "299" to = "205" }
+add_hyperlane = { from = "304" to = "286" }
+add_hyperlane = { from = "304" to = "248" }
+add_hyperlane = { from = "78" to = "248" }
+add_hyperlane = { from = "286" to = "205" }
+add_hyperlane = { from = "205" to = "41" }
+add_hyperlane = { from = "248" to = "70" }
+add_hyperlane = { from = "41" to = "191" }
+add_hyperlane = { from = "70" to = "27" }
+add_hyperlane = { from = "70" to = "9" }
+add_hyperlane = { from = "191" to = "73" }
+add_hyperlane = { from = "191" to = "277" }
+add_hyperlane = { from = "27" to = "105" }
+add_hyperlane = { from = "27" to = "9" }
+add_hyperlane = { from = "9" to = "200" }
+add_hyperlane = { from = "73" to = "200" }
+add_hyperlane = { from = "277" to = "6" }
+add_hyperlane = { from = "105" to = "333" }
+add_hyperlane = { from = "200" to = "320" }
+add_hyperlane = { from = "6" to = "22" }
+add_hyperlane = { from = "333" to = "314" }
+add_hyperlane = { from = "320" to = "262" }
+add_hyperlane = { from = "22" to = "54" }
+add_hyperlane = { from = "314" to = "215" }
+add_hyperlane = { from = "262" to = "249" }
+add_hyperlane = { from = "54" to = "109" }
+add_hyperlane = { from = "215" to = "109" }
+add_hyperlane = { from = "249" to = "106" }
+add_hyperlane = { from = "249" to = "120" }
+add_hyperlane = { from = "109" to = "98" }
+add_hyperlane = { from = "106" to = "183" }
+add_hyperlane = { from = "106" to = "7" }
+add_hyperlane = { from = "120" to = "123" }
+add_hyperlane = { from = "98" to = "57" }
+add_hyperlane = { from = "98" to = "80" }
+add_hyperlane = { from = "183" to = "123" }
+add_hyperlane = { from = "183" to = "165" }
+add_hyperlane = { from = "7" to = "165" }
+add_hyperlane = { from = "123" to = "102" }
+add_hyperlane = { from = "57" to = "102" }
+add_hyperlane = { from = "80" to = "97" }
+add_hyperlane = { from = "165" to = "210" }
+add_hyperlane = { from = "102" to = "190" }
+add_hyperlane = { from = "97" to = "327" }
+add_hyperlane = { from = "210" to = "330" }
+add_hyperlane = { from = "190" to = "349" }
+add_hyperlane = { from = "190" to = "92" }
+add_hyperlane = { from = "327" to = "162" }
+add_hyperlane = { from = "327" to = "162" }
+add_hyperlane = { from = "330" to = "234" }
+add_hyperlane = { from = "349" to = "138" }
+add_hyperlane = { from = "92" to = "357" }
+add_hyperlane = { from = "162" to = "107" }
+add_hyperlane = { from = "234" to = "58" }
+add_hyperlane = { from = "138" to = "176" }
+add_hyperlane = { from = "138" to = "2" }
+add_hyperlane = { from = "357" to = "107" }
+add_hyperlane = { from = "107" to = "329" }
+add_hyperlane = { from = "58" to = "246" }
+add_hyperlane = { from = "176" to = "119" }
+add_hyperlane = { from = "2" to = "127" }
+add_hyperlane = { from = "329" to = "127" }
+add_hyperlane = { from = "246" to = "45" }
+add_hyperlane = { from = "119" to = "306" }
+add_hyperlane = { from = "127" to = "173" }
+add_hyperlane = { from = "45" to = "51" }
+add_hyperlane = { from = "306" to = "182" }
+add_hyperlane = { from = "173" to = "230" }
+add_hyperlane = { from = "182" to = "126" }
+add_hyperlane = { from = "230" to = "260" }
+add_hyperlane = { from = "126" to = "72" }
+add_hyperlane = { from = "126" to = "60" }
+add_hyperlane = { from = "260" to = "99" }
+add_hyperlane = { from = "72" to = "203" }
+add_hyperlane = { from = "60" to = "203" }
+add_hyperlane = { from = "99" to = "164" }
+add_hyperlane = { from = "203" to = "164" }
+add_hyperlane = { from = "164" to = "307" }
+add_hyperlane = { from = "307" to = "149" }
+add_hyperlane = { from = "307" to = "29" }
+add_hyperlane = { from = "149" to = "254" }
+add_hyperlane = { from = "29" to = "281" }
+add_hyperlane = { from = "254" to = "290" }
+add_hyperlane = { from = "281" to = "305" }
+add_hyperlane = { from = "281" to = "10" }
+add_hyperlane = { from = "290" to = "10" }
+add_hyperlane = { from = "290" to = "24" }
+add_hyperlane = { from = "305" to = "24" }
+add_hyperlane = { from = "10" to = "144" }
+add_hyperlane = { from = "24" to = "91" }
+add_hyperlane = { from = "144" to = "267" }
+add_hyperlane = { from = "144" to = "143" }
+add_hyperlane = { from = "91" to = "328" }
+add_hyperlane = { from = "267" to = "143" }
+add_hyperlane = { from = "143" to = "207" }
+add_hyperlane = { from = "143" to = "19" }
+add_hyperlane = { from = "207" to = "142" }
+add_hyperlane = { from = "19" to = "188" }
+add_hyperlane = { from = "142" to = "188" }
+add_hyperlane = { from = "188" to = "79" }
+add_hyperlane = { from = "79" to = "211" }
+add_hyperlane = { from = "79" to = "169" }
+add_hyperlane = { from = "211" to = "39" }
+add_hyperlane = { from = "211" to = "110" }
+add_hyperlane = { from = "169" to = "39" }
+add_hyperlane = { from = "39" to = "274" }
+add_hyperlane = { from = "39" to = "40" }
+add_hyperlane = { from = "110" to = "40" }
+add_hyperlane = { from = "274" to = "265" }
+add_hyperlane = { from = "5" to = "221" }
+add_hyperlane = { from = "5" to = "171" }
+add_hyperlane = { from = "5" to = "171" }
+add_hyperlane = { from = "171" to = "268" }
+add_hyperlane = { from = "268" to = "46" }
+add_hyperlane = { from = "268" to = "261" }
+add_hyperlane = { from = "46" to = "343" }
+add_hyperlane = { from = "46" to = "261" }
+add_hyperlane = { from = "261" to = "82" }
+add_hyperlane = { from = "343" to = "186" }
+add_hyperlane = { from = "82" to = "172" }
+add_hyperlane = { from = "186" to = "111" }
+add_hyperlane = { from = "172" to = "42" }
+add_hyperlane = { from = "172" to = "309" }
+add_hyperlane = { from = "42" to = "258" }
+add_hyperlane = { from = "42" to = "240" }
+add_hyperlane = { from = "309" to = "332" }
+add_hyperlane = { from = "258" to = "240" }
+add_hyperlane = { from = "258" to = "62" }
+add_hyperlane = { from = "240" to = "253" }
+add_hyperlane = { from = "332" to = "187" }
+add_hyperlane = { from = "332" to = "245" }
+add_hyperlane = { from = "62" to = "253" }
+add_hyperlane = { from = "253" to = "340" }
+add_hyperlane = { from = "187" to = "121" }
+add_hyperlane = { from = "245" to = "130" }
+add_hyperlane = { from = "245" to = "167" }
+add_hyperlane = { from = "340" to = "181" }
+add_hyperlane = { from = "340" to = "297" }
+add_hyperlane = { from = "121" to = "179" }
+add_hyperlane = { from = "130" to = "181" }
+add_hyperlane = { from = "130" to = "292" }
+add_hyperlane = { from = "167" to = "134" }
+add_hyperlane = { from = "181" to = "175" }
+add_hyperlane = { from = "297" to = "175" }
+add_hyperlane = { from = "179" to = "32" }
+add_hyperlane = { from = "179" to = "134" }
+add_hyperlane = { from = "292" to = "128" }
+add_hyperlane = { from = "134" to = "270" }
+add_hyperlane = { from = "175" to = "59" }
+add_hyperlane = { from = "175" to = "128" }
+add_hyperlane = { from = "32" to = "59" }
+add_hyperlane = { from = "128" to = "283" }
+add_hyperlane = { from = "270" to = "195" }
+add_hyperlane = { from = "59" to = "4" }
+add_hyperlane = { from = "283" to = "71" }
+add_hyperlane = { from = "195" to = "53" }
+add_hyperlane = { from = "4" to = "71" }
+add_hyperlane = { from = "71" to = "125" }
+add_hyperlane = { from = "53" to = "88" }
+add_hyperlane = { from = "53" to = "223" }
+add_hyperlane = { from = "125" to = "252" }
+add_hyperlane = { from = "88" to = "223" }
+add_hyperlane = { from = "223" to = "263" }
+add_hyperlane = { from = "252" to = "129" }
+add_hyperlane = { from = "252" to = "303" }
+add_hyperlane = { from = "263" to = "75" }
+add_hyperlane = { from = "129" to = "303" }
+add_hyperlane = { from = "303" to = "271" }
+add_hyperlane = { from = "75" to = "218" }
+add_hyperlane = { from = "271" to = "291" }
+add_hyperlane = { from = "271" to = "313" }
+add_hyperlane = { from = "218" to = "316" }
+add_hyperlane = { from = "291" to = "313" }
+add_hyperlane = { from = "291" to = "15" }
+add_hyperlane = { from = "313" to = "298" }
+add_hyperlane = { from = "316" to = "100" }
+add_hyperlane = { from = "15" to = "298" }
+add_hyperlane = { from = "298" to = "273" }
+add_hyperlane = { from = "100" to = "47" }
+add_hyperlane = { from = "273" to = "159" }
+add_hyperlane = { from = "47" to = "341" }
+add_hyperlane = { from = "159" to = "86" }
+add_hyperlane = { from = "341" to = "178" }
+add_hyperlane = { from = "341" to = "13" }
+add_hyperlane = { from = "86" to = "229" }
+add_hyperlane = { from = "86" to = "214" }
+add_hyperlane = { from = "178" to = "235" }
+add_hyperlane = { from = "178" to = "13" }
+add_hyperlane = { from = "13" to = "63" }
+add_hyperlane = { from = "229" to = "237" }
+add_hyperlane = { from = "214" to = "26" }
+add_hyperlane = { from = "214" to = "89" }
+add_hyperlane = { from = "235" to = "251" }
+add_hyperlane = { from = "63" to = "89" }
+add_hyperlane = { from = "237" to = "317" }
+add_hyperlane = { from = "26" to = "224" }
+add_hyperlane = { from = "89" to = "224" }
+add_hyperlane = { from = "224" to = "202" }
+add_hyperlane = { from = "202" to = "132" }
+add_hyperlane = { from = "202" to = "132" }
+add_hyperlane = { from = "17" to = "132" }
+add_hyperlane = { from = "17" to = "124" }
+add_hyperlane = { from = "17" to = "124" }
+add_hyperlane = { from = "124" to = "293" }
+add_hyperlane = { from = "293" to = "93" }
+add_hyperlane = { from = "93" to = "30" }
+add_hyperlane = { from = "93" to = "339" }
+add_hyperlane = { from = "30" to = "157" }
+add_hyperlane = { from = "339" to = "233" }
+add_hyperlane = { from = "157" to = "196" }
+add_hyperlane = { from = "233" to = "133" }
+add_hyperlane = { from = "233" to = "239" }
+add_hyperlane = { from = "196" to = "231" }
+add_hyperlane = { from = "133" to = "3" }
+add_hyperlane = { from = "239" to = "112" }
+add_hyperlane = { from = "239" to = "301" }
+add_hyperlane = { from = "231" to = "201" }
+add_hyperlane = { from = "231" to = "101" }
+add_hyperlane = { from = "3" to = "112" }
+add_hyperlane = { from = "112" to = "168" }
+add_hyperlane = { from = "301" to = "358" }
+add_hyperlane = { from = "301" to = "358" }
+add_hyperlane = { from = "168" to = "34" }
+add_hyperlane = { from = "358" to = "308" }
+add_hyperlane = { from = "358" to = "226" }
+add_hyperlane = { from = "34" to = "23" }
+add_hyperlane = { from = "308" to = "23" }
+add_hyperlane = { from = "226" to = "342" }
+add_hyperlane = { from = "23" to = "275" }
+add_hyperlane = { from = "342" to = "275" }
+add_hyperlane = { from = "342" to = "152" }
+add_hyperlane = { from = "275" to = "152" }
+add_hyperlane = { from = "152" to = "158" }
+add_hyperlane = { from = "158" to = "278" }
+add_hyperlane = { from = "278" to = "350" }
+add_hyperlane = { from = "278" to = "131" }
+add_hyperlane = { from = "350" to = "131" }
+add_hyperlane = { from = "350" to = "247" }
+add_hyperlane = { from = "131" to = "247" }
+add_hyperlane = { from = "131" to = "259" }
+add_hyperlane = { from = "247" to = "259" }
+add_hyperlane = { from = "247" to = "348" }
+add_hyperlane = { from = "259" to = "244" }
+add_hyperlane = { from = "259" to = "272" }
+add_hyperlane = { from = "348" to = "244" }
+add_hyperlane = { from = "244" to = "269" }
+add_hyperlane = { from = "272" to = "269" }
+add_hyperlane = { from = "243" to = "22" }
+add_hyperlane = { from = "243" to = "22" }
+add_hyperlane = { from = "282" to = "215" }
+add_hyperlane = { from = "282" to = "215" }
+add_hyperlane = { from = "282" to = "54" }
+add_hyperlane = { from = "445" to = "406" }
+add_hyperlane = { from = "445" to = "414" }
+add_hyperlane = { from = "406" to = "448" }
+add_hyperlane = { from = "414" to = "416" }
+add_hyperlane = { from = "448" to = "453" }
+add_hyperlane = { from = "448" to = "411" }
+add_hyperlane = { from = "416" to = "376" }
+add_hyperlane = { from = "416" to = "411" }
+add_hyperlane = { from = "453" to = "387" }
+add_hyperlane = { from = "411" to = "365" }
+add_hyperlane = { from = "376" to = "418" }
+add_hyperlane = { from = "376" to = "447" }
+add_hyperlane = { from = "387" to = "443" }
+add_hyperlane = { from = "365" to = "382" }
+add_hyperlane = { from = "418" to = "466" }
+add_hyperlane = { from = "418" to = "380" }
+add_hyperlane = { from = "447" to = "456" }
+add_hyperlane = { from = "447" to = "409" }
+add_hyperlane = { from = "443" to = "393" }
+add_hyperlane = { from = "443" to = "422" }
+add_hyperlane = { from = "382" to = "380" }
+add_hyperlane = { from = "466" to = "434" }
+add_hyperlane = { from = "380" to = "403" }
+add_hyperlane = { from = "456" to = "402" }
+add_hyperlane = { from = "456" to = "390" }
+add_hyperlane = { from = "409" to = "402" }
+add_hyperlane = { from = "393" to = "363" }
+add_hyperlane = { from = "422" to = "410" }
+add_hyperlane = { from = "422" to = "361" }
+add_hyperlane = { from = "434" to = "403" }
+add_hyperlane = { from = "403" to = "415" }
+add_hyperlane = { from = "402" to = "363" }
+add_hyperlane = { from = "390" to = "388" }
+add_hyperlane = { from = "390" to = "444" }
+add_hyperlane = { from = "363" to = "444" }
+add_hyperlane = { from = "410" to = "367" }
+add_hyperlane = { from = "410" to = "413" }
+add_hyperlane = { from = "361" to = "432" }
+add_hyperlane = { from = "415" to = "438" }
+add_hyperlane = { from = "388" to = "398" }
+add_hyperlane = { from = "444" to = "374" }
+add_hyperlane = { from = "367" to = "459" }
+add_hyperlane = { from = "367" to = "369" }
+add_hyperlane = { from = "413" to = "391" }
+add_hyperlane = { from = "432" to = "437" }
+add_hyperlane = { from = "438" to = "378" }
+add_hyperlane = { from = "398" to = "429" }
+add_hyperlane = { from = "374" to = "370" }
+add_hyperlane = { from = "459" to = "461" }
+add_hyperlane = { from = "369" to = "391" }
+add_hyperlane = { from = "391" to = "423" }
+add_hyperlane = { from = "437" to = "389" }
+add_hyperlane = { from = "437" to = "370" }
+add_hyperlane = { from = "378" to = "362" }
+add_hyperlane = { from = "429" to = "408" }
+add_hyperlane = { from = "429" to = "449" }
+add_hyperlane = { from = "370" to = "397" }
+add_hyperlane = { from = "461" to = "428" }
+add_hyperlane = { from = "423" to = "399" }
+add_hyperlane = { from = "389" to = "407" }
+add_hyperlane = { from = "362" to = "454" }
+add_hyperlane = { from = "408" to = "395" }
+add_hyperlane = { from = "408" to = "430" }
+add_hyperlane = { from = "449" to = "395" }
+add_hyperlane = { from = "397" to = "383" }
+add_hyperlane = { from = "428" to = "383" }
+add_hyperlane = { from = "399" to = "400" }
+add_hyperlane = { from = "407" to = "366" }
+add_hyperlane = { from = "454" to = "421" }
+add_hyperlane = { from = "454" to = "430" }
+add_hyperlane = { from = "395" to = "368" }
+add_hyperlane = { from = "430" to = "401" }
+add_hyperlane = { from = "383" to = "427" }
+add_hyperlane = { from = "400" to = "467" }
+add_hyperlane = { from = "366" to = "392" }
+add_hyperlane = { from = "421" to = "460" }
+add_hyperlane = { from = "368" to = "435" }
+add_hyperlane = { from = "401" to = "436" }
+add_hyperlane = { from = "427" to = "404" }
+add_hyperlane = { from = "427" to = "371" }
+add_hyperlane = { from = "467" to = "419" }
+add_hyperlane = { from = "392" to = "452" }
+add_hyperlane = { from = "460" to = "436" }
+add_hyperlane = { from = "460" to = "440" }
+add_hyperlane = { from = "435" to = "386" }
+add_hyperlane = { from = "436" to = "446" }
+add_hyperlane = { from = "436" to = "424" }
+add_hyperlane = { from = "404" to = "371" }
+add_hyperlane = { from = "404" to = "442" }
+add_hyperlane = { from = "371" to = "458" }
+add_hyperlane = { from = "419" to = "433" }
+add_hyperlane = { from = "452" to = "379" }
+add_hyperlane = { from = "452" to = "405" }
+add_hyperlane = { from = "440" to = "424" }
+add_hyperlane = { from = "386" to = "450" }
+add_hyperlane = { from = "386" to = "375" }
+add_hyperlane = { from = "446" to = "431" }
+add_hyperlane = { from = "446" to = "431" }
+add_hyperlane = { from = "424" to = "377" }
+add_hyperlane = { from = "424" to = "465" }
+add_hyperlane = { from = "442" to = "462" }
+add_hyperlane = { from = "458" to = "381" }
+add_hyperlane = { from = "433" to = "412" }
+add_hyperlane = { from = "379" to = "463" }
+add_hyperlane = { from = "379" to = "457" }
+add_hyperlane = { from = "405" to = "384" }
+add_hyperlane = { from = "450" to = "375" }
+add_hyperlane = { from = "375" to = "420" }
+add_hyperlane = { from = "431" to = "377" }
+add_hyperlane = { from = "431" to = "377" }
+add_hyperlane = { from = "462" to = "468" }
+add_hyperlane = { from = "462" to = "364" }
+add_hyperlane = { from = "381" to = "425" }
+add_hyperlane = { from = "412" to = "464" }
+add_hyperlane = { from = "463" to = "441" }
+add_hyperlane = { from = "457" to = "441" }
+add_hyperlane = { from = "384" to = "394" }
+add_hyperlane = { from = "384" to = "372" }
+add_hyperlane = { from = "420" to = "372" }
+add_hyperlane = { from = "468" to = "439" }
+add_hyperlane = { from = "468" to = "360" }
+add_hyperlane = { from = "364" to = "455" }
+add_hyperlane = { from = "364" to = "360" }
+add_hyperlane = { from = "425" to = "451" }
+add_hyperlane = { from = "464" to = "451" }
+add_hyperlane = { from = "441" to = "385" }
+add_hyperlane = { from = "441" to = "417" }
+add_hyperlane = { from = "439" to = "455" }
+add_hyperlane = { from = "360" to = "396" }
+add_hyperlane = { from = "360" to = "396" }
+add_hyperlane = { from = "451" to = "426" }
+add_hyperlane = { from = "451" to = "426" }
+add_hyperlane = { from = "373" to = "429" }
+add_hyperlane = { from = "373" to = "429" }
+add_hyperlane = { from = "373" to = "398" }
+add_hyperlane = { from = "549" to = "541" }
+add_hyperlane = { from = "549" to = "575" }
+add_hyperlane = { from = "541" to = "491" }
+add_hyperlane = { from = "541" to = "479" }
+add_hyperlane = { from = "575" to = "556" }
+add_hyperlane = { from = "491" to = "471" }
+add_hyperlane = { from = "479" to = "509" }
+add_hyperlane = { from = "556" to = "531" }
+add_hyperlane = { from = "556" to = "524" }
+add_hyperlane = { from = "471" to = "518" }
+add_hyperlane = { from = "509" to = "576" }
+add_hyperlane = { from = "531" to = "548" }
+add_hyperlane = { from = "524" to = "536" }
+add_hyperlane = { from = "518" to = "533" }
+add_hyperlane = { from = "576" to = "545" }
+add_hyperlane = { from = "548" to = "477" }
+add_hyperlane = { from = "536" to = "494" }
+add_hyperlane = { from = "533" to = "529" }
+add_hyperlane = { from = "545" to = "550" }
+add_hyperlane = { from = "545" to = "550" }
+add_hyperlane = { from = "477" to = "559" }
+add_hyperlane = { from = "494" to = "510" }
+add_hyperlane = { from = "529" to = "499" }
+add_hyperlane = { from = "550" to = "551" }
+add_hyperlane = { from = "559" to = "495" }
+add_hyperlane = { from = "510" to = "520" }
+add_hyperlane = { from = "510" to = "569" }
+add_hyperlane = { from = "499" to = "470" }
+add_hyperlane = { from = "551" to = "486" }
+add_hyperlane = { from = "495" to = "574" }
+add_hyperlane = { from = "495" to = "512" }
+add_hyperlane = { from = "520" to = "569" }
+add_hyperlane = { from = "569" to = "566" }
+add_hyperlane = { from = "470" to = "564" }
+add_hyperlane = { from = "470" to = "564" }
+add_hyperlane = { from = "486" to = "484" }
+add_hyperlane = { from = "486" to = "484" }
+add_hyperlane = { from = "574" to = "552" }
+add_hyperlane = { from = "574" to = "502" }
+add_hyperlane = { from = "512" to = "542" }
+add_hyperlane = { from = "566" to = "498" }
+add_hyperlane = { from = "564" to = "475" }
+add_hyperlane = { from = "552" to = "515" }
+add_hyperlane = { from = "502" to = "482" }
+add_hyperlane = { from = "542" to = "493" }
+add_hyperlane = { from = "498" to = "517" }
+add_hyperlane = { from = "498" to = "501" }
+add_hyperlane = { from = "475" to = "516" }
+add_hyperlane = { from = "515" to = "517" }
+add_hyperlane = { from = "482" to = "485" }
+add_hyperlane = { from = "493" to = "532" }
+add_hyperlane = { from = "493" to = "532" }
+add_hyperlane = { from = "517" to = "519" }
+add_hyperlane = { from = "501" to = "538" }
+add_hyperlane = { from = "516" to = "560" }
+add_hyperlane = { from = "485" to = "523" }
+add_hyperlane = { from = "485" to = "507" }
+add_hyperlane = { from = "532" to = "513" }
+add_hyperlane = { from = "519" to = "522" }
+add_hyperlane = { from = "519" to = "522" }
+add_hyperlane = { from = "538" to = "539" }
+add_hyperlane = { from = "560" to = "488" }
+add_hyperlane = { from = "523" to = "544" }
+add_hyperlane = { from = "507" to = "540" }
+add_hyperlane = { from = "513" to = "565" }
+add_hyperlane = { from = "513" to = "539" }
+add_hyperlane = { from = "522" to = "571" }
+add_hyperlane = { from = "539" to = "497" }
+add_hyperlane = { from = "539" to = "565" }
+add_hyperlane = { from = "488" to = "577" }
+add_hyperlane = { from = "544" to = "478" }
+add_hyperlane = { from = "540" to = "547" }
+add_hyperlane = { from = "540" to = "554" }
+add_hyperlane = { from = "565" to = "543" }
+add_hyperlane = { from = "571" to = "476" }
+add_hyperlane = { from = "571" to = "530" }
+add_hyperlane = { from = "497" to = "476" }
+add_hyperlane = { from = "577" to = "555" }
+add_hyperlane = { from = "478" to = "490" }
+add_hyperlane = { from = "547" to = "554" }
+add_hyperlane = { from = "547" to = "483" }
+add_hyperlane = { from = "554" to = "480" }
+add_hyperlane = { from = "543" to = "561" }
+add_hyperlane = { from = "476" to = "530" }
+add_hyperlane = { from = "476" to = "489" }
+add_hyperlane = { from = "530" to = "525" }
+add_hyperlane = { from = "555" to = "573" }
+add_hyperlane = { from = "490" to = "505" }
+add_hyperlane = { from = "483" to = "558" }
+add_hyperlane = { from = "480" to = "505" }
+add_hyperlane = { from = "561" to = "557" }
+add_hyperlane = { from = "489" to = "492" }
+add_hyperlane = { from = "489" to = "508" }
+add_hyperlane = { from = "525" to = "553" }
+add_hyperlane = { from = "573" to = "562" }
+add_hyperlane = { from = "573" to = "481" }
+add_hyperlane = { from = "505" to = "487" }
+add_hyperlane = { from = "505" to = "537" }
+add_hyperlane = { from = "558" to = "504" }
+add_hyperlane = { from = "558" to = "526" }
+add_hyperlane = { from = "557" to = "473" }
+add_hyperlane = { from = "492" to = "534" }
+add_hyperlane = { from = "508" to = "572" }
+add_hyperlane = { from = "553" to = "487" }
+add_hyperlane = { from = "562" to = "506" }
+add_hyperlane = { from = "481" to = "568" }
+add_hyperlane = { from = "487" to = "503" }
+add_hyperlane = { from = "487" to = "567" }
+add_hyperlane = { from = "537" to = "567" }
+add_hyperlane = { from = "504" to = "526" }
+add_hyperlane = { from = "504" to = "526" }
+add_hyperlane = { from = "526" to = "511" }
+add_hyperlane = { from = "534" to = "472" }
+add_hyperlane = { from = "572" to = "570" }
+add_hyperlane = { from = "568" to = "496" }
+add_hyperlane = { from = "568" to = "500" }
+add_hyperlane = { from = "472" to = "474" }
+add_hyperlane = { from = "472" to = "474" }
+add_hyperlane = { from = "570" to = "535" }
+add_hyperlane = { from = "496" to = "521" }
+add_hyperlane = { from = "500" to = "521" }
+add_hyperlane = { from = "474" to = "535" }
+add_hyperlane = { from = "535" to = "514" }
+add_hyperlane = { from = "521" to = "469" }
+add_hyperlane = { from = "521" to = "469" }
+add_hyperlane = { from = "527" to = "493" }
+add_hyperlane = { from = "527" to = "546" }
+add_hyperlane = { from = "527" to = "546" }
+add_hyperlane = { from = "546" to = "563" }
+add_hyperlane = { from = "528" to = "557" }
+add_hyperlane = { from = "528" to = "557" }
+add_hyperlane = { from = "528" to = "561" }
 } 
