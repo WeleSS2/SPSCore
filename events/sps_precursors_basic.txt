@@ -1,0 +1,297 @@
+namespace = sps_precursors_basic
+
+country_event = {
+	id = sps_precursors_basic.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
+		set_country_flag = vultaum_intro
+		set_country_flag = yuht_intro
+		set_country_flag = first_league_intro
+		set_country_flag = irassian_intro
+		set_country_flag = cybrex_intro
+		set_country_flag = zroni_intro
+		set_country_flag = baol_intro
+		country_event = { id = sps_precursors_basic.2 days = 500 random = 500 }
+	}
+}
+
+country_event = {
+	id = sps_precursors_basic.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		NOT = {
+			has_country_flag = precursors_chosen
+		}
+	}
+
+	immediate = {
+		random_system_within_border = { 
+			random_system_planet = {
+				add_anomaly = {
+					category = sps_precursor_category
+				}
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = sps_precursors_basic.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			NOT = {
+				has_country_flag = precursors_chosen
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = { owner = { country_event = { id = story.5 days = 30 } } }
+		owner = {
+			random_list = {
+				500 = {
+					country_event = { id = sps_precursors_basic.10 }
+				}
+				500 = {
+					country_event = { id = sps_precursors_basic.11 }
+				}
+				500 = {
+					country_event = { id = sps_precursors_basic.12 }
+				}
+				500 = {
+					country_event = { id = sps_precursors_basic.13 }
+				}
+				500 = {
+					country_event = { id = sps_precursors_basic.14 }
+				}
+				500 = {
+					if = {
+						limit = {
+							is_gestalt = no
+						}
+						country_event = { id = sps_precursors_basic.15 }
+					}
+					else = {
+						country_event = {
+							id = sps_precursors_basic.20
+						}
+					}
+				}
+				500 = {
+					if = {
+						limit = {
+							is_gestalt = no
+						}
+						country_event = { id = sps_precursors_basic.16 }
+					}
+					else = {
+						country_event = {
+							id = sps_precursors_basic.20
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sps_precursors_basic.10
+	hide_window = no
+	is_triggered_only = yes
+	desc = sps_precursors_basic.10_desc
+
+	option = {
+		name = Yes
+		country_event = { id = story.5 days = 30 }
+		begin_event_chain = {
+			event_chain = "vultaum_chain"
+			target = THIS
+		}
+		set_country_flag = precursors_chosen
+	}
+
+	option = {
+		name = Nah
+		hidden_effect = {
+			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
+		}
+	}
+}
+
+
+country_event = {
+	id = sps_precursors_basic.11
+	hide_window = no
+	is_triggered_only = yes
+	desc = sps_precursors_basic.11_desc
+
+	option = {
+		name = Yes
+		country_event = { id = story.5 days = 30 }
+		begin_event_chain = {
+			event_chain = "yuht_chain"
+			target = THIS
+		}
+		set_country_flag = precursors_chosen
+	}
+
+	option = {
+		name = Nah
+		hidden_effect = {
+			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
+		}
+	}
+}
+
+
+country_event = {
+	id = sps_precursors_basic.12
+	hide_window = no
+	is_triggered_only = yes
+	desc = sps_precursors_basic.12_desc
+
+	option = {
+		name = Yes
+		country_event = { id = story.5 days = 30 }
+		begin_event_chain = {
+			event_chain = "first_league_chain"
+			target = THIS
+		}
+		set_country_flag = precursors_chosen
+	}
+
+	option = {
+		name = Nah
+		hidden_effect = {
+			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
+		}
+	}
+}
+
+
+country_event = {
+	id = sps_precursors_basic.13
+	hide_window = no
+	is_triggered_only = yes
+	desc = sps_precursors_basic.13_desc
+
+	option = {
+		name = Yes
+		country_event = { id = story.5 days = 30 }
+		begin_event_chain = {
+			event_chain = "irassian_chain"
+			target = ROOT
+		}
+		set_country_flag = precursors_chosen
+	}
+
+	option = {
+		name = Nah
+		hidden_effect = {
+			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
+		}
+	}
+}
+
+
+country_event = {
+	id = sps_precursors_basic.14
+	hide_window = no
+	is_triggered_only = yes
+	desc = sps_precursors_basic.14_desc
+
+	option = {
+		name = Yes
+		country_event = { id = story.5 days = 30 }
+		begin_event_chain = {
+			event_chain = "cybrex_chain"
+			target = ROOT
+		}
+		set_country_flag = precursors_chosen
+	}
+
+	option = {
+		name = Nah
+		hidden_effect = {
+			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
+		}
+	}
+}
+
+
+country_event = {
+	id = sps_precursors_basic.15
+	hide_window = no
+	is_triggered_only = yes
+	desc = sps_precursors_basic.15_desc
+
+	option = {
+		name = Yes
+		country_event = { id = story.5 days = 30 }
+		closest_system = {
+			random_system_planet = {
+				create_archaeological_site = grunur_digsite_1
+			}
+		}
+		set_country_flag = precursors_chosen
+	}
+
+	option = {
+		name = Nah
+		hidden_effect = {
+			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
+		}
+	}
+}
+
+country_event = {
+	id = sps_precursors_basic.16
+	hide_window = no
+	is_triggered_only = yes
+	desc = sps_precursors_basic.16_desc
+
+	option = {
+		name = Yes
+		country_event = { id = story.5 days = 30 }
+		closest_system = {
+			random_system_planet = {
+				create_archaeological_site = zroni_digsite_1
+			}
+		}
+		set_country_flag = precursors_chosen
+	}
+
+	option = {
+		name = Nah
+		hidden_effect = {
+			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
+		}
+	}
+}
+
+country_event = {
+	id = sps_precursors_basic.20
+	hide_window = no
+	is_triggered_only = yes
+	desc = "Error"
+
+	option = {
+		name = "Break connection"
+		hidden_effect = {
+			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
+		}
+	}
+}

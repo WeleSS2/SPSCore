@@ -2,10 +2,12 @@
 # Triggers when the game starts
 on_game_start = {
 	events = {
-		sps_smgg.10
+		sps_precursors_basic.1
 		sps_smgg.2
 		sps_smgg.4
 		sps_smgg.5
+		sps_smgg.6
+		sps_smgg.10
 		sps_smgg.20
 		sps_smgg.30
 		sps_smgg.40

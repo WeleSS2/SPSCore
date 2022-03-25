@@ -5,6 +5,7 @@ namespace = sps_smgg
 # 3 - 2nd race fixes
 # 4 - Maruders Fix
 # 5 - Guaranteed Worlds fix
+# 6 - Central Black Holes
 # 10 - Vanilla events for empires (Pops, buildings, deposits e.t.c)
 # 20 - 110 Fallen Empire fixes
 # 130-140 Added traditions events
@@ -1124,14 +1125,52 @@ event = {
 }
 
 event = {
+	id = sps_smgg.6
+	hide_window = no
+	is_triggered_only = yes
+
+	immediate = {
+		every_system = {
+			random_system_planet = {
+				limit = {
+					has_planet_flag = central_wormhole_flag
+				}
+				prev = {
+					spawn_megastructure = {
+						type = central_wormhole_base
+						name = "Strange Anomaly"
+					}
+				}
+			}
+		}
+	}
+}
+
+event = {
 	id = sps_smgg.10
 	hide_window = yes
 	is_triggered_only = yes
 
 
 	immediate = {
+		# Spawn special/hidden countries
+		#country_event = {
+		#	id = game_start.1 # Spawn special/hidden countries
+		#}
+		# removes random planet modifiers from homeworlds
+		#country_event = {
+		#	id = game_start.2
+		#}
 		every_country = {
+			random_system = {
+				
+			}
 			limit = { is_country_type = default }
+			# Hidden Game Start Event that resets tutorial for advisor trigger purposes
+			country_event = {
+				id = game_start.3
+			}
+
 			# Add origin hyperlanes and stations in capital system
 			country_event = {
 				id = game_start.33

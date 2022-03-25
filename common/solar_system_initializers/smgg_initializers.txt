@@ -577,3 +577,17 @@ sfallen_machine = {
 		create_fe_citadel = yes
 	}
 }
+ 
+smgg_central_black_hole = {
+	name = "Galaxy Center"
+	class = sc_black_hole
+
+	planet = {
+		class = star
+		orbit_distance = 0
+		size = 60
+		init_effect = {
+			set_planet_flag = central_wormhole_flag
+		}
+	}
+}

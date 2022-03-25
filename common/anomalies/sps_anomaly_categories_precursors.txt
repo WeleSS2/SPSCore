@@ -1,0 +1,10 @@
+sps_precursor_category = {
+	should_ai_and_humans_use = no
+	level = 5
+
+	spawn_chance = {
+		base = 0
+	}
+
+	on_success = sps_precursors_basic.3
+}
