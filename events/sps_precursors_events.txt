@@ -8,7 +8,7 @@ country_event = {
 	trigger = {
 		is_ai = no
 	}
-
+	
 	immediate = {
 		set_country_flag = vultaum_intro
 		set_country_flag = yuht_intro
@@ -16,8 +16,7 @@ country_event = {
 		set_country_flag = irassian_intro
 		set_country_flag = cybrex_intro
 		set_country_flag = zroni_intro
-		set_country_flag = baol_intro
-		country_event = { id = sps_precursors_basic.2 days = 500 random = 500 }
+		set_country_flag = baol_intro	
 	}
 }
 
@@ -28,16 +27,35 @@ country_event = {
 
 	trigger = {
 		is_ai = no
-		NOT = {
+		NOR = {
 			has_country_flag = precursors_chosen
+			has_country_flag = precursors_anomaly_obtained
 		}
 	}
 
 	immediate = {
 		random_system_within_border = { 
 			random_system_planet = {
-				add_anomaly = {
-					category = sps_precursor_category
+				if = {
+					limit = {
+						has_anomaly = no
+						prev = {
+							is_capital_system = no
+						}
+					}
+					if = {
+						limit = {
+							has_anomaly = no
+						}
+						root = {
+							set_country_flag = precursors_anomaly_obtained
+							prev = {
+								add_anomaly = {
+									category = sps_precursor_category
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -46,8 +64,9 @@ country_event = {
 
 ship_event = {
 	id = sps_precursors_basic.3
-	hide_window = yes
+	hide_window = no
 	is_triggered_only = yes
+	desc = sps_precursors_basic_desc_10
 
 	trigger = {
 		owner = {
@@ -103,6 +122,11 @@ ship_event = {
 					}
 				}
 			}
+			country_event = {
+				id = sps_precursors_basic.2 
+				days = 150 
+				random = 200
+			}
 		}
 	}
 }
@@ -111,7 +135,7 @@ country_event = {
 	id = sps_precursors_basic.10
 	hide_window = no
 	is_triggered_only = yes
-	desc = sps_precursors_basic.10_desc
+	desc = sps_precursors_basic_desc_10
 
 	option = {
 		name = Yes
@@ -125,9 +149,7 @@ country_event = {
 
 	option = {
 		name = Nah
-		hidden_effect = {
-			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
-		}
+		remove_country_flag = precursors_anomaly_obtained
 	}
 }
 
@@ -136,7 +158,7 @@ country_event = {
 	id = sps_precursors_basic.11
 	hide_window = no
 	is_triggered_only = yes
-	desc = sps_precursors_basic.11_desc
+	desc = sps_precursors_basic_desc_11
 
 	option = {
 		name = Yes
@@ -150,9 +172,7 @@ country_event = {
 
 	option = {
 		name = Nah
-		hidden_effect = {
-			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
-		}
+		remove_country_flag = precursors_anomaly_obtained
 	}
 }
 
@@ -161,7 +181,7 @@ country_event = {
 	id = sps_precursors_basic.12
 	hide_window = no
 	is_triggered_only = yes
-	desc = sps_precursors_basic.12_desc
+	desc = sps_precursors_basic_desc_12
 
 	option = {
 		name = Yes
@@ -175,9 +195,7 @@ country_event = {
 
 	option = {
 		name = Nah
-		hidden_effect = {
-			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
-		}
+		remove_country_flag = precursors_anomaly_obtained
 	}
 }
 
@@ -186,7 +204,7 @@ country_event = {
 	id = sps_precursors_basic.13
 	hide_window = no
 	is_triggered_only = yes
-	desc = sps_precursors_basic.13_desc
+	desc = sps_precursors_basic_desc_13
 
 	option = {
 		name = Yes
@@ -200,9 +218,7 @@ country_event = {
 
 	option = {
 		name = Nah
-		hidden_effect = {
-			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
-		}
+		remove_country_flag = precursors_anomaly_obtained
 	}
 }
 
@@ -211,7 +227,7 @@ country_event = {
 	id = sps_precursors_basic.14
 	hide_window = no
 	is_triggered_only = yes
-	desc = sps_precursors_basic.14_desc
+	desc = sps_precursors_basic_desc_14
 
 	option = {
 		name = Yes
@@ -225,9 +241,7 @@ country_event = {
 
 	option = {
 		name = Nah
-		hidden_effect = {
-			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
-		}
+		remove_country_flag = precursors_anomaly_obtained
 	}
 }
 
@@ -236,7 +250,7 @@ country_event = {
 	id = sps_precursors_basic.15
 	hide_window = no
 	is_triggered_only = yes
-	desc = sps_precursors_basic.15_desc
+	desc = sps_precursors_basic_desc_15
 
 	option = {
 		name = Yes
@@ -251,9 +265,7 @@ country_event = {
 
 	option = {
 		name = Nah
-		hidden_effect = {
-			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
-		}
+		remove_country_flag = precursors_anomaly_obtained
 	}
 }
 
@@ -261,7 +273,7 @@ country_event = {
 	id = sps_precursors_basic.16
 	hide_window = no
 	is_triggered_only = yes
-	desc = sps_precursors_basic.16_desc
+	desc = sps_precursors_basic_desc_16
 
 	option = {
 		name = Yes
@@ -276,9 +288,7 @@ country_event = {
 
 	option = {
 		name = Nah
-		hidden_effect = {
-			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
-		}
+		remove_country_flag = precursors_anomaly_obtained
 	}
 }
 
@@ -290,8 +300,6 @@ country_event = {
 
 	option = {
 		name = "Break connection"
-		hidden_effect = {
-			country_event = { id = sps_precursors_basic.2 days = 360 random = 720 }
-		}
+		remove_country_flag = precursors_anomaly_obtained
 	}
 }

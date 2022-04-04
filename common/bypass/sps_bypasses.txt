@@ -58,6 +58,9 @@ central_wormhole = {
 
 	potential = {
 		always = yes
+		owner = {
+			has_technology = tech_black_holes_stabilization
+		}
 	}
 
 	country_can_use = {
@@ -65,8 +68,6 @@ central_wormhole = {
 			fail_text = "We cannot pass through"
 			# Wormhole can be used if...
 			OR = {
-				# System has no owner
-				NOT = { exists = from }
 				# System's owner has not closed borders to you
 				from = {
 					NOT = { has_closed_borders = root }

@@ -7,9 +7,17 @@ on_game_start = {
 		sps_smgg.4
 		sps_smgg.5
 		sps_smgg.6
+		sps_smgg.7
 		sps_smgg.10
+		sps_smgg.11
 		sps_smgg.20
 		sps_smgg.30
 		sps_smgg.40
+	}
+}
+
+on_yearly_pulse_country = {
+	events = {
+		sps_precursors_basic.2
 	}
 }

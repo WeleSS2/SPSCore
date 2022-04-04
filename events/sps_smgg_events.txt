@@ -6,7 +6,9 @@ namespace = sps_smgg
 # 4 - Maruders Fix
 # 5 - Guaranteed Worlds fix
 # 6 - Central Black Holes
+# 7 - Empire/falen empires clusters fix
 # 10 - Vanilla events for empires (Pops, buildings, deposits e.t.c)
+# 11 - Fix for nebulas
 # 20 - 110 Fallen Empire fixes
 # 130-140 Added traditions events
 # Discovery
@@ -36,6 +38,23 @@ namespace = sps_smgg
 # 
 # 
 # 
+country_event = {
+    id = sps_smgg.1
+	hide_window = no
+	is_triggered_only = yes
+
+	immediate = {
+		add_resource = {
+			minerals = 100
+		}
+		closest_system = {
+			random_system_planet = {
+				change_pc = pc_gaia
+			}
+		}
+	}
+
+}
 event = {
     id = sps_smgg.2
 	hide_window = yes
@@ -101,6 +120,11 @@ event = {
 				origin_origin_ocean_paradise = {
 					capital_scope = {
 						change_pc = pc_ocean
+					}
+				}
+				origin_machine = {
+					capital_scope = {
+						change_pc = pc_machine
 					}
 				}
 			}
@@ -975,6 +999,7 @@ event = {
 				is_country_type = default	
 				NOR = {
 					has_origin = origin_life_seeded
+					has_origin = origin_ocean_paradise
 					has_origin = origin_common_ground
 					has_origin = origin_common_ground_npc
 					has_origin = origin_hegemon
@@ -985,78 +1010,70 @@ event = {
 				}
 			}
 			if = { limit = { num_guaranteed_colonies = 1 }
-				random_system = {
-					limit = {
-						distance = {
+			random_galaxy_planet = {
+				limit = {
+					distance = {
 						source = prev
 						type = hyperlane
 						use_bypasses = no
 						bypass_empire = prev
 						min_jumps = 1
-						max_jumps = 3
+						max_jumps = 2
 						min_distance >= 1
 						max_distance <= 50
 						}
+						planet_size > 12
+						planet_size < 20
+						uninhabitable_regular_planet = yes
 					}
-					create_starbase = {
-						size = starbase_outpost
-						owner = prev
+					prev = {
+						switch = {
+						trigger = ideal_planet_class
+							pc_continental = { prev = { 
+								change_pc = pc_continental 
+								reroll_deposits = yes
+							} }
+							pc_ocean = { prev = { 
+								change_pc = pc_ocean
+								reroll_deposits = yes
+							} }
+							pc_tropical = { prev = { 
+								change_pc = pc_tropical
+								reroll_deposits = yes 
+							} }
+							pc_desert = { prev = { 
+								change_pc = pc_desert
+								reroll_deposits = yes 
+							} }
+							pc_arid = { prev = { 
+								change_pc = pc_arid 
+								reroll_deposits = yes
+							} }
+							pc_savannah = { prev = { 
+								change_pc = pc_savannah
+								reroll_deposits = yes 
+							} }
+							pc_arctic = { prev = { 
+								change_pc = pc_arctic
+								reroll_deposits = yes 
+							} }
+							pc_alpine = { prev = { 
+								change_pc = pc_alpine
+								reroll_deposits = yes 
+							} }
+							pc_tundra = { prev = { 
+								change_pc = pc_tundra
+								reroll_deposits = yes 
+							} }
 						}
-					random_system_planet = {
-						limit = {
-							planet_size > 5
-							planet_size < 20
-							uninhabitable_regular_planet = yes
-							}
-							prevprev = {
-								switch = {
-								trigger = ideal_planet_class
-								pc_continental = { prev = { 
-									change_pc = pc_continental 
-									reroll_deposits = yes
-								} }
-								pc_ocean = { prev = { 
-									change_pc = pc_ocean
-									reroll_deposits = yes
-								} }
-								pc_tropical = { prev = { 
-									change_pc = pc_tropical
-									reroll_deposits = yes 
-								} }
-								pc_desert = { prev = { 
-									change_pc = pc_desert
-									reroll_deposits = yes 
-								} }
-								pc_arid = { prev = { 
-									change_pc = pc_arid 
-									reroll_deposits = yes
-								} }
-								pc_savannah = { prev = { 
-									change_pc = pc_savannah
-									reroll_deposits = yes 
-								} }
-								pc_arctic = { prev = { 
-									change_pc = pc_arctic
-									reroll_deposits = yes 
-								} }
-								pc_alpine = { prev = { 
-									change_pc = pc_alpine
-									reroll_deposits = yes 
-								} }
-								pc_tundra = { prev = { 
-									change_pc = pc_tundra
-									reroll_deposits = yes 
-								} }
-								}
-							}
-						}	
-					}
+					}	
 				}
+			}
 			if = {
 				limit = { num_guaranteed_colonies = 2 }
 				while = {
 					count = 2
-					random_system = {
+					random_galaxy_planet = {
 						limit = {
 							distance = {
 								source = prev
@@ -1064,59 +1081,55 @@ event = {
 								use_bypasses = no
 								bypass_empire = prev
 								min_jumps = 1
-								max_jumps = 3
+								max_jumps = 2
 								min_distance >= 1
 								max_distance <= 50
 								}
+								planet_size > 12
+								planet_size < 20
+								uninhabitable_regular_planet = yes
 							}
-							random_system_planet = {
-								limit = {
-									planet_size > 12
-									planet_size < 20
-									uninhabitable_regular_planet = yes
-									}
-								prevprev = {
-									switch = {
-									trigger = ideal_planet_class
-										pc_continental = { prev = { 
-											change_pc = pc_continental 
-											reroll_deposits = yes
-										} }
-										pc_ocean = { prev = { 
-											change_pc = pc_ocean
-											reroll_deposits = yes
-										} }
-										pc_tropical = { prev = { 
-											change_pc = pc_tropical
-											reroll_deposits = yes 
-										} }
-										pc_desert = { prev = { 
-											change_pc = pc_desert
-											reroll_deposits = yes 
-										} }
-										pc_arid = { prev = { 
-											change_pc = pc_arid 
-											reroll_deposits = yes
-										} }
-										pc_savannah = { prev = { 
-											change_pc = pc_savannah
-											reroll_deposits = yes 
-										} }
-										pc_arctic = { prev = { 
-											change_pc = pc_arctic
-											reroll_deposits = yes 
-										} }
-										pc_alpine = { prev = { 
-											change_pc = pc_alpine
-											reroll_deposits = yes 
-										} }
-										pc_tundra = { prev = { 
-											change_pc = pc_tundra
-											reroll_deposits = yes 
-										} }
-								}
-							}	
-						}
+							prev = {
+								switch = {
+								trigger = ideal_planet_class
+									pc_continental = { prev = { 
+										change_pc = pc_continental 
+										reroll_deposits = yes
+									} }
+									pc_ocean = { prev = { 
+										change_pc = pc_ocean
+										reroll_deposits = yes
+									} }
+									pc_tropical = { prev = { 
+										change_pc = pc_tropical
+										reroll_deposits = yes 
+									} }
+									pc_desert = { prev = { 
+										change_pc = pc_desert
+										reroll_deposits = yes 
+									} }
+									pc_arid = { prev = { 
+										change_pc = pc_arid 
+										reroll_deposits = yes
+									} }
+									pc_savannah = { prev = { 
+										change_pc = pc_savannah
+										reroll_deposits = yes 
+									} }
+									pc_arctic = { prev = { 
+										change_pc = pc_arctic
+										reroll_deposits = yes 
+									} }
+									pc_alpine = { prev = { 
+										change_pc = pc_alpine
+										reroll_deposits = yes 
+									} }
+									pc_tundra = { prev = { 
+										change_pc = pc_tundra
+										reroll_deposits = yes 
+									} }
+							}
+						}	
 					}
 				}
 			}
@@ -1140,6 +1153,37 @@ event = {
 						type = central_wormhole_base
 						name = "Strange Anomaly"
 					}
+				}
+			}
+		}
+	}
+}
+
+event = {
+	id = sps_smgg.7
+	hide_window = no
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			if = {
+				limit = {
+					is_country_type = default
+				}
+				every_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = hyperlane
+							use_bypasses = no
+							bypass_empire = prev
+							min_jumps = 1
+							max_jumps = 3
+							min_distance >= 1
+							max_distance <= 30
+						}
+					}
+					set_star_flag = empire_cluster
 				}
 			}
 		}
@@ -1180,24 +1224,263 @@ event = {
 				id = game_start.8
 			}
 			capital_scope = {
-				# Add additional pops on capital
-				planet_event = {
-					id = game_start.23
-				}
 				# Pop, buildings and districts
 				planet_event = {
 					id = game_start.12
 				}
-				#Shattered Ring blockers
-				planet_event = {
-					id = game_start.20
-				}
+			}
+			### Empire init - populate home system
+			country_event = {
+				id = game_start.33
 			}
 		}
-		
 	}
 }
 
+event = {
+	id = sps_smgg.11
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_system = {
+			limit = { is_inside_nebula = yes }
+			# Class B
+			if = {
+				limit = {
+					OR = {
+						is_star_class = sc_b
+						is_star_class = sc_binary_2
+						is_star_class = sc_binary_5
+						is_star_class = sc_trinary_2
+						is_star_class = sc_trinary_4
+					}
+				}
+				random_list = {
+					20 = { create_nebula_3 = yes }
+					20 = { create_nebula_4 = yes }
+					10 = { create_rare_nebula_1 = yes }
+					4 = {
+						modifier = {
+							factor = 0
+							has_star_flag = empire_home_system
+						}
+						create_turbulent_nebula_1 = yes
+					}
+				}
+			}
+			# Class A
+			else_if = {
+				limit = {
+					OR = {
+						is_star_class = sc_a
+						is_star_class = sc_binary_1
+						is_star_class = sc_binary_9
+						is_star_class = sc_binary_10
+					}
+				}
+				if = {
+					limit = { has_star_flag = ocean_paradise_nebula }
+					create_rare_nebula_1 = yes
+				}
+				else = {
+					random_list = {
+						20 = { create_nebula_3 = yes }
+						20 = { create_nebula_4 = yes }
+						10 = { create_rare_nebula_1 = yes }
+						10 = { create_rare_nebula_2 = yes }
+						4 = {
+							modifier = {
+								factor = 0
+								has_star_flag = empire_home_system
+							}
+							create_turbulent_nebula_1 = yes
+						}
+						4 = {
+							modifier = {
+								factor = 0
+								has_star_flag = empire_home_system
+							}
+							create_turbulent_nebula_2 = yes
+						}
+					}
+				}
+			}
+			# Class F
+			else_if = {
+				limit = { is_star_class = sc_f }
+				random_list = {
+					20 = { create_nebula_3 = yes }
+					20 = { create_nebula_4 = yes }
+					10 = { create_rare_nebula_1 = yes }
+					4 = {
+						modifier = {
+							factor = 0
+							has_star_flag = empire_home_system
+						}
+						create_turbulent_nebula_1 = yes
+					}
+				}
+			}
+			# Class G
+			else_if = {
+				limit = {
+					OR = {
+						is_star_class = sc_g
+						is_star_class = sc_binary_8
+						is_star_class = sc_trinary_1
+					}
+				}
+				random_list = {
+					20 = { create_nebula_1 = yes }
+					10 = { create_rare_nebula_2 = yes }
+					4 = {
+						modifier = {
+							factor = 0
+							has_star_flag = empire_home_system
+						}
+						create_turbulent_nebula_2 = yes
+					}
+				}
+			}
+			# Class K
+			else_if = {
+				limit = {
+					OR = {
+						is_star_class = sc_k
+						is_star_class = sc_binary_7
+						is_star_class = sc_trinary_3
+					}
+				}
+				random_list = {
+					20 = { create_nebula_1 = yes }
+					20 = { create_nebula_2 = yes }
+					10 = { create_rare_nebula_2 = yes }
+					4 = {
+						modifier = {
+							factor = 0
+							has_star_flag = empire_home_system
+						}
+						create_turbulent_nebula_2 = yes
+					}
+				}
+			}
+			# Class M
+			else_if = {
+				limit = {
+					OR = {
+						is_star_class = sc_m
+						is_star_class = sc_m_giant
+						is_star_class = sc_binary_3
+						is_star_class = sc_binary_4
+						is_star_class = sc_binary_6
+					}
+				}
+				random_list = {
+					20 = { create_nebula_1 = yes }
+					20 = { create_nebula_2 = yes }
+					10 = { create_rare_nebula_2 = yes }
+					4 = {
+						modifier = {
+							factor = 0
+							has_star_flag = empire_home_system
+						}
+						create_turbulent_nebula_2 = yes
+					}
+				}
+			}
+			# Class T
+			else_if = {
+				limit = { is_star_class = sc_t }
+				random_list = {
+					20 = { create_nebula_3 = yes }
+					10 = { create_rare_nebula_1 = yes }
+					4 = {
+						modifier = {
+							factor = 0
+							has_star_flag = empire_home_system
+						}
+						create_turbulent_nebula_1 = yes
+					}
+				}
+			}
+			# Black Hole
+			else_if = {
+				limit = { is_star_class = sc_black_hole }
+				random_list = {
+					20 = { create_nebula_1 = yes }
+					20 = { create_nebula_2 = yes }
+					20 = { create_nebula_3 = yes }
+					20 = { create_nebula_4 = yes }
+					10 = { create_rare_nebula_1 = yes }
+					10 = { create_rare_nebula_2 = yes }
+					4 = {
+						modifier = {
+							factor = 0
+							has_star_flag = empire_home_system
+						}
+						create_turbulent_nebula_1 = yes
+					}
+					4 = {
+						modifier = {
+							factor = 0
+							has_star_flag = empire_home_system
+						}
+						create_turbulent_nebula_2 = yes
+					}
+				}
+			}
+			# Neutron Star
+			else_if = {
+				limit = { is_star_class = sc_neutron_star }
+				random_list = {
+					20 = { create_nebula_3 = yes }
+					20 = { create_nebula_4 = yes }
+					10 = { create_rare_nebula_1 = yes }
+					10 = { create_rare_nebula_2 = yes }
+					4 = {
+						modifier = {
+							factor = 0
+							has_star_flag = empire_home_system
+						}
+						create_turbulent_nebula_1 = yes
+					}
+					4 = {
+						modifier = {
+							factor = 0
+							has_star_flag = empire_home_system
+						}
+						create_turbulent_nebula_2 = yes
+					}
+				}
+			}
+			# Pulsar
+			else_if = {
+				limit = { is_star_class = sc_pulsar }
+				random_list = {
+					20 = { create_nebula_3 = yes }
+					20 = { create_nebula_4 = yes }
+					10 = { create_rare_nebula_1 = yes }
+					10 = { create_rare_nebula_2 = yes }
+					4 = {
+						modifier = {
+							factor = 0
+							has_star_flag = empire_home_system
+						}
+						create_turbulent_nebula_1 = yes
+					}
+					4 = {
+						modifier = {
+							factor = 0
+							has_star_flag = empire_home_system
+						}
+						create_turbulent_nebula_2 = yes
+					}
+				}
+			}
+		}
+	}
+}
 
 #Fallen Empire Generation
 
@@ -1323,6 +1606,15 @@ event = {
 					add_building = building_nano_forge
 					add_building = building_nano_forge
 					add_building = building_nano_forge
+
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
 
 					while = {
 						count = 10
@@ -1636,8 +1928,10 @@ event = {
 								design = "NAME_Faith"
 							}
 						}
+						
 					}
 				}
+				
 				create_cluster = {
 					id = fe2_cluster
 					radius = 80
