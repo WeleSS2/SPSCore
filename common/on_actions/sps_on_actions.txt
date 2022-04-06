@@ -7,7 +7,6 @@ on_game_start = {
 		sps_smgg.4
 		sps_smgg.5
 		sps_smgg.6
-		sps_smgg.7
 		sps_smgg.10
 		sps_smgg.11
 		sps_smgg.20

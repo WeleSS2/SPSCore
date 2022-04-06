@@ -1,0 +1,1 @@
+namespace = sps_authoritarian_fe

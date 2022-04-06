@@ -1,0 +1,1 @@
+namespace = sps_pacifist_fe

@@ -1,0 +1,203 @@
+namespace = sps_universal_fe
+# 100-110 Added traditions events
+# 100 Discovery
+# 101 Adaptability
+# 102 Domination
+# 103 Diplomacy
+# 104 Expansion
+# 105 Harmony
+# 106 Mercantile
+# 107 Prosperity
+# 108 Subterfuge
+# 109 Supremacy
+# 110 Unyielding
+
+
+
+
+# Discovery
+country_event = {
+	id = sps_universal_fe.100
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		add_tradition = tr_discovery_adopt
+		add_tradition = tr_discovery_databank_uplinks
+		add_tradition = tr_discovery_faith_in_science
+		add_tradition = tr_discovery_polytechnic_education
+		add_tradition = tr_discovery_science_division
+		add_tradition = tr_discovery_to_boldly_go
+		add_tradition = tr_discovery_finish
+	}
+}
+
+# Adaptability
+country_event = {
+	id = sps_universal_fe.101
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		add_tradition = tr_adaptability_adopt
+		add_tradition = tr_adaptability_adaptive_ecology
+		add_tradition = tr_adaptability_appropriation
+		add_tradition = tr_adaptability_dietary_enrichment
+		add_tradition = tr_adaptability_environmental_diversification
+		add_tradition = tr_adaptability_survival_fittest
+		add_tradition = tr_adaptability_finish
+	}
+}
+
+# Domination
+country_event = {
+	id = sps_universal_fe.102
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		add_tradition = tr_domination_adopt
+		add_tradition = tr_domination_colonial_viceroys
+		add_tradition = tr_domination_grand_council
+		add_tradition = tr_domination_imperious_architecture
+		add_tradition = tr_domination_judgment_corps
+		add_tradition = tr_domination_workplace_motivators
+		add_tradition = tr_domination_finish
+	}
+}
+
+# Diplomacy
+country_event = {
+	id = sps_universal_fe.103
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		add_tradition = tr_diplomacy_adopt
+		add_tradition = tr_diplomacy_diplomatic_networking
+		add_tradition = tr_diplomacy_direct_diplomacy
+		add_tradition = tr_diplomacy_eminent_diplomats
+		add_tradition = tr_diplomacy_entente_coordination
+		add_tradition = tr_diplomacy_the_federation
+		add_tradition = tr_diplomacy_finish
+	}
+}
+
+# Expansion
+country_event = {
+	id = sps_universal_fe.104
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		add_tradition = tr_expansion_adopt
+		add_tradition = tr_expansion_a_new_life
+		add_tradition = tr_expansion_colonization_fever
+		add_tradition = tr_expansion_courier_network
+		add_tradition = tr_expansion_galactic_ambition
+		add_tradition = tr_expansion_reach_for_the_stars
+		add_tradition = tr_expansion_finish
+	}
+}
+
+# Harmony
+country_event = {
+	id = sps_universal_fe.105
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		add_tradition = tr_harmony_adopt
+		add_tradition = tr_harmony_harmonious_directives
+		add_tradition = tr_harmony_kinship
+		add_tradition = tr_harmony_mind_and_body
+		add_tradition = tr_harmony_the_greater_good
+		add_tradition = tr_harmony_utopian_dream
+		add_tradition = tr_harmony_finish
+	}
+}
+
+# Mercantile
+country_event = {
+	id = sps_universal_fe.106
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		add_tradition = tr_mercantile_adopt
+		add_tradition = tr_mercantile_adaptive_economic_policies
+		add_tradition = tr_mercantile_commercial_enterprise
+		add_tradition = tr_mercantile_insider_trading
+		add_tradition = tr_mercantile_marketplace_of_better_ideas
+		add_tradition = tr_mercantile_trickle_up_economics
+		add_tradition = tr_mercantile_finish
+	}
+}
+
+#Prosperity
+country_event = {
+	id = sps_universal_fe.107
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		add_tradition = tr_prosperity_adopt
+		add_tradition = tr_prosperity_administrative_operations
+		add_tradition = tr_prosperity_interstellar_franchising
+		add_tradition = tr_prosperity_public_works
+		add_tradition = tr_prosperity_pursuit_of_profit
+		add_tradition = tr_prosperity_sct
+		add_tradition = tr_prosperity_finish
+	}
+}
+
+# Subterfuge
+country_event = {
+	id = sps_universal_fe.108
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		add_tradition = tr_subterfuge_adopt
+		add_tradition = tr_subterfuge_double_agents
+		add_tradition = tr_subterfuge_information_security
+		add_tradition = tr_subterfuge_nda
+		add_tradition = tr_subterfuge_operational_security
+		add_tradition = tr_subterfuge_shadow_recruits
+		add_tradition = tr_subterfuge_finish
+	}
+}
+
+# Supremacy
+country_event = {
+	id = sps_universal_fe.109
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		add_tradition = tr_supremacy_adopt
+		add_tradition = tr_supremacy_fleet_logistical_corps
+		add_tradition = tr_supremacy_great_game
+		add_tradition = tr_supremacy_master_shipwrights
+		add_tradition = tr_supremacy_overwhelming_force
+		add_tradition = tr_supremacy_war_games
+		add_tradition = tr_supremacy_finish
+	}
+}
+
+# Unyielding
+country_event = {
+	id = sps_universal_fe.110
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		add_tradition = tr_unyielding_adopt
+		add_tradition = tr_unyielding_bulwark_of_harmony
+		add_tradition = tr_unyielding_defensive_zeal
+		add_tradition = tr_unyielding_fortress_doctrine
+		add_tradition = tr_unyielding_never_surrender
+		add_tradition = tr_unyielding_resistance_is_frugal
+		add_tradition = tr_unyielding_finish
+	}
+}

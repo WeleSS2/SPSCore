@@ -1,0 +1,392 @@
+namespace = sps_spiritualist_fe
+
+# Temporary Fallen Spiritualist Empire
+# Saint Live Center
+event = {
+	id = sps_spiritualist_fe.1
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		random_galaxy_planet = {
+			limit = {
+				has_planet_flag = sps_fallen_2_1
+			}
+			create_species = {
+				name = "Traktor"
+				plural = "Traktors"
+				class = FUN
+				portrait = fun7
+				homeworld = this
+				traits = { 
+					trait = "trait_conformists"
+					trait = "trait_conservational"
+					trait = "trait_slow_learners"
+				 }
+				can_be_modified = yes
+
+				effect = {
+					save_event_target_as = smgg_traktor_species
+				}
+			}
+			create_species = {
+				name = "Varrasan"
+				plural = "Varrasan"
+				class = PLANT
+				portrait = pla7
+				homeworld = this
+				traits = { 
+					trait = "trait_industrious"
+					trait = "trait_agrarian"
+				 }
+				can_be_modified = yes
+
+				effect = {
+					save_event_target_as = smgg_varrasan_species
+				}
+			}
+			create_country = {
+				type = fallen_empire
+				name = "Saint Live Center"
+				adjective = "Saint Live Center"
+				name_list = FUN2
+				ship_prefix = "SAINT"
+				authority = auth_dictatorial
+				civics = { 
+					civic = civic_exalted_priesthood
+					civic = civic_death_cult
+				}
+				flag = random #/ { icon = { category = <key> file = <filename.dds> } background = { category = <key> file = <filename.dds> } colors = { <key> <key> } }
+				ethos = { 
+					ethic = ethic_fanatic_spiritualist
+				}
+				species = event_target:smgg_traktor_species
+				effect = {
+					set_graphical_culture = fallen_empire_02
+					save_event_target_as = smgg_traktor_empire
+				}
+			}
+			solar_system = {
+				create_starbase = {
+					owner = event_target:smgg_traktor_empire
+					size = starbase_citadel
+					module = shipyard
+					module = shipyard
+					module = shipyard
+					module = shipyard
+					module = shipyard
+					module = shipyard
+					building = crew_quarters
+					building = titan_yards
+					building = fleet_academy
+					building = colossus_yards
+					effect = {
+						while = {
+							count = 21
+							create_ship = {
+								design = "NAME_Faith"
+							}
+						}
+						
+					}
+				}
+				
+				create_cluster = {
+					id = fe2_cluster
+					radius = 80
+					center = this.solar_system
+				}
+				spawn_megastructure = {
+					type = mega_art_installation_4
+					graphical_culture = mammalian_01
+				}
+				while = {
+					count = 2
+
+					random_system_planet = {
+						limit = {
+							OR = {
+								has_planet_flag = sps_fallen_2_2
+								has_planet_flag = sps_fallen_2_3
+							}
+							NOT = {  has_planet_flag = planet_colonized  }
+						}
+						set_owner = event_target:smgg_traktor_empire
+						set_planet_flag = fallen_empire_world
+						set_planet_flag = planet_colonized
+						prevent_anomaly = yes
+						set_controller = event_target:smgg_traktor_empire
+	
+						add_building = building_ancient_palace
+						add_building = building_class_4_singularity
+						add_building = building_class_4_singularity
+						add_building = building_dimensional_fabricator
+						add_building = building_dimensional_fabricator
+						add_building = building_nano_forge
+						add_building = building_nano_forge
+						add_building = building_nano_forge
+						add_building = building_fe_stronghold
+						add_building = building_fe_dome
+	
+						while = {
+							count = 10
+							add_district = district_city
+						}
+						while = {
+							count = 30
+							create_pop = {
+								species = owner_main_species
+							}
+						}
+						while = {
+							count = 10
+							create_pop = {
+								species = event_target:smgg_varrasan_species
+							}
+						}
+					}
+				}
+				while = {
+					count = 3
+
+					random_system_planet = {
+						limit = {
+							OR = {
+								has_planet_flag = sps_fallen_2_4
+								has_planet_flag = sps_fallen_2_5
+								has_planet_flag = sps_fallen_2_6
+							}
+							NOT = {  has_planet_flag = planet_colonized  }
+						}
+						set_owner = event_target:smgg_traktor_empire
+						set_planet_flag = fallen_empire_world
+						set_planet_flag = planet_colonized
+						prevent_anomaly = yes
+						set_controller = event_target:smgg_traktor_empire
+	
+						add_building = building_fe_dome
+						add_building = building_fe_dome
+
+						add_deposit = sps_amenities_20
+	
+						while = {
+							count = 5
+							add_district = district_mining
+							add_district = district_generator
+							add_district = district_farming
+						}
+						while = {
+							count = 1
+							create_pop = {
+								species = owner_main_species
+							}
+						}
+						while = {
+							count = 30
+							create_pop = {
+								species = event_target:smgg_varrasan_species
+							}
+						}
+					}
+				}
+			}
+			this = {
+				set_owner = event_target:smgg_traktor_empire
+				set_planet_flag = fallen_empire_world
+				prevent_anomaly = yes
+				set_controller = event_target:smgg_traktor_empire
+				set_capital = yes
+
+				add_building = building_ancient_palace
+				add_building = building_fe_stronghold
+				add_building = building_fe_stronghold
+				add_building = building_nourishment_center
+				add_building = building_nourishment_center
+				add_building = building_empyrean_shrine
+				add_building = building_empyrean_shrine
+				add_building = building_empyrean_shrine
+				add_building = building_empyrean_shrine
+				add_building = building_empyrean_shrine
+				add_building = building_empyrean_shrine
+				add_building = building_empyrean_shrine
+				
+				add_deposit = sps_amenities_20
+				add_deposit = sps_amenities_20
+				add_deposit = sps_amenities_20
+				add_deposit = sps_amenities_20
+				add_deposit = sps_amenities_20
+
+				while = {
+					count = 20
+					add_district = district_city
+				}
+				while = {
+					count = 60
+					create_pop = {
+						species = owner_main_species
+					}
+				}
+
+				create_fleet = {
+					name = "Crusaders I"
+					effect = {
+						set_owner = event_target:smgg_traktor_empire
+						create_ship = {
+							design = "NAME_Eternal"
+						}
+						while = {
+							count = 12
+							create_ship = {
+								design = "NAME_Avatar"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								design = "NAME_Zealot"
+							}
+						}
+						set_location = {
+							target = PREV
+							distance = 10
+							angle = random
+						}
+					}
+				}
+				create_fleet = {
+					name = "Crusaders II"
+					effect = {
+						set_owner = event_target:smgg_traktor_empire
+						create_ship = {
+							design = "NAME_Eternal"
+						}
+						while = {
+							count = 12
+							create_ship = {
+								design = "NAME_Avatar"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								design = "NAME_Zealot"
+							}
+						}
+						set_location = {
+							target = PREV
+							distance = 10
+							angle = random
+						}
+					}
+				}
+				create_fleet = {
+					name = "Church Forces"
+					effect = {
+						set_owner = event_target:smgg_traktor_empire
+						while = {
+							count = 2
+							create_ship = {
+								design = "NAME_Avatar"
+							}
+						}
+						while = {
+							count = 6
+							create_ship = {
+								design = "NAME_Zealot"
+							}
+						}
+						set_location = {
+							target = PREV
+							distance = 10
+							angle = random
+						}
+					}
+				}
+
+				while = {
+					count = 8
+					closest_system = {
+						limit = {
+							NOT = {
+								exists = starbase
+							}
+							distance = {
+								source = event_target:smgg_traktor_empire
+								type = hyperlane
+								use_bypasses = no
+								bypass_empire = event_target:smgg_traktor_empire
+								min_distance >= 5
+								max_distance <= 65
+							}
+						}
+						create_starbase = {
+							owner = event_target:smgg_traktor_empire
+							size = starbase_citadel
+							module = anchorage
+							module = anchorage
+							module = anchorage
+							module = anchorage
+							module = anchorage
+							module = anchorage
+							building = crew_quarters
+							building = naval_logistics_office
+							building = communications_jammer
+							building = command_center
+							effect = {
+								while = {
+									count = 15
+									create_ship = {
+										design = "NAME_Faith"
+									}
+								}
+							}
+						}
+					}
+				}
+				owner = {
+					create_ship_design = {
+						design = "NAME_Cleanser"
+					}
+					create_ship_design = {
+						design = "NAME_Eternal"
+					}
+					create_ship_design = {
+						design = "NAME_Avatar"
+					}
+					create_ship_design = {
+						design = "NAME_Zealot"
+					}
+					create_ship_design = {
+						design = "NAME_Penitent"
+					}
+					create_ship_design = {
+						design = "NAME_Pilgrim"
+					}
+					create_ship_design = {
+						design = "NAME_Faith"
+					}
+				}
+				
+				owner = {
+					country_event = {
+						id = sps_smgg.131
+					}
+					country_event = {
+						id = sps_smgg.132
+					}
+					country_event = {
+						id = sps_smgg.134
+					}
+					country_event = {
+						id = sps_smgg.135
+					}
+					country_event = {
+						id = sps_smgg.138
+					}
+					country_event = {
+						id = sps_smgg.139
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,369 @@
+namespace = sps_materialist_fe
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# Temporary materialist fallen empire
+# Fellorian Technology Empire
+event = {
+	id = sps_materialist_fe.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		random_galaxy_planet = {
+			limit = {
+				has_planet_flag = sps_fallen_1
+			}
+			create_species = {
+				name = "Fellorian"
+				plural = "Fellorians"
+				class = AVI
+				portrait = avi16
+				homeworld = this
+				traits = { 
+					trait = "trait_intelligent"
+					trait = "trait_natural_engineers"
+				 }
+				can_be_modified = yes
+
+				effect = {
+					save_event_target_as = smgg_fellorian_species
+				}
+			}
+			create_species = {
+				name = "Zarran"
+				plural = "Zarrans"
+				class = AVI
+				portrait = avi13
+				homeworld = this
+				traits = { 
+					trait = "trait_conformists"
+					trait = "trait_conservational"
+					trait = "trait_slow_learners"
+				 }
+				can_be_modified = yes
+
+				effect = {
+					save_event_target_as = smgg_zarran_species
+				}
+			}
+			create_country = {
+				type = fallen_empire
+				name = "Grand Fellorian Nation"
+				adjective = "Grand Fellorian Nation"
+				name_list = AVI3
+				ship_prefix = "GFN"
+				authority = auth_democratic
+				civics = { 
+					civic = civic_technocracy
+					civic = civic_crafters
+				}
+				flag = random #/ { icon = { category = <key> file = <filename.dds> } background = { category = <key> file = <filename.dds> } colors = { <key> <key> } }
+				ethos = { 
+					ethic = ethic_fanatic_materialist
+				}
+				species = event_target:smgg_fellorian_species
+				effect = {
+					set_graphical_culture = fallen_empire_01
+					save_event_target_as = smgg_fellorian_empire
+				}
+			}
+			solar_system = {
+				create_starbase = {
+					owner = event_target:smgg_fellorian_empire
+					size = starbase_citadel
+					module = anchorage
+					module = anchorage
+					module = anchorage
+					module = anchorage
+					module = anchorage
+					module = anchorage
+					building = crew_quarters
+					building = naval_logistics_office
+					building = defense_grid
+					building = command_center
+					effect = {
+						while = {
+							count = 21
+							create_ship = {
+								design = "NAME_Cloaker"
+							}
+						}
+					}
+				}
+				create_cluster = {
+					id = fe1_cluster
+					radius = 120
+					center = this.solar_system
+				}
+				spawn_megastructure = {
+					type = mega_shipyard_3
+					graphical_culture = mammalian_01
+				}
+				spawn_megastructure = {
+					type = think_tank_3
+					graphical_culture = mammalian_01
+				}
+				random_system_planet = {
+					limit = { has_planet_flag = sps_fallen_1_1 }
+					set_owner = event_target:smgg_fellorian_empire
+					prevent_anomaly = yes
+					set_controller = event_target:smgg_fellorian_empire
+					set_planet_flag = fallen_empire_world
+					clear_blockers = yes
+
+					add_building = building_ancient_palace
+					add_building = building_fe_stronghold
+					add_building = building_class_4_singularity
+					add_building = building_class_4_singularity
+					add_building = building_class_4_singularity
+					add_building = building_class_4_singularity
+					add_building = building_class_4_singularity
+					add_building = building_dimensional_fabricator
+					add_building = building_dimensional_fabricator
+					add_building = building_nano_forge
+					add_building = building_nano_forge
+					add_building = building_nano_forge
+
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
+					add_deposit = sps_amenities_20
+
+					while = {
+						count = 10
+						add_district = district_arcology_housing
+					}
+					while = {
+						count = 4
+						add_district = district_arcology_leisure
+					}
+					while = {
+						count = 25
+						create_pop = {
+							species = owner_main_species
+						}
+					}
+					while = {
+						count = 40
+						create_pop = {
+							species = event_target:smgg_zarran_species
+						}
+					}
+				}
+			}
+			this = {
+				set_owner = event_target:smgg_fellorian_empire
+				set_planet_flag = fallen_empire_world
+				prevent_anomaly = yes
+				set_controller = event_target:smgg_fellorian_empire
+				set_capital = yes
+
+				add_building = building_ancient_palace
+				add_building = building_fe_stronghold
+				add_building = building_fe_stronghold
+				add_building = building_affluence_center
+				add_building = building_affluence_center
+				add_building = building_nourishment_center
+				add_building = building_nourishment_center
+				add_building = building_nourishment_center
+				add_building = building_dimensional_fabricator
+				add_building = building_dimensional_fabricator
+				add_building = building_dimensional_fabricator
+				add_building = building_dimensional_fabricator
+
+				while = {
+					count = 10
+					add_district = district_arcology_housing
+				}
+				while = {
+					count = 5
+					add_district = district_arcology_arms_industry
+					add_district = district_arcology_arms_industry
+					add_district = district_arcology_civilian_industry
+				}
+				while = {
+					count = 50
+					create_pop = {
+						species = owner_main_species
+					}
+				}
+				while = {
+					count = 130
+					create_pop = {
+						species = event_target:smgg_zarran_species
+					}
+				}
+				create_fleet = {
+					name = "Core Defenders"
+					effect = {
+						set_owner = event_target:smgg_fellorian_empire
+						create_ship = {
+							design = "NAME_Savant"
+						}
+						while = {
+							count = 12
+							create_ship = {
+								design = "NAME_Scholar"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								design = "NAME_Sage"
+							}
+						}
+						set_location = {
+							target = PREV
+							distance = 10
+							angle = random
+						}
+					}
+				}
+				create_fleet = {
+					name = "Core Supports"
+					effect = {
+						set_owner = event_target:smgg_fellorian_empire
+						while = {
+							count = 8
+							create_ship = {
+								design = "NAME_Scholar"
+							}
+						}
+						while = {
+							count = 16
+							create_ship = {
+								design = "NAME_Sage"
+							}
+						}
+						set_location = {
+							target = PREV
+							distance = 10
+							angle = random
+						}
+					}
+				}
+				create_fleet = {
+					name = "Core Supports II"
+					effect = {
+						set_owner = event_target:smgg_fellorian_empire
+						while = {
+							count = 8
+							create_ship = {
+								design = "NAME_Scholar"
+							}
+						}
+						while = {
+							count = 16
+							create_ship = {
+								design = "NAME_Sage"
+							}
+						}
+						set_location = {
+							target = PREV
+							distance = 10
+							angle = random
+						}
+					}
+				}
+
+				while = {
+					count = 8
+					closest_system = {
+						limit = {
+							NOT = {
+								exists = starbase
+							}
+							distance = {
+								source = event_target:smgg_fellorian_empire
+								type = hyperlane
+								use_bypasses = no
+								bypass_empire = event_target:smgg_fellorian_empire
+								min_distance >= 5
+								max_distance <= 65
+							}
+						}
+						create_starbase = {
+							owner = event_target:smgg_fellorian_empire
+							size = starbase_citadel
+							module = anchorage
+							module = anchorage
+							module = anchorage
+							module = anchorage
+							module = anchorage
+							module = anchorage
+							building = crew_quarters
+							building = naval_logistics_office
+							building = communications_jammer
+							building = command_center
+							effect = {
+								while = {
+									count = 15
+									create_ship = {
+										design = "NAME_Cloaker"
+									}
+								}
+							}
+						}
+					}
+				}
+				owner = {
+					create_ship_design = {
+						design = "NAME_Savant"
+					}
+					create_ship_design = {
+						design = "NAME_Scholar"
+					}
+					create_ship_design = {
+						design = "NAME_Sage"
+					}
+					create_ship_design = {
+						design = "NAME_Enforcer"
+					}
+					create_ship_design = {
+						design = "NAME_Cloaker"
+					}
+					create_ship_design = {
+						design = "NAME_Librarian"
+					}
+					create_ship_design = {
+						design = "NAME_Archivist"
+					}
+				}
+				
+				owner = {
+					country_event = {
+						id = sps_universal_fe.100
+					}
+					country_event = {
+						id = sps_universal_fe.101
+					}
+					country_event = {
+						id = sps_universal_fe.104
+					}
+					country_event = {
+						id = sps_universal_fe.107
+					}
+					country_event = {
+						id = sps_universal_fe.108
+					}
+					country_event = {
+						id = sps_universal_fe.110
+					}
+				}
+			}
+		}
+	}
+}
