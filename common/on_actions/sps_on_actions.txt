@@ -9,9 +9,9 @@ on_game_start = {
 		sps_smgg.6
 		sps_smgg.10
 		sps_smgg.11
-		sps_smgg.20
-		sps_smgg.30
-		sps_smgg.40
+		sps_materialist_fe.1
+		sps_machine_fe.1
+		sps_spiritualist_fe.1
 	}
 }
 

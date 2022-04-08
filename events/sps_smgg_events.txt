@@ -8,7 +8,7 @@ namespace = sps_smgg
 # 6 - Central Black Holes
 # 
 # 10 - Vanilla events for empires (Pops, buildings, deposits e.t.c)
-# 11 - Fix for nebulas - Not working currently
+# 11 - Fix for nebulas - Not working currently/ Added for a future
 # 
 # 
 # 
@@ -25,6 +25,8 @@ namespace = sps_smgg
 # 
 # 
 # 
+
+
 event = {
     id = sps_smgg.2
 	hide_window = yes

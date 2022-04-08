@@ -368,22 +368,22 @@ event = {
 				
 				owner = {
 					country_event = {
-						id = sps_smgg.131
+						id = sps_universal_fe.101
 					}
 					country_event = {
-						id = sps_smgg.132
+						id = sps_universal_fe.102
 					}
 					country_event = {
-						id = sps_smgg.134
+						id = sps_universal_fe.104
 					}
 					country_event = {
-						id = sps_smgg.135
+						id = sps_universal_fe.105
 					}
 					country_event = {
-						id = sps_smgg.138
+						id = sps_universal_fe.108
 					}
 					country_event = {
-						id = sps_smgg.139
+						id = sps_universal_fe.109
 					}
 				}
 			}

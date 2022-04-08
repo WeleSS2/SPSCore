@@ -1,5 +1,29 @@
 namespace = game_start
-
+# Fallen empire events will be from now in separeted files, 1 file for every fe.
+# Universal_fe_events is obvious i think
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 event = {
 	id = game_start.1
 	hide_window = yes
